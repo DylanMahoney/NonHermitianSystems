@@ -1,0 +1,732 @@
+Requirement already satisfied: imageio in /home/users/dylan24/.local/lib/python3.9/site-packages (2.31.1)
+Requirement already satisfied: numpy in /share/software/user/open/py-numpy/1.24.2_py39/lib/python3.9/site-packages (from imageio) (1.24.2)
+Requirement already satisfied: pillow>=8.3.2 in /share/software/user/open/py-matplotlib/3.7.1_py39/lib/python3.9/site-packages (from imageio) (9.5.0)
+M sector dimension: 1
+Diagonalizing op_1 within sector
+Time taken to diagonalize op_1 within sector: 0.033
+number of op_1 eigenvalues in this M sector: 1
+Hamiltonian #0:
+Time taken to diagonalize M_sector_H: 0.078
+Time taken for time evolution with this Hamiltonian in this M sector: 0.0154
+Hamiltonian #1:
+Time taken to diagonalize M_sector_H: 0.016
+Time taken for time evolution with this Hamiltonian in this M sector: 0.0110
+Hamiltonian #2:
+Time taken to diagonalize M_sector_H: 0.011
+Time taken for time evolution with this Hamiltonian in this M sector: 0.0106
+Hamiltonian #3:
+Time taken to diagonalize M_sector_H: 0.011
+Time taken for time evolution with this Hamiltonian in this M sector: 0.0105
+Hamiltonian #4:
+Time taken to diagonalize M_sector_H: 0.011
+Time taken for time evolution with this Hamiltonian in this M sector: 0.0106
+Hamiltonian #5:
+Time taken to diagonalize M_sector_H: 0.011
+Time taken for time evolution with this Hamiltonian in this M sector: 0.0105
+M sector dimension: 8
+Diagonalizing op_1 within sector
+Time taken to diagonalize op_1 within sector: 0.006
+number of op_1 eigenvalues in this M sector: 5
+Hamiltonian #0:
+Time taken to diagonalize M_sector_H: 0.006
+Time taken for time evolution with this Hamiltonian in this M sector: 0.0824
+Hamiltonian #1:
+Time taken to diagonalize M_sector_H: 0.083
+Time taken for time evolution with this Hamiltonian in this M sector: 0.0828
+Hamiltonian #2:
+Time taken to diagonalize M_sector_H: 0.083
+Time taken for time evolution with this Hamiltonian in this M sector: 0.0824
+Hamiltonian #3:
+Time taken to diagonalize M_sector_H: 0.083
+Time taken for time evolution with this Hamiltonian in this M sector: 0.0823
+Hamiltonian #4:
+Time taken to diagonalize M_sector_H: 0.083
+Time taken for time evolution with this Hamiltonian in this M sector: 0.0820
+Hamiltonian #5:
+Time taken to diagonalize M_sector_H: 0.082
+Time taken for time evolution with this Hamiltonian in this M sector: 0.0822
+M sector dimension: 28
+Diagonalizing op_1 within sector
+Time taken to diagonalize op_1 within sector: 0.001
+number of op_1 eigenvalues in this M sector: 9
+Hamiltonian #0:
+Time taken to diagonalize M_sector_H: 0.002
+Time taken for time evolution with this Hamiltonian in this M sector: 0.1797
+Hamiltonian #1:
+Time taken to diagonalize M_sector_H: 0.181
+Time taken for time evolution with this Hamiltonian in this M sector: 0.1797
+Hamiltonian #2:
+Time taken to diagonalize M_sector_H: 0.181
+Time taken for time evolution with this Hamiltonian in this M sector: 0.1662
+Hamiltonian #3:
+Time taken to diagonalize M_sector_H: 0.167
+Time taken for time evolution with this Hamiltonian in this M sector: 0.1422
+Hamiltonian #4:
+Time taken to diagonalize M_sector_H: 0.143
+Time taken for time evolution with this Hamiltonian in this M sector: 0.1796
+Hamiltonian #5:
+Time taken to diagonalize M_sector_H: 0.181
+Time taken for time evolution with this Hamiltonian in this M sector: 0.1470
+M sector dimension: 56
+Diagonalizing op_1 within sector
+Time taken to diagonalize op_1 within sector: 0.003
+number of op_1 eigenvalues in this M sector: 15
+Hamiltonian #0:
+Time taken to diagonalize M_sector_H: 0.007
+Time taken for time evolution with this Hamiltonian in this M sector: 0.4863
+Hamiltonian #1:
+Time taken to diagonalize M_sector_H: 0.491
+Time taken for time evolution with this Hamiltonian in this M sector: 0.4665
+Hamiltonian #2:
+Time taken to diagonalize M_sector_H: 0.472
+Time taken for time evolution with this Hamiltonian in this M sector: 0.5109
+Hamiltonian #3:
+Time taken to diagonalize M_sector_H: 0.517
+Time taken for time evolution with this Hamiltonian in this M sector: 0.5105
+Hamiltonian #4:
+Time taken to diagonalize M_sector_H: 0.516
+Time taken for time evolution with this Hamiltonian in this M sector: 0.5267
+Hamiltonian #5:
+Time taken to diagonalize M_sector_H: 0.533
+Time taken for time evolution with this Hamiltonian in this M sector: 0.5132
+M sector dimension: 70
+Diagonalizing op_1 within sector
+Time taken to diagonalize op_1 within sector: 0.006
+number of op_1 eigenvalues in this M sector: 13
+Hamiltonian #0:
+Time taken to diagonalize M_sector_H: 0.014
+Time taken for time evolution with this Hamiltonian in this M sector: 0.6586
+Hamiltonian #1:
+Time taken to diagonalize M_sector_H: 0.666
+Time taken for time evolution with this Hamiltonian in this M sector: 0.6511
+Hamiltonian #2:
+Time taken to diagonalize M_sector_H: 0.660
+Time taken for time evolution with this Hamiltonian in this M sector: 0.6790
+Hamiltonian #3:
+Time taken to diagonalize M_sector_H: 0.688
+Time taken for time evolution with this Hamiltonian in this M sector: 0.6868
+Hamiltonian #4:
+Time taken to diagonalize M_sector_H: 0.695
+Time taken for time evolution with this Hamiltonian in this M sector: 0.6596
+Hamiltonian #5:
+Time taken to diagonalize M_sector_H: 0.668
+Time taken for time evolution with this Hamiltonian in this M sector: 0.6201
+M sector dimension: 56
+Diagonalizing op_1 within sector
+Time taken to diagonalize op_1 within sector: 0.004
+number of op_1 eigenvalues in this M sector: 15
+Hamiltonian #0:
+Time taken to diagonalize M_sector_H: 0.008
+Time taken for time evolution with this Hamiltonian in this M sector: 0.5335
+Hamiltonian #1:
+Time taken to diagonalize M_sector_H: 0.538
+Time taken for time evolution with this Hamiltonian in this M sector: 0.4883
+Hamiltonian #2:
+Time taken to diagonalize M_sector_H: 0.494
+Time taken for time evolution with this Hamiltonian in this M sector: 0.5367
+Hamiltonian #3:
+Time taken to diagonalize M_sector_H: 0.542
+Time taken for time evolution with this Hamiltonian in this M sector: 0.5357
+Hamiltonian #4:
+Time taken to diagonalize M_sector_H: 0.542
+Time taken for time evolution with this Hamiltonian in this M sector: 0.5339
+Hamiltonian #5:
+Time taken to diagonalize M_sector_H: 0.539
+Time taken for time evolution with this Hamiltonian in this M sector: 0.5337
+M sector dimension: 28
+Diagonalizing op_1 within sector
+Time taken to diagonalize op_1 within sector: 0.002
+number of op_1 eigenvalues in this M sector: 9
+Hamiltonian #0:
+Time taken to diagonalize M_sector_H: 0.003
+Time taken for time evolution with this Hamiltonian in this M sector: 0.1781
+Hamiltonian #1:
+Time taken to diagonalize M_sector_H: 0.179
+Time taken for time evolution with this Hamiltonian in this M sector: 0.1755
+Hamiltonian #2:
+Time taken to diagonalize M_sector_H: 0.177
+Time taken for time evolution with this Hamiltonian in this M sector: 0.1771
+Hamiltonian #3:
+Time taken to diagonalize M_sector_H: 0.178
+Time taken for time evolution with this Hamiltonian in this M sector: 0.1767
+Hamiltonian #4:
+Time taken to diagonalize M_sector_H: 0.178
+Time taken for time evolution with this Hamiltonian in this M sector: 0.1762
+Hamiltonian #5:
+Time taken to diagonalize M_sector_H: 0.177
+Time taken for time evolution with this Hamiltonian in this M sector: 0.1560
+M sector dimension: 8
+Diagonalizing op_1 within sector
+Time taken to diagonalize op_1 within sector: 0.001
+number of op_1 eigenvalues in this M sector: 5
+Hamiltonian #0:
+Time taken to diagonalize M_sector_H: 0.001
+Time taken for time evolution with this Hamiltonian in this M sector: 0.0712
+Hamiltonian #1:
+Time taken to diagonalize M_sector_H: 0.071
+Time taken for time evolution with this Hamiltonian in this M sector: 0.0800
+Hamiltonian #2:
+Time taken to diagonalize M_sector_H: 0.080
+Time taken for time evolution with this Hamiltonian in this M sector: 0.0810
+Hamiltonian #3:
+Time taken to diagonalize M_sector_H: 0.081
+Time taken for time evolution with this Hamiltonian in this M sector: 0.0814
+Hamiltonian #4:
+Time taken to diagonalize M_sector_H: 0.082
+Time taken for time evolution with this Hamiltonian in this M sector: 0.0794
+Hamiltonian #5:
+Time taken to diagonalize M_sector_H: 0.080
+Time taken for time evolution with this Hamiltonian in this M sector: 0.0772
+M sector dimension: 1
+Diagonalizing op_1 within sector
+Time taken to diagonalize op_1 within sector: 0.000
+number of op_1 eigenvalues in this M sector: 1
+Hamiltonian #0:
+Time taken to diagonalize M_sector_H: 0.000
+Time taken for time evolution with this Hamiltonian in this M sector: 0.0139
+Hamiltonian #1:
+Time taken to diagonalize M_sector_H: 0.014
+Time taken for time evolution with this Hamiltonian in this M sector: 0.0131
+Hamiltonian #2:
+Time taken to diagonalize M_sector_H: 0.013
+Time taken for time evolution with this Hamiltonian in this M sector: 0.0125
+Hamiltonian #3:
+Time taken to diagonalize M_sector_H: 0.013
+Time taken for time evolution with this Hamiltonian in this M sector: 0.0118
+Hamiltonian #4:
+Time taken to diagonalize M_sector_H: 0.012
+Time taken for time evolution with this Hamiltonian in this M sector: 0.0113
+Hamiltonian #5:
+Time taken to diagonalize M_sector_H: 0.011
+Time taken for time evolution with this Hamiltonian in this M sector: 0.0108
+Doing current-current ED took 0.022 per Hamiltonian per time_step
+M sector dimension: 1
+Diagonalizing op_1 within sector
+Time taken to diagonalize op_1 within sector: 0.000
+number of op_1 eigenvalues in this M sector: 1
+Hamiltonian #0:
+Time taken to diagonalize M_sector_H: 0.000
+Time taken for time evolution with this Hamiltonian in this M sector: 0.0140
+Hamiltonian #1:
+Time taken to diagonalize M_sector_H: 0.014
+Time taken for time evolution with this Hamiltonian in this M sector: 0.0132
+Hamiltonian #2:
+Time taken to diagonalize M_sector_H: 0.013
+Time taken for time evolution with this Hamiltonian in this M sector: 0.0125
+Hamiltonian #3:
+Time taken to diagonalize M_sector_H: 0.013
+Time taken for time evolution with this Hamiltonian in this M sector: 0.0119
+Hamiltonian #4:
+Time taken to diagonalize M_sector_H: 0.012
+Time taken for time evolution with this Hamiltonian in this M sector: 0.0113
+Hamiltonian #5:
+Time taken to diagonalize M_sector_H: 0.011
+Time taken for time evolution with this Hamiltonian in this M sector: 0.0109
+M sector dimension: 10
+Diagonalizing op_1 within sector
+Time taken to diagonalize op_1 within sector: 0.000
+number of op_1 eigenvalues in this M sector: 5
+Hamiltonian #0:
+Time taken to diagonalize M_sector_H: 0.001
+Time taken for time evolution with this Hamiltonian in this M sector: 0.0671
+Hamiltonian #1:
+Time taken to diagonalize M_sector_H: 0.067
+Time taken for time evolution with this Hamiltonian in this M sector: 0.0709
+Hamiltonian #2:
+Time taken to diagonalize M_sector_H: 0.071
+Time taken for time evolution with this Hamiltonian in this M sector: 0.0818
+Hamiltonian #3:
+Time taken to diagonalize M_sector_H: 0.082
+Time taken for time evolution with this Hamiltonian in this M sector: 0.0827
+Hamiltonian #4:
+Time taken to diagonalize M_sector_H: 0.083
+Time taken for time evolution with this Hamiltonian in this M sector: 0.0806
+Hamiltonian #5:
+Time taken to diagonalize M_sector_H: 0.081
+Time taken for time evolution with this Hamiltonian in this M sector: 0.0790
+M sector dimension: 45
+Diagonalizing op_1 within sector
+Time taken to diagonalize op_1 within sector: 0.007
+number of op_1 eigenvalues in this M sector: 17
+Hamiltonian #0:
+Time taken to diagonalize M_sector_H: 0.009
+Time taken for time evolution with this Hamiltonian in this M sector: 0.4234
+Hamiltonian #1:
+Time taken to diagonalize M_sector_H: 0.426
+Time taken for time evolution with this Hamiltonian in this M sector: 0.4289
+Hamiltonian #2:
+Time taken to diagonalize M_sector_H: 0.432
+Time taken for time evolution with this Hamiltonian in this M sector: 0.4560
+Hamiltonian #3:
+Time taken to diagonalize M_sector_H: 0.460
+Time taken for time evolution with this Hamiltonian in this M sector: 0.4672
+Hamiltonian #4:
+Time taken to diagonalize M_sector_H: 0.471
+Time taken for time evolution with this Hamiltonian in this M sector: 0.4592
+Hamiltonian #5:
+Time taken to diagonalize M_sector_H: 0.463
+Time taken for time evolution with this Hamiltonian in this M sector: 0.4204
+M sector dimension: 120
+Diagonalizing op_1 within sector
+Time taken to diagonalize op_1 within sector: 0.018
+number of op_1 eigenvalues in this M sector: 21
+Hamiltonian #0:
+Time taken to diagonalize M_sector_H: 0.052
+Time taken for time evolution with this Hamiltonian in this M sector: 3.2319
+Hamiltonian #1:
+Time taken to diagonalize M_sector_H: 3.265
+Time taken for time evolution with this Hamiltonian in this M sector: 3.2148
+Hamiltonian #2:
+Time taken to diagonalize M_sector_H: 3.252
+Time taken for time evolution with this Hamiltonian in this M sector: 3.2628
+Hamiltonian #3:
+Time taken to diagonalize M_sector_H: 3.302
+Time taken for time evolution with this Hamiltonian in this M sector: 3.1882
+Hamiltonian #4:
+Time taken to diagonalize M_sector_H: 3.222
+Time taken for time evolution with this Hamiltonian in this M sector: 3.2033
+Hamiltonian #5:
+Time taken to diagonalize M_sector_H: 3.234
+Time taken for time evolution with this Hamiltonian in this M sector: 3.3350
+M sector dimension: 210
+Diagonalizing op_1 within sector
+Time taken to diagonalize op_1 within sector: 0.089
+number of op_1 eigenvalues in this M sector: 37
+Hamiltonian #0:
+Time taken to diagonalize M_sector_H: 0.177
+Time taken for time evolution with this Hamiltonian in this M sector: 24.5743
+Hamiltonian #1:
+Time taken to diagonalize M_sector_H: 24.662
+Time taken for time evolution with this Hamiltonian in this M sector: 24.6744
+Hamiltonian #2:
+Time taken to diagonalize M_sector_H: 24.771
+Time taken for time evolution with this Hamiltonian in this M sector: 25.0014
+Hamiltonian #3:
+Time taken to diagonalize M_sector_H: 25.093
+Time taken for time evolution with this Hamiltonian in this M sector: 24.8178
+Hamiltonian #4:
+Time taken to diagonalize M_sector_H: 24.909
+Time taken for time evolution with this Hamiltonian in this M sector: 24.3572
+Hamiltonian #5:
+Time taken to diagonalize M_sector_H: 24.458
+Time taken for time evolution with this Hamiltonian in this M sector: 24.6569
+M sector dimension: 252
+Diagonalizing op_1 within sector
+Time taken to diagonalize op_1 within sector: 0.125
+number of op_1 eigenvalues in this M sector: 25
+Hamiltonian #0:
+Time taken to diagonalize M_sector_H: 0.261
+Time taken for time evolution with this Hamiltonian in this M sector: 25.8972
+Hamiltonian #1:
+Time taken to diagonalize M_sector_H: 26.037
+Time taken for time evolution with this Hamiltonian in this M sector: 27.4774
+Hamiltonian #2:
+Time taken to diagonalize M_sector_H: 27.621
+Time taken for time evolution with this Hamiltonian in this M sector: 27.3803
+Hamiltonian #3:
+Time taken to diagonalize M_sector_H: 27.530
+Time taken for time evolution with this Hamiltonian in this M sector: 26.3982
+Hamiltonian #4:
+Time taken to diagonalize M_sector_H: 26.510
+Time taken for time evolution with this Hamiltonian in this M sector: 26.2737
+Hamiltonian #5:
+Time taken to diagonalize M_sector_H: 26.388
+Time taken for time evolution with this Hamiltonian in this M sector: 25.8956
+M sector dimension: 210
+Diagonalizing op_1 within sector
+Time taken to diagonalize op_1 within sector: 0.078
+number of op_1 eigenvalues in this M sector: 37
+Hamiltonian #0:
+Time taken to diagonalize M_sector_H: 0.173
+Time taken for time evolution with this Hamiltonian in this M sector: 23.2377
+Hamiltonian #1:
+Time taken to diagonalize M_sector_H: 23.320
+Time taken for time evolution with this Hamiltonian in this M sector: 23.7086
+Hamiltonian #2:
+Time taken to diagonalize M_sector_H: 23.790
+Time taken for time evolution with this Hamiltonian in this M sector: 23.8924
+Hamiltonian #3:
+Time taken to diagonalize M_sector_H: 23.966
+Time taken for time evolution with this Hamiltonian in this M sector: 24.8688
+Hamiltonian #4:
+Time taken to diagonalize M_sector_H: 24.950
+Time taken for time evolution with this Hamiltonian in this M sector: 24.6999
+Hamiltonian #5:
+Time taken to diagonalize M_sector_H: 24.792
+Time taken for time evolution with this Hamiltonian in this M sector: 24.6845
+M sector dimension: 120
+Diagonalizing op_1 within sector
+Time taken to diagonalize op_1 within sector: 0.017
+number of op_1 eigenvalues in this M sector: 21
+Hamiltonian #0:
+Time taken to diagonalize M_sector_H: 0.046
+Time taken for time evolution with this Hamiltonian in this M sector: 3.3906
+Hamiltonian #1:
+Time taken to diagonalize M_sector_H: 3.420
+Time taken for time evolution with this Hamiltonian in this M sector: 3.1322
+Hamiltonian #2:
+Time taken to diagonalize M_sector_H: 3.170
+Time taken for time evolution with this Hamiltonian in this M sector: 3.2223
+Hamiltonian #3:
+Time taken to diagonalize M_sector_H: 3.260
+Time taken for time evolution with this Hamiltonian in this M sector: 3.2023
+Hamiltonian #4:
+Time taken to diagonalize M_sector_H: 3.240
+Time taken for time evolution with this Hamiltonian in this M sector: 3.2473
+Hamiltonian #5:
+Time taken to diagonalize M_sector_H: 3.287
+Time taken for time evolution with this Hamiltonian in this M sector: 3.3082
+M sector dimension: 45
+Diagonalizing op_1 within sector
+Time taken to diagonalize op_1 within sector: 0.006
+number of op_1 eigenvalues in this M sector: 17
+Hamiltonian #0:
+Time taken to diagonalize M_sector_H: 0.008
+Time taken for time evolution with this Hamiltonian in this M sector: 0.4451
+Hamiltonian #1:
+Time taken to diagonalize M_sector_H: 0.448
+Time taken for time evolution with this Hamiltonian in this M sector: 0.4140
+Hamiltonian #2:
+Time taken to diagonalize M_sector_H: 0.418
+Time taken for time evolution with this Hamiltonian in this M sector: 0.4314
+Hamiltonian #3:
+Time taken to diagonalize M_sector_H: 0.434
+Time taken for time evolution with this Hamiltonian in this M sector: 0.4585
+Hamiltonian #4:
+Time taken to diagonalize M_sector_H: 0.462
+Time taken for time evolution with this Hamiltonian in this M sector: 0.4509
+Hamiltonian #5:
+Time taken to diagonalize M_sector_H: 0.455
+Time taken for time evolution with this Hamiltonian in this M sector: 0.4445
+M sector dimension: 10
+Diagonalizing op_1 within sector
+Time taken to diagonalize op_1 within sector: 0.000
+number of op_1 eigenvalues in this M sector: 5
+Hamiltonian #0:
+Time taken to diagonalize M_sector_H: 0.001
+Time taken for time evolution with this Hamiltonian in this M sector: 0.0709
+Hamiltonian #1:
+Time taken to diagonalize M_sector_H: 0.071
+Time taken for time evolution with this Hamiltonian in this M sector: 0.0789
+Hamiltonian #2:
+Time taken to diagonalize M_sector_H: 0.079
+Time taken for time evolution with this Hamiltonian in this M sector: 0.0827
+Hamiltonian #3:
+Time taken to diagonalize M_sector_H: 0.083
+Time taken for time evolution with this Hamiltonian in this M sector: 0.0825
+Hamiltonian #4:
+Time taken to diagonalize M_sector_H: 0.083
+Time taken for time evolution with this Hamiltonian in this M sector: 0.0828
+Hamiltonian #5:
+Time taken to diagonalize M_sector_H: 0.083
+Time taken for time evolution with this Hamiltonian in this M sector: 0.0803
+M sector dimension: 1
+Diagonalizing op_1 within sector
+Time taken to diagonalize op_1 within sector: 0.000
+number of op_1 eigenvalues in this M sector: 1
+Hamiltonian #0:
+Time taken to diagonalize M_sector_H: 0.000
+Time taken for time evolution with this Hamiltonian in this M sector: 0.0140
+Hamiltonian #1:
+Time taken to diagonalize M_sector_H: 0.014
+Time taken for time evolution with this Hamiltonian in this M sector: 0.0131
+Hamiltonian #2:
+Time taken to diagonalize M_sector_H: 0.013
+Time taken for time evolution with this Hamiltonian in this M sector: 0.0124
+Hamiltonian #3:
+Time taken to diagonalize M_sector_H: 0.013
+Time taken for time evolution with this Hamiltonian in this M sector: 0.0118
+Hamiltonian #4:
+Time taken to diagonalize M_sector_H: 0.012
+Time taken for time evolution with this Hamiltonian in this M sector: 0.0113
+Hamiltonian #5:
+Time taken to diagonalize M_sector_H: 0.011
+Time taken for time evolution with this Hamiltonian in this M sector: 0.0109
+Doing current-current ED took 0.826 per Hamiltonian per time_step
+M sector dimension: 1
+Diagonalizing op_1 within sector
+Time taken to diagonalize op_1 within sector: 0.000
+number of op_1 eigenvalues in this M sector: 1
+Hamiltonian #0:
+Time taken to diagonalize M_sector_H: 0.000
+Time taken for time evolution with this Hamiltonian in this M sector: 0.0136
+Hamiltonian #1:
+Time taken to diagonalize M_sector_H: 0.014
+Time taken for time evolution with this Hamiltonian in this M sector: 0.0128
+Hamiltonian #2:
+Time taken to diagonalize M_sector_H: 0.013
+Time taken for time evolution with this Hamiltonian in this M sector: 0.0122
+Hamiltonian #3:
+Time taken to diagonalize M_sector_H: 0.012
+Time taken for time evolution with this Hamiltonian in this M sector: 0.0118
+Hamiltonian #4:
+Time taken to diagonalize M_sector_H: 0.012
+Time taken for time evolution with this Hamiltonian in this M sector: 0.0119
+Hamiltonian #5:
+Time taken to diagonalize M_sector_H: 0.012
+Time taken for time evolution with this Hamiltonian in this M sector: 0.0119
+M sector dimension: 12
+Diagonalizing op_1 within sector
+Time taken to diagonalize op_1 within sector: 0.001
+number of op_1 eigenvalues in this M sector: 7
+Hamiltonian #0:
+Time taken to diagonalize M_sector_H: 0.001
+Time taken for time evolution with this Hamiltonian in this M sector: 0.1294
+Hamiltonian #1:
+Time taken to diagonalize M_sector_H: 0.130
+Time taken for time evolution with this Hamiltonian in this M sector: 0.1276
+Hamiltonian #2:
+Time taken to diagonalize M_sector_H: 0.128
+Time taken for time evolution with this Hamiltonian in this M sector: 0.1192
+Hamiltonian #3:
+Time taken to diagonalize M_sector_H: 0.120
+Time taken for time evolution with this Hamiltonian in this M sector: 0.1081
+Hamiltonian #4:
+Time taken to diagonalize M_sector_H: 0.108
+Time taken for time evolution with this Hamiltonian in this M sector: 0.1170
+Hamiltonian #5:
+Time taken to diagonalize M_sector_H: 0.117
+Time taken for time evolution with this Hamiltonian in this M sector: 0.1154
+M sector dimension: 66
+Diagonalizing op_1 within sector
+Time taken to diagonalize op_1 within sector: 0.005
+number of op_1 eigenvalues in this M sector: 19
+Hamiltonian #0:
+Time taken to diagonalize M_sector_H: 0.011
+Time taken for time evolution with this Hamiltonian in this M sector: 0.8733
+Hamiltonian #1:
+Time taken to diagonalize M_sector_H: 0.880
+Time taken for time evolution with this Hamiltonian in this M sector: 0.8706
+Hamiltonian #2:
+Time taken to diagonalize M_sector_H: 0.879
+Time taken for time evolution with this Hamiltonian in this M sector: 0.8810
+Hamiltonian #3:
+Time taken to diagonalize M_sector_H: 0.890
+Time taken for time evolution with this Hamiltonian in this M sector: 0.8400
+Hamiltonian #4:
+Time taken to diagonalize M_sector_H: 0.849
+Time taken for time evolution with this Hamiltonian in this M sector: 0.8495
+Hamiltonian #5:
+Time taken to diagonalize M_sector_H: 0.859
+Time taken for time evolution with this Hamiltonian in this M sector: 0.8612
+M sector dimension: 220
+Diagonalizing op_1 within sector
+Time taken to diagonalize op_1 within sector: 0.093
+number of op_1 eigenvalues in this M sector: 33
+Hamiltonian #0:
+Time taken to diagonalize M_sector_H: 0.204
+Time taken for time evolution with this Hamiltonian in this M sector: 24.6313
+Hamiltonian #1:
+Time taken to diagonalize M_sector_H: 24.731
+Time taken for time evolution with this Hamiltonian in this M sector: 24.6416
+Hamiltonian #2:
+Time taken to diagonalize M_sector_H: 24.748
+Time taken for time evolution with this Hamiltonian in this M sector: 24.7664
+Hamiltonian #3:
+Time taken to diagonalize M_sector_H: 24.870
+Time taken for time evolution with this Hamiltonian in this M sector: 24.5200
+Hamiltonian #4:
+Time taken to diagonalize M_sector_H: 24.606
+Time taken for time evolution with this Hamiltonian in this M sector: 24.6294
+Hamiltonian #5:
+Time taken to diagonalize M_sector_H: 24.734
+Time taken for time evolution with this Hamiltonian in this M sector: 24.6656
+M sector dimension: 495
+Diagonalizing op_1 within sector
+Time taken to diagonalize op_1 within sector: 0.819
+number of op_1 eigenvalues in this M sector: 43
+Hamiltonian #0:
+Time taken to diagonalize M_sector_H: 1.629
+Time taken for time evolution with this Hamiltonian in this M sector: 324.8673
+Hamiltonian #1:
+Time taken to diagonalize M_sector_H: 325.695
+Time taken for time evolution with this Hamiltonian in this M sector: 335.6176
+Hamiltonian #2:
+Time taken to diagonalize M_sector_H: 336.461
+Time taken for time evolution with this Hamiltonian in this M sector: 341.1593
+Hamiltonian #3:
+Time taken to diagonalize M_sector_H: 341.946
+Time taken for time evolution with this Hamiltonian in this M sector: 325.0486
+Hamiltonian #4:
+Time taken to diagonalize M_sector_H: 325.793
+Time taken for time evolution with this Hamiltonian in this M sector: 325.3153
+Hamiltonian #5:
+Time taken to diagonalize M_sector_H: 326.155
+Time taken for time evolution with this Hamiltonian in this M sector: 325.5584
+M sector dimension: 792
+Diagonalizing op_1 within sector
+Time taken to diagonalize op_1 within sector: 3.875
+number of op_1 eigenvalues in this M sector: 45
+Hamiltonian #0:
+Time taken to diagonalize M_sector_H: 6.505
+Time taken for time evolution with this Hamiltonian in this M sector: 1334.4931
+Hamiltonian #1:
+Time taken to diagonalize M_sector_H: 1337.126
+Time taken for time evolution with this Hamiltonian in this M sector: 1331.4352
+Hamiltonian #2:
+Time taken to diagonalize M_sector_H: 1334.063
+Time taken for time evolution with this Hamiltonian in this M sector: 1259.9167
+Hamiltonian #3:
+Time taken to diagonalize M_sector_H: 1262.380
+Time taken for time evolution with this Hamiltonian in this M sector: 1261.7100
+Hamiltonian #4:
+Time taken to diagonalize M_sector_H: 1264.201
+Time taken for time evolution with this Hamiltonian in this M sector: 1294.6871
+Hamiltonian #5:
+Time taken to diagonalize M_sector_H: 1297.265
+Time taken for time evolution with this Hamiltonian in this M sector: 1337.7581
+M sector dimension: 924
+Diagonalizing op_1 within sector
+Time taken to diagonalize op_1 within sector: 6.439
+number of op_1 eigenvalues in this M sector: 49
+Hamiltonian #0:
+Time taken to diagonalize M_sector_H: 10.294
+Time taken for time evolution with this Hamiltonian in this M sector: 2356.3363
+Hamiltonian #1:
+Time taken to diagonalize M_sector_H: 2360.167
+Time taken for time evolution with this Hamiltonian in this M sector: 2338.1473
+Hamiltonian #2:
+Time taken to diagonalize M_sector_H: 2342.157
+Time taken for time evolution with this Hamiltonian in this M sector: 2327.0801
+Hamiltonian #3:
+Time taken to diagonalize M_sector_H: 2331.164
+Time taken for time evolution with this Hamiltonian in this M sector: 2189.8088
+Hamiltonian #4:
+Time taken to diagonalize M_sector_H: 2193.374
+Time taken for time evolution with this Hamiltonian in this M sector: 2342.4075
+Hamiltonian #5:
+Time taken to diagonalize M_sector_H: 2346.568
+Time taken for time evolution with this Hamiltonian in this M sector: 2304.5934
+M sector dimension: 792
+Diagonalizing op_1 within sector
+Time taken to diagonalize op_1 within sector: 4.091
+number of op_1 eigenvalues in this M sector: 45
+Hamiltonian #0:
+Time taken to diagonalize M_sector_H: 6.941
+Time taken for time evolution with this Hamiltonian in this M sector: 1414.8031
+Hamiltonian #1:
+Time taken to diagonalize M_sector_H: 1417.619
+Time taken for time evolution with this Hamiltonian in this M sector: 1417.5077
+Hamiltonian #2:
+Time taken to diagonalize M_sector_H: 1420.294
+Time taken for time evolution with this Hamiltonian in this M sector: 1415.1766
+Hamiltonian #3:
+Time taken to diagonalize M_sector_H: 1418.125
+Time taken for time evolution with this Hamiltonian in this M sector: 1404.4978
+Hamiltonian #4:
+Time taken to diagonalize M_sector_H: 1407.328
+Time taken for time evolution with this Hamiltonian in this M sector: 1405.3139
+Hamiltonian #5:
+Time taken to diagonalize M_sector_H: 1408.195
+Time taken for time evolution with this Hamiltonian in this M sector: 1379.1406
+M sector dimension: 495
+Diagonalizing op_1 within sector
+Time taken to diagonalize op_1 within sector: 0.841
+number of op_1 eigenvalues in this M sector: 43
+Hamiltonian #0:
+Time taken to diagonalize M_sector_H: 1.599
+Time taken for time evolution with this Hamiltonian in this M sector: 340.3810
+Hamiltonian #1:
+Time taken to diagonalize M_sector_H: 341.199
+Time taken for time evolution with this Hamiltonian in this M sector: 343.7643
+Hamiltonian #2:
+Time taken to diagonalize M_sector_H: 344.568
+Time taken for time evolution with this Hamiltonian in this M sector: 341.8555
+Hamiltonian #3:
+Time taken to diagonalize M_sector_H: 342.643
+Time taken for time evolution with this Hamiltonian in this M sector: 339.9768
+Hamiltonian #4:
+Time taken to diagonalize M_sector_H: 340.801
+Time taken for time evolution with this Hamiltonian in this M sector: 339.2894
+Hamiltonian #5:
+Time taken to diagonalize M_sector_H: 340.098
+Time taken for time evolution with this Hamiltonian in this M sector: 346.1349
+M sector dimension: 220
+Diagonalizing op_1 within sector
+Time taken to diagonalize op_1 within sector: 0.114
+number of op_1 eigenvalues in this M sector: 33
+Hamiltonian #0:
+Time taken to diagonalize M_sector_H: 0.209
+Time taken for time evolution with this Hamiltonian in this M sector: 27.0733
+Hamiltonian #1:
+Time taken to diagonalize M_sector_H: 27.175
+Time taken for time evolution with this Hamiltonian in this M sector: 27.2868
+Hamiltonian #2:
+Time taken to diagonalize M_sector_H: 27.398
+Time taken for time evolution with this Hamiltonian in this M sector: 26.9329
+Hamiltonian #3:
+Time taken to diagonalize M_sector_H: 27.039
+Time taken for time evolution with this Hamiltonian in this M sector: 27.4081
+Hamiltonian #4:
+Time taken to diagonalize M_sector_H: 27.517
+Time taken for time evolution with this Hamiltonian in this M sector: 27.4806
+Hamiltonian #5:
+Time taken to diagonalize M_sector_H: 27.589
+Time taken for time evolution with this Hamiltonian in this M sector: 27.3839
+M sector dimension: 66
+Diagonalizing op_1 within sector
+Time taken to diagonalize op_1 within sector: 0.005
+number of op_1 eigenvalues in this M sector: 19
+Hamiltonian #0:
+Time taken to diagonalize M_sector_H: 0.012
+Time taken for time evolution with this Hamiltonian in this M sector: 0.8843
+Hamiltonian #1:
+Time taken to diagonalize M_sector_H: 0.891
+Time taken for time evolution with this Hamiltonian in this M sector: 0.8097
+Hamiltonian #2:
+Time taken to diagonalize M_sector_H: 0.818
+Time taken for time evolution with this Hamiltonian in this M sector: 0.8631
+Hamiltonian #3:
+Time taken to diagonalize M_sector_H: 0.872
+Time taken for time evolution with this Hamiltonian in this M sector: 0.8838
+Hamiltonian #4:
+Time taken to diagonalize M_sector_H: 0.893
+Time taken for time evolution with this Hamiltonian in this M sector: 0.8837
+Hamiltonian #5:
+Time taken to diagonalize M_sector_H: 0.893
+Time taken for time evolution with this Hamiltonian in this M sector: 0.8828
+M sector dimension: 12
+Diagonalizing op_1 within sector
+Time taken to diagonalize op_1 within sector: 0.010
+number of op_1 eigenvalues in this M sector: 7
+Hamiltonian #0:
+Time taken to diagonalize M_sector_H: 0.011
+Time taken for time evolution with this Hamiltonian in this M sector: 0.1172
+Hamiltonian #1:
+Time taken to diagonalize M_sector_H: 0.118
+Time taken for time evolution with this Hamiltonian in this M sector: 0.1169
+Hamiltonian #2:
+Time taken to diagonalize M_sector_H: 0.117
+Time taken for time evolution with this Hamiltonian in this M sector: 0.1172
+Hamiltonian #3:
+Time taken to diagonalize M_sector_H: 0.118
+Time taken for time evolution with this Hamiltonian in this M sector: 0.1172
+Hamiltonian #4:
+Time taken to diagonalize M_sector_H: 0.118
+Time taken for time evolution with this Hamiltonian in this M sector: 0.1170
+Hamiltonian #5:
+Time taken to diagonalize M_sector_H: 0.117
+Time taken for time evolution with this Hamiltonian in this M sector: 0.1166
+M sector dimension: 1
+Diagonalizing op_1 within sector
+Time taken to diagonalize op_1 within sector: 0.000
+number of op_1 eigenvalues in this M sector: 1
+Hamiltonian #0:
+Time taken to diagonalize M_sector_H: 0.001
+Time taken for time evolution with this Hamiltonian in this M sector: 0.0144
+Hamiltonian #1:
+Time taken to diagonalize M_sector_H: 0.015
+Time taken for time evolution with this Hamiltonian in this M sector: 0.0135
+Hamiltonian #2:
+Time taken to diagonalize M_sector_H: 0.014
+Time taken for time evolution with this Hamiltonian in this M sector: 0.0126
+Hamiltonian #3:
+Time taken to diagonalize M_sector_H: 0.013
+Time taken for time evolution with this Hamiltonian in this M sector: 0.0120
+Hamiltonian #4:
+Time taken to diagonalize M_sector_H: 0.012
+Time taken for time evolution with this Hamiltonian in this M sector: 0.0114
+Hamiltonian #5:
+Time taken to diagonalize M_sector_H: 0.012
+Time taken for time evolution with this Hamiltonian in this M sector: 0.0110
+Doing current-current ED took 57.014 per Hamiltonian per time_step

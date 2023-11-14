@@ -1,0 +1,2 @@
+/home/users/dylan24/HatanoNelson/GitHubPropotypeAlpha/function_definitions.py:273: ComplexWarning: Casting complex values to real discards the imaginary part
+  results_all_sectors[h,i] += (eigenvalue*op_1_sector_dimensions[n]/(2**L))*np.trace(density_matrix@M_sector_op_2)

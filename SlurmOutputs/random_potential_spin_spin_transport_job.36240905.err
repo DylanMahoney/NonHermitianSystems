@@ -1,0 +1,6 @@
+/home/users/dylan24/HatanoNelson/GitHubPropotypeAlpha/function_definitions.py:386: ComplexWarning: Casting complex values to real discards the imaginary part
+  results_all_sectors[j,i] += op_1_eval*op_1_dimension*EV/(2**L)
+/home/users/dylan24/HatanoNelson/GitHubPropotypeAlpha/function_definitions.py:386: ComplexWarning: Casting complex values to real discards the imaginary part
+  results_all_sectors[j,i] += op_1_eval*op_1_dimension*EV/(2**L)
+/var/spool/slurmd/job36240905/slurm_script: line 20: 52892 Killed                  python3.9 random_potential_spin_spin_transport.py
+slurmstepd: error: Detected 1 oom_kill event in StepId=36240905.batch. Some of the step tasks have been OOM Killed.
