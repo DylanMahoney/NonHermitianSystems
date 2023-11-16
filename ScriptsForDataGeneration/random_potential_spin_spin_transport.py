@@ -27,8 +27,9 @@ t = np.linspace(0,t_max,num_times)
 L_list = [18]#Jonas said 16 or 18 would be good
 Delta_1_list = [1,1.5]#[1,1.5]
 Delta_2 = 0
-num_runs = 50#INCREASE THIS to at least 50, ideally 100-200
-W_list = [0.5,1]#[0,0.5,1] #MAYBE CUT ONE OF THESE THREE VALUES LATER
+nonHermitian_num_runs = 50#INCREASE THIS to at least 50, ideally 100-200
+Hermitian_num_runs = 2 #We should need a lot fewer runs in the Hermitian case
+W_list = [0]#[0,0.5,1] #MAYBE CUT ONE OF THESE THREE VALUES LATER
 
 for L in L_list:
     M_projectors,M_dimensions = magnetization_projectors(L,return_dimensions=True)
@@ -43,6 +44,10 @@ for L in L_list:
         H_without_W_stuff = construct_HN_Ham(L,Delta_1 = Delta_1)
         for W in W_list:
             print("W=%.2f" % W)
+            if W > 0.0001:
+                num_runs = nonHermitian_num_runs
+            else:
+                num_runs = Hermitian_num_runs
             transport_results = np.zeros((num_runs,len(op_2_list),num_times))
             t0 = time.time()
             for run in range(num_runs): #average over the initial states and the random potentials at the same time, since the two integrals involved in averaging should commute
