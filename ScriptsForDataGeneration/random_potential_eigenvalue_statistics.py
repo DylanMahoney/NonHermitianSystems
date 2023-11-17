@@ -39,6 +39,7 @@ for W in W_list:
         local_potentials = 1j*np.random.uniform(low=-W,high=W,size=L)
         local_potential_term = gen_op_total([local_potentials[r]*spinz_list[r] for r in range(L)])
         H = H_without_W_stuff + local_potential_term
+
         z = get_zs_within_sector(H,projector)
         z_all_runs[run] = z
     z_filename = os.path.join(data_dir,'L=%iW=%.2f,%iruns_zs.npy' % (L,W,num_runs))

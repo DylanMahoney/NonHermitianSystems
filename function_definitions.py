@@ -4,6 +4,7 @@ import scipy.sparse.linalg as spalin
 import numpy as np
 from scipy import linalg
 import matplotlib.pyplot as plt
+import matplotlib.transforms as mtransforms
 import os
 import time
 
@@ -230,6 +231,15 @@ def get_fig_directory(current_directory,folder_name): #Figures go in the directo
     if not os.path.isdir(fig_dir):
         os.makedirs(fig_dir)
     return fig_dir
+def get_list_of_colors_I_like(num_colors):
+    return plt.get_cmap('viridis')(np.flip(np.linspace(0,(num_colors - 1)/num_colors,num_colors)))
+def add_letter_labels(fig,axs,x_trans,y_trans,annotation_list,white_labels=False):
+    color_letter = 'w' if white_labels else 'k'
+    annotation_list = [': %s' % annotation for annotation in annotation_list]
+    labels = [r'\textbf{(%c)}%s' % (chr(97+i),annotation_list[i]) for i in range(len(axs))]
+    for i,ax in enumerate(axs.flatten()):
+        trans = mtransforms.ScaledTranslation(x_trans/72, -y_trans/72, fig.dpi_scale_trans) #I definitely got this from somewhere but it seems like a small enough snippet that I don't need to credit it
+        ax.text(0.0, 1.0, labels[i], transform=ax.transAxes + trans, fontsize='large', verticalalignment='top',color=color_letter)
     
     
 def ED_correlator(op_1,op_2,t,H_list,L,M_projectors):

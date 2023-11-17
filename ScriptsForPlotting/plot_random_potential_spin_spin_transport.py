@@ -34,7 +34,7 @@ figure_width = 12
 #FIRST LET'S PLOT THE SAME-SITE CORRELATION AS A FUNCTION OF TIME
 fig,axs = plt.subplots(1,2,sharey=True)
 fig.set_size_inches(figure_width, figure_width/2)
-color_list = plt.get_cmap('viridis')(np.flip(np.linspace(0,0.66,3)))
+color_list = get_list_of_colors_I_like(num_colors)
 
 first_index = 5 #Later we might want to not show early times
 

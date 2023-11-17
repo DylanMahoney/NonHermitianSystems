@@ -27,9 +27,9 @@ t = np.linspace(0,t_max,num_times)
 L_list = [18]#Jonas said 16 or 18 would be good
 Delta_1_list = [1,1.5]#[1,1.5]
 Delta_2 = 0
-nonHermitian_num_runs = 50#INCREASE THIS to at least 50, ideally 100-200
+nonHermitian_num_runs = 200#INCREASE THIS to at least 50, ideally 100-200
 Hermitian_num_runs = 2 #We should need a lot fewer runs in the Hermitian case
-W_list = [0]#[0,0.5,1] #MAYBE CUT ONE OF THESE THREE VALUES LATER
+W_list = [0,0.5,1]#[0,0.5,1] #MAYBE CUT ONE OF THESE THREE VALUES LATER
 
 for L in L_list:
     M_projectors,M_dimensions = magnetization_projectors(L,return_dimensions=True)

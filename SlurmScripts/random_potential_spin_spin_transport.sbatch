@@ -2,7 +2,7 @@
 #SBATCH --job-name=random_potential_spin_spin_transport_job
 #SBATCH --output=../SlurmOutputs/random_potential_spin_spin_transport_job.%j.out
 #SBATCH --error=../SlurmOutputs/random_potential_spin_spin_transport_job.%j.err
-#SBATCH --time=20:00:00
+#SBATCH --time=12:00:00
 #SBATCH -c 1
 #SBATCH --mem=8GB
 #SBATCH --mail-type=all
@@ -19,4 +19,4 @@ pip3 install --user imageio
 
 python3.9 -u random_potential_spin_spin_transport.py
 
-#In this past this has run out of memory when given only 8GB
+#In this past this has run out of memory when given only 8GB, but later it seemed fine
