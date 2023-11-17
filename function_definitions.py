@@ -217,12 +217,20 @@ def biorthogonalize(L,R): #https://joshuagoings.com/2015/04/03/biorthogonalizing
     M_L,M_U = scipy.linalg.lu(M,permute_l=True)
     return np.linalg.inv(M_L)@L,R@np.linalg.inv(M_U)
 
+#I know it's sort of redundant to have both of the following two functions, but I subjectively prefer it this way
 def get_data_directory(current_directory,folder_name): #Data goes in the folder 'RawData' which which is in the parent directory of the working directory
     parent_directory = os.path.dirname(current_directory)
     data_dir = os.path.join(os.path.join(parent_directory,'RawData'),folder_name)
     if not os.path.isdir(data_dir):
         os.makedirs(data_dir)
     return data_dir
+def get_fig_directory(current_directory,folder_name): #Figures go in the directory 'Figures' which is in the parent directory of the working directory
+    parent_directory = os.path.dirname(current_directory)
+    fig_dir = os.path.join(os.path.join(parent_directory,'Figures'),folder_name)
+    if not os.path.isdir(fig_dir):
+        os.makedirs(fig_dir)
+    return fig_dir
+    
     
 def ED_correlator(op_1,op_2,t,H_list,L,M_projectors):
     num_times = t.size
