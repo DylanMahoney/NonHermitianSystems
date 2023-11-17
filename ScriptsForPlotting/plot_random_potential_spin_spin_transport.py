@@ -34,7 +34,6 @@ figure_width = 12
 #FIRST LET'S PLOT THE SAME-SITE CORRELATION AS A FUNCTION OF TIME
 fig,axs = plt.subplots(1,2,sharey=True)
 fig.set_size_inches(figure_width, figure_width/2)
-color_list = get_list_of_colors_I_like(num_colors)
 
 first_index = 5 #Later we might want to not show early times
 
@@ -42,6 +41,8 @@ Delta_1_list = [1,1.5]
 W_list = [0,0.5,1]
 nonHermitian_num_runs = 50#INCREASE THIS to at least 50, ideally 100-200
 Hermitian_num_runs = 2 #We should need a lot fewer runs in the Hermitian case
+
+color_list = get_list_of_colors_I_like(len(W_list))
 
 L = 18
 t_max = 20#20 or 30

@@ -1,0 +1,100 @@
+import sys
+import os
+
+current_directory = os.getcwd()
+parent_directory = os.path.dirname(current_directory)
+sys.path.append(parent_directory)
+
+from function_definitions import *
+import scipy
+import scipy.sparse as sparse
+import scipy.sparse.linalg as spalin
+import numpy as np #USE DTYPE np.cdouble FOR COMPLEX THINGS
+from scipy import linalg
+import matplotlib.pyplot as plt
+import matplotlib.transforms as mtransforms
+import time
+
+plt.rcParams['text.usetex'] = True
+rng = np.random.default_rng(2128971964) #WHO YOU GONNA CALL?
+plt.rc('text', usetex=True)
+plt.rcParams.update({
+    "text.usetex": True,
+    "font.family": "Computer Modern"
+})
+plt.rc('text.latex', preamble=r'\usepackage{amsmath,braket}')
+plt.rcParams['figure.constrained_layout.use'] = True
+
+folder_name = 'HNSpinSpinTransport'
+fig_dir = get_fig_directory(current_directory,folder_name)
+data_dir = get_data_directory(current_directory,folder_name)
+
+figure_width = 12
+
+#FIRST LET'S PLOT THE SAME-SITE CORRELATION AS A FUNCTION OF TIME
+fig,axs = plt.subplots(1,2,sharey=True)
+fig.set_size_inches(figure_width, figure_width/2)
+
+first_index = 0 #Later we might want to not show early times
+
+t_max = 20#20 or 30
+t_step = 0.1
+num_times = int(t_max/t_step)+1
+t = np.linspace(0,t_max,num_times)
+L = 20 #I also computed L=18 so that could be shown as a shadow
+#L = 22 needs more than 8GB RAM; 12GB is also not enough. EVEN 16GB IS NOT ENOUGH! Just do L = 18,20 for now
+g_list = [0,0.1,0.2]
+Delta_1 = 1.5
+Delta_2_list = [0,1.5]
+num_runs = 2
+
+color_list = get_list_of_colors_I_like(len(g_list))
+finite_size_eq = 1/(4*L)
+hydrodynamics_start_time_list = [3,4] #DETERMINED VIA EYEBALLS
+hydro_start_indices = [int(t/t_step) for t in hydrodynamics_start_time_list]
+
+
+for i,Delta_2 in enumerate(Delta_2_list):
+    #Do stuff to the ith Axis object
+    for j,g in enumerate(g_list):
+        data_filename = os.path.join(data_dir,'L=%ig=%.2fD1=%.2fD2=%.2f,%iruns_all_data.npy' % (L,g,Delta_1,Delta_2,num_runs))
+        data = np.load(data_filename)
+        first_run = data[0,L//2,:]
+        second_run = data[1,L//2,:]
+        #Let's cut off everything after one of the runs hits 1/(4*L) for visual cleanliness and typicality reliability
+        min_of_two_runs = np.minimum(first_run,second_run)
+        last_value = t.size - 1
+        if np.min(min_of_two_runs) <= finite_size_eq:
+            last_value = np.argmax(min_of_two_runs <= finite_size_eq) #First time it hits or drops below eq
+        
+        #Let's fit a power law to the average of the two runs, starting at hydro_start_index
+        #TODO: put this into a function so that I don't copy-paste a bunch of code for the other spin-spin transport figure
+        #TODO: verify that this does what it's supposed to while under less time pressure
+        hydro_start_index = hydro_start_indices[i]
+        avg_run = (first_run + second_run)/2 #THIS IS INELEGANT
+        starting_value = avg_run[hydro_start_index]
+        t0 = t[hydro_start_index]
+        def power_law_decay(t,alpha): # = const (t - t0)^{- \alpha}
+            return starting_value*t0**alpha*t**(-alpha)
+        popt,pcov = scipy.optimize.curve_fit(power_law_decay,t[hydro_start_index+1:last_value],avg_run[hydro_start_index+1:last_value],p0=0.66)
+        optimal_alpha = popt[0]
+        axs[i].plot(t[hydro_start_index+1:last_value],power_law_decay(t[hydro_start_index+1:last_value],optimal_alpha),linestyle='--',label='slope %.4f' % optimal_alpha,color=color_list[j])
+        
+        axs[i].plot(t[first_index:last_value+1],first_run[first_index:last_value+1],label="g = %.1f" % g,color=color_list[j])
+        axs[i].plot(t[first_index:last_value+1],second_run[first_index:last_value+1],color=color_list[j])
+    axs[i].axhline(y=finite_size_eq,color='k',label=r'$\frac{1}{4L}$')
+
+axs[0].set_ylabel("$C_{ss}(t)$",fontsize=14)
+for ax in axs.flatten():
+    ax.set_xlabel("$t$")
+    ax.set_xscale('log')
+    ax.set_yscale('log')
+
+axs[0].legend(markerfirst=False,frameon=False)
+axs[1].legend(markerfirst=False,frameon=False)
+add_letter_labels(fig,axs,110,144,[r'$\Delta_2 = 0$',r'$\Delta_2 = 1.5$'],white_labels=False)
+filename = os.path.join(fig_dir,'HN_spin_spin_same_site.png')
+
+fig.set_size_inches(figure_width,figure_width/2)
+fig.savefig(filename,dpi=120)
+plt.close(fig)
