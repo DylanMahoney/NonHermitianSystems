@@ -38,8 +38,8 @@ fig.set_size_inches(figure_width, figure_width/2)
 first_index = 5 #Later we might want to not show early times
 
 Delta_1_list = [1,1.5]
-W_list = [0,0.5,1]
-nonHermitian_num_runs = 50#INCREASE THIS to at least 50, ideally 100-200
+W_list = [0,0.5]#[0,0.5,1]
+nonHermitian_num_runs = 200#INCREASE THIS to at least 50, ideally 100-200
 Hermitian_num_runs = 2 #We should need a lot fewer runs in the Hermitian case
 
 color_list = get_list_of_colors_I_like(len(W_list))
@@ -83,7 +83,7 @@ for i,ax in enumerate(axs):
     trans = mtransforms.ScaledTranslation(10/72, -30/72, fig.dpi_scale_trans)
     ax.text(0.0, 1.0, labels[i], transform=ax.transAxes + trans,
             fontsize='large', verticalalignment='top',fontweight='bold') #removed fontfamily = 'serif' #removed bbox=dict(facecolor='1.0', edgecolor='none', pad=3.0)
-filename = os.path.join(fig_dir,'random_potential_spin_spin_same_site.png')
+filename = os.path.join(fig_dir,'random_potential_spin_spin_same_site_no_W=1_ran_out_of_time.png')
 
 fig.savefig(filename,dpi=120)
 plt.close(fig)

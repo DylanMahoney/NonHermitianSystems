@@ -38,7 +38,7 @@ t_step = 0.5
 num_times = int(t_max/t_step)+1
 t = np.linspace(0,t_max,num_times)
 L_list = [8,10,12]#bring up to 14 or so
-g = 0.2 #g = 0 and g=0.1 also available
+g = 0.1 #g = 0 and g=0.1 also available
 Delta_1 = 1.5
 Delta_2_list = [0,1.5]#[0,1.5]
 fig,axs = plt.subplots(1,2,sharey=True)
@@ -70,7 +70,7 @@ for i,ax in enumerate(axs):
     trans = mtransforms.ScaledTranslation(10/72, -10/72, fig.dpi_scale_trans)
     ax.text(0.0, 1.0, labels[i], transform=ax.transAxes + trans,
             fontsize='large', verticalalignment='top',fontweight='bold') #removed fontfamily = 'serif' #removed bbox=dict(facecolor='1.0', edgecolor='none', pad=3.0)
-filename = os.path.join(fig_dir,'HN_current_current_transport.png')
+filename = os.path.join(fig_dir,'HN_current_current_transportg=0.1.png')
 
 fig.savefig(filename,dpi=120)
 plt.close(fig)
