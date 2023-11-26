@@ -1,0 +1,21 @@
+Requirement already satisfied: imageio in /home/users/dylan24/.local/lib/python3.9/site-packages (2.31.1)
+Requirement already satisfied: numpy in /share/software/user/open/py-numpy/1.24.2_py39/lib/python3.9/site-packages (from imageio) (1.24.2)
+Requirement already satisfied: pillow>=8.3.2 in /share/software/user/open/py-matplotlib/3.7.1_py39/lib/python3.9/site-packages (from imageio) (9.5.0)
+L = 18, g=0.00, Delta_1 = 1.50, Delta_2=0.00 Started
+L = 18, g=0.10, Delta_1 = 1.50, Delta_2=0.00 Started
+L = 18, g=0.20, Delta_1 = 1.50, Delta_2=0.00 Started
+Sector dimension: 2424
+Sector dimension: 2424
+Sector dimension: 2424
+L = 18, g=0.00, Delta_1 = 1.50, Delta_2=0.00 Time taken to get z's: 28.0659
+L = 18, g=0.10, Delta_1 = 1.50, Delta_2=0.00 Time taken to get z's: 29.4780
+L = 18, g=0.10, Delta_1 = 1.50, Delta_2=1.50 Started
+L = 18, g=0.20, Delta_1 = 1.50, Delta_2=1.50 Started
+L = 18, g=0.20, Delta_1 = 1.50, Delta_2=0.00 Time taken to get z's: 29.9196
+L = 18, g=0.00, Delta_1 = 1.50, Delta_2=1.50 Started
+Sector dimension: 2424
+Sector dimension: 2424
+Sector dimension: 2424
+L = 18, g=0.10, Delta_1 = 1.50, Delta_2=1.50 Time taken to get z's: 28.0872
+L = 18, g=0.20, Delta_1 = 1.50, Delta_2=1.50 Time taken to get z's: 29.2415
+L = 18, g=0.00, Delta_1 = 1.50, Delta_2=1.50 Time taken to get z's: 30.1715

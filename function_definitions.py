@@ -236,7 +236,7 @@ def get_list_of_colors_I_like(num_colors):
 def add_letter_labels(fig,axs,x_trans,y_trans,annotation_list,white_labels=False):
     color_letter = 'w' if white_labels else 'k'
     annotation_list = [': %s' % annotation for annotation in annotation_list]
-    labels = [r'\textbf{(%c)}%s' % (chr(97+i),annotation_list[i]) for i in range(len(axs))]
+    labels = [r'\textbf{(%c)}%s' % (chr(97+i),annotation_list[i]) for i in range(axs.size)]
     for i,ax in enumerate(axs.flatten()):
         trans = mtransforms.ScaledTranslation(x_trans/72, -y_trans/72, fig.dpi_scale_trans) #I definitely got this from somewhere but it seems like a small enough snippet that I don't need to credit it
         ax.text(0.0, 1.0, labels[i], transform=ax.transAxes + trans, fontsize='large', verticalalignment='top',color=color_letter)
@@ -426,14 +426,14 @@ def evals_to_zs(evals):
         z[k] = (NN - lam)/(NNN - lam)
     return z
 
-def get_zs_within_sector(H,projector):
+def get_zs_within_sector(H,projector): #also returns eigenvalues
     
     sector_H = projector@H@np.conj(projector.T)
     print("Sector dimension: %i" % sector_H.shape[0])
 
     evals = np.linalg.eigvals(sector_H.toarray())
     z = evals_to_zs(evals)
-    return z
+    return z,evals
 
 def get_biortho_evecs(H):
     evals, matrix_of_left_eigenvectors, matrix_of_right_eigenvectors = scipy.linalg.eig(H, left=True)

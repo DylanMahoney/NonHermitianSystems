@@ -1,0 +1,38 @@
+usage: HN_eigenvalue_statistics.py [-h] [--g G] [--L L] [--D1 D1] [--D2 D2]
+HN_eigenvalue_statistics.py: error: unrecognized arguments: -u
+srun: error: sh02-01n38: task 0: Exited with exit code 2
+srun: Terminating StepId=36728098.0
+srun: Job 36728098 step creation temporarily disabled, retrying (Requested nodes are busy)
+srun: Job 36728098 step creation temporarily disabled, retrying (Requested nodes are busy)
+srun: Job 36728098 step creation temporarily disabled, retrying (Requested nodes are busy)
+srun: Job 36728098 step creation temporarily disabled, retrying (Requested nodes are busy)
+srun: Step created for StepId=36728098.2
+usage: HN_eigenvalue_statistics.py [-h] [--g G] [--L L] [--D1 D1] [--D2 D2]
+HN_eigenvalue_statistics.py: error: unrecognized arguments: -u
+usage: HN_eigenvalue_statistics.py [-h] [--g G] [--L L] [--D1 D1] [--D2 D2]
+HN_eigenvalue_statistics.py: error: unrecognized arguments: -u
+srun: error: sh02-01n42: task 0: Exited with exit code 2
+srun: Terminating StepId=36728098.1
+srun: error: sh02-01n38: task 0: Exited with exit code 2
+srun: Terminating StepId=36728098.2
+srun: Job 36728098 step creation still disabled, retrying (Requested nodes are busy)
+srun: Job 36728098 step creation still disabled, retrying (Requested nodes are busy)
+srun: Job 36728098 step creation still disabled, retrying (Requested nodes are busy)
+srun: Step created for StepId=36728098.3
+srun: Job 36728098 step creation still disabled, retrying (Requested nodes are busy)
+srun: Job 36728098 step creation still disabled, retrying (Requested nodes are busy)
+srun: Step created for StepId=36728098.4
+usage: HN_eigenvalue_statistics.py [-h] [--g G] [--L L] [--D1 D1] [--D2 D2]
+HN_eigenvalue_statistics.py: error: unrecognized arguments: -u
+usage: HN_eigenvalue_statistics.py [-h] [--g G] [--L L] [--D1 D1] [--D2 D2]
+HN_eigenvalue_statistics.py: error: unrecognized arguments: -u
+srun: error: sh02-01n42: task 0: Exited with exit code 2
+srun: Terminating StepId=36728098.3
+srun: error: sh02-01n38: task 0: Exited with exit code 2
+srun: Terminating StepId=36728098.4
+srun: Job 36728098 step creation still disabled, retrying (Requested nodes are busy)
+srun: Step created for StepId=36728098.5
+usage: HN_eigenvalue_statistics.py [-h] [--g G] [--L L] [--D1 D1] [--D2 D2]
+HN_eigenvalue_statistics.py: error: unrecognized arguments: -u
+srun: error: sh02-01n42: task 0: Exited with exit code 2
+srun: Terminating StepId=36728098.5

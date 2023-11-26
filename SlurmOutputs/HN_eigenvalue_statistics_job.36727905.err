@@ -1,0 +1,47 @@
+srun: warning: can't run 1 processes on 5 nodes, setting nnodes to 1
+srun: warning: can't run 1 processes on 5 nodes, setting nnodes to 1
+srun: warning: can't run 1 processes on 5 nodes, setting nnodes to 1
+srun: warning: can't run 1 processes on 5 nodes, setting nnodes to 1
+srun: warning: can't run 1 processes on 5 nodes, setting nnodes to 1
+srun: warning: can't run 1 processes on 5 nodes, setting nnodes to 1
+srun: warning: can't run 1 processes on 5 nodes, setting nnodes to 1
+srun: warning: can't run 1 processes on 5 nodes, setting nnodes to 1
+srun: warning: can't run 1 processes on 5 nodes, setting nnodes to 1
+srun: warning: can't run 1 processes on 5 nodes, setting nnodes to 1
+srun: warning: can't run 1 processes on 5 nodes, setting nnodes to 1
+srun: warning: can't run 1 processes on 5 nodes, setting nnodes to 1
+srun: Job 36727905 step creation temporarily disabled, retrying (Requested nodes are busy)
+srun: Job 36727905 step creation temporarily disabled, retrying (Requested nodes are busy)
+srun: Job 36727905 step creation temporarily disabled, retrying (Requested nodes are busy)
+srun: Job 36727905 step creation temporarily disabled, retrying (Requested nodes are busy)
+srun: Job 36727905 step creation temporarily disabled, retrying (Requested nodes are busy)
+srun: Job 36727905 step creation temporarily disabled, retrying (Requested nodes are busy)
+srun: Job 36727905 step creation temporarily disabled, retrying (Requested nodes are busy)
+srun: Step created for StepId=36727905.5
+srun: Job 36727905 step creation still disabled, retrying (Requested nodes are busy)
+srun: Job 36727905 step creation still disabled, retrying (Requested nodes are busy)
+srun: Job 36727905 step creation still disabled, retrying (Requested nodes are busy)
+srun: Job 36727905 step creation still disabled, retrying (Requested nodes are busy)
+srun: Job 36727905 step creation still disabled, retrying (Requested nodes are busy)
+srun: Job 36727905 step creation still disabled, retrying (Requested nodes are busy)
+srun: Step created for StepId=36727905.6
+srun: Job 36727905 step creation still disabled, retrying (Requested nodes are busy)
+srun: Job 36727905 step creation still disabled, retrying (Requested nodes are busy)
+srun: Job 36727905 step creation still disabled, retrying (Requested nodes are busy)
+srun: Job 36727905 step creation still disabled, retrying (Requested nodes are busy)
+srun: Job 36727905 step creation still disabled, retrying (Requested nodes are busy)
+srun: Step created for StepId=36727905.7
+srun: Job 36727905 step creation still disabled, retrying (Requested nodes are busy)
+srun: Job 36727905 step creation still disabled, retrying (Requested nodes are busy)
+srun: Job 36727905 step creation still disabled, retrying (Requested nodes are busy)
+srun: Job 36727905 step creation still disabled, retrying (Requested nodes are busy)
+srun: Step created for StepId=36727905.8
+srun: Job 36727905 step creation still disabled, retrying (Requested nodes are busy)
+srun: Job 36727905 step creation still disabled, retrying (Requested nodes are busy)
+srun: Job 36727905 step creation still disabled, retrying (Requested nodes are busy)
+srun: Step created for StepId=36727905.9
+srun: Job 36727905 step creation still disabled, retrying (Requested nodes are busy)
+srun: Job 36727905 step creation still disabled, retrying (Requested nodes are busy)
+srun: Step created for StepId=36727905.10
+srun: Job 36727905 step creation still disabled, retrying (Requested nodes are busy)
+srun: Step created for StepId=36727905.11

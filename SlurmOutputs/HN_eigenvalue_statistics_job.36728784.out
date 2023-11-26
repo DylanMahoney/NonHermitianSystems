@@ -1,0 +1,57 @@
+Requirement already satisfied: imageio in /home/users/dylan24/.local/lib/python3.9/site-packages (2.31.1)
+Requirement already satisfied: numpy in /share/software/user/open/py-numpy/1.24.2_py39/lib/python3.9/site-packages (from imageio) (1.24.2)
+Requirement already satisfied: pillow>=8.3.2 in /share/software/user/open/py-matplotlib/3.7.1_py39/lib/python3.9/site-packages (from imageio) (9.5.0)
+L = 16, g=0.10, Delta_1 = 1.50, Delta_2=1.50 Started
+L = 16, g=0.20, Delta_1 = 1.50, Delta_2=1.50 Started
+L = 16, g=0.00, Delta_1 = 1.50, Delta_2=1.50 Started
+L = 16, g=0.20, Delta_1 = 1.50, Delta_2=0.00 Started
+L = 16, g=0.00, Delta_1 = 1.50, Delta_2=0.00 Started
+Sector dimension: 715
+Sector dimension: 715
+Sector dimension: 715
+L = 16, g=0.10, Delta_1 = 1.50, Delta_2=0.00 Started
+Sector dimension: 715
+L = 16, g=0.10, Delta_1 = 1.50, Delta_2=1.50 Time taken to get z's: 3.0991
+L = 16, g=0.00, Delta_1 = 1.50, Delta_2=1.50 Time taken to get z's: 3.0793
+L = 16, g=0.20, Delta_1 = 1.50, Delta_2=1.50 Time taken to get z's: 3.3267
+L = 16, g=0.20, Delta_1 = 1.50, Delta_2=0.00 Time taken to get z's: 3.1950
+Sector dimension: 715
+Sector dimension: 715
+L = 16, g=0.00, Delta_1 = 1.50, Delta_2=0.00 Time taken to get z's: 3.2258
+L = 16, g=0.10, Delta_1 = 1.50, Delta_2=0.00 Time taken to get z's: 3.4459
+L = 18, g=0.20, Delta_1 = 1.50, Delta_2=0.00 Started
+L = 18, g=0.00, Delta_1 = 1.50, Delta_2=1.50 Started
+L = 18, g=0.20, Delta_1 = 1.50, Delta_2=1.50 Started
+L = 18, g=0.10, Delta_1 = 1.50, Delta_2=0.00 Started
+L = 18, g=0.00, Delta_1 = 1.50, Delta_2=0.00 Started
+L = 18, g=0.10, Delta_1 = 1.50, Delta_2=1.50 Started
+Sector dimension: 2424
+Sector dimension: 2424
+Sector dimension: 2424
+Sector dimension: 2424
+Sector dimension: 2424
+Sector dimension: 2424
+L = 18, g=0.20, Delta_1 = 1.50, Delta_2=1.50 Time taken to get z's: 27.2029
+L = 18, g=0.20, Delta_1 = 1.50, Delta_2=0.00 Time taken to get z's: 27.7939
+L = 18, g=0.00, Delta_1 = 1.50, Delta_2=1.50 Time taken to get z's: 29.2157
+L = 18, g=0.10, Delta_1 = 1.50, Delta_2=0.00 Time taken to get z's: 29.3753
+L = 18, g=0.00, Delta_1 = 1.50, Delta_2=0.00 Time taken to get z's: 29.3649
+L = 18, g=0.10, Delta_1 = 1.50, Delta_2=1.50 Time taken to get z's: 29.9717
+L = 18, g=0.10, Delta_1 = 1.50, Delta_2=1.50 Started
+L = 18, g=0.00, Delta_1 = 1.50, Delta_2=1.50 Started
+L = 18, g=0.20, Delta_1 = 1.50, Delta_2=0.00 Started
+L = 18, g=0.20, Delta_1 = 1.50, Delta_2=1.50 Started
+L = 18, g=0.00, Delta_1 = 1.50, Delta_2=0.00 Started
+L = 18, g=0.10, Delta_1 = 1.50, Delta_2=0.00 Started
+Sector dimension: 2424
+Sector dimension: 2424
+Sector dimension: 2424
+Sector dimension: 2424
+Sector dimension: 2424
+Sector dimension: 2424
+L = 18, g=0.20, Delta_1 = 1.50, Delta_2=1.50 Time taken to get z's: 27.1153
+L = 18, g=0.10, Delta_1 = 1.50, Delta_2=1.50 Time taken to get z's: 28.1636
+L = 18, g=0.00, Delta_1 = 1.50, Delta_2=1.50 Time taken to get z's: 29.2562
+L = 18, g=0.00, Delta_1 = 1.50, Delta_2=0.00 Time taken to get z's: 29.1889
+L = 18, g=0.10, Delta_1 = 1.50, Delta_2=0.00 Time taken to get z's: 29.3144
+L = 18, g=0.20, Delta_1 = 1.50, Delta_2=0.00 Time taken to get z's: 29.4424
