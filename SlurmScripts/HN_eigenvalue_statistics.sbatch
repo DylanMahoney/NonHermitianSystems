@@ -19,6 +19,9 @@ ml load py-matplotlib/3.7.1_py39
 ml load py-scipy/1.10.1_py39
 pip3 install --user imageio
 
+#I gave this 16 hours but it actually only took 09:16:36
+#But this depended very strongly on me giving each diagonalization two CPU's
+
 for L in 16 18 20 22
 do
  for g in 0 0.1 0.2 #3 g's

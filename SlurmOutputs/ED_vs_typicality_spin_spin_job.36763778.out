@@ -1,0 +1,7 @@
+Requirement already satisfied: imageio in /home/users/dylan24/.local/lib/python3.9/site-packages (2.31.1)
+Requirement already satisfied: numpy in /share/software/user/open/py-numpy/1.24.2_py39/lib/python3.9/site-packages (from imageio) (1.24.2)
+Requirement already satisfied: pillow>=8.3.2 in /share/software/user/open/py-matplotlib/3.7.1_py39/lib/python3.9/site-packages (from imageio) (9.5.0)
+L=10,Delta_1=1.50,Delta_2=0.00,g = 0.20
+Doing ED
+L=10,Delta_1=1.50,Delta_2=0.00,g = 0.00
+Doing ED

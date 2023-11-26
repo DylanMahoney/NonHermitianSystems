@@ -242,58 +242,56 @@ def add_letter_labels(fig,axs,x_trans,y_trans,annotation_list,white_labels=False
         ax.text(0.0, 1.0, labels[i], transform=ax.transAxes + trans, fontsize='large', verticalalignment='top',color=color_letter)
     
     
-def ED_correlator(op_1,op_2,t,H_list,L,M_projectors):
+def ED_correlator(op_1_evals_list,op_1_projectors_list,op_1_sector_dimensions_list,op_1,op_2,t,H,L,M_projectors):
     num_times = t.size
     num_M_sectors = len(M_projectors)
-    results_all_sectors = np.zeros((len(H_list),num_times))
+    results_all_sectors = np.zeros(num_times)
     
     #IN GENERAL, FOR TRACING SPARSE MATRICES, USE csr_matrix.trace(offset=0) INSTEAD OF NP.TRACE
     for M_sector_index,M_projector in enumerate(M_projectors):
-        M_sector_H_list = [M_projector@H@np.conj(M_projector.T) for H in H_list]
+        M_sector_H = M_projector@H@np.conj(M_projector.T)
         M_sector_op_2 = M_projector@op_2@np.conj(M_projector.T)
         M_sector_op_1 = M_projector@op_1@np.conj(M_projector.T)
         
-        M_sector_dimension = M_sector_H_list[0].shape[0]
+        M_sector_dimension = M_sector_H.shape[0]
         print("M sector dimension: %i" % M_sector_dimension)
-        print("Diagonalizing op_1 within sector")
-        t0 = time.time()
-        unique_evals,op_1_projectors,op_1_sector_dimensions = diagonalize_operator(M_sector_op_1)
+        unique_evals,op_1_projectors,op_1_sector_dimensions = op_1_evals_list[M_sector_index],op_1_projectors_list[M_sector_index],op_1_sector_dimensions_list[M_sector_index]
         op_1_sector_dimensions = np.asarray(op_1_sector_dimensions)
 
-        t1 = time.time()
-        time_taken = t1 - t0
-        print("Time taken to diagonalize op_1 within sector: %.3f" %time_taken)
         print("number of op_1 eigenvalues in this M sector: %i" % len(unique_evals))
         
-        for h,M_sector_H in enumerate(M_sector_H_list):
-            print("Hamiltonian #%i:" % h)
-            evals,U = np.linalg.eig(M_sector_H.toarray())
-            D = np.diag(evals)
-            U_inv = np.linalg.inv(U)
-            U_dag = np.conj(U.T)
-            U_dag_inv = np.linalg.inv(U_dag)
-            t1 = time.time()
-            time_taken = t1 - t0
-            print("Time taken to diagonalize M_sector_H: %.3f" % time_taken)
-            t0 = time.time()
-            
-            Delta_t = t[1] - t[0] #THIS CODE ASSUMES T VALUES ARE EVENLY SPACED
-            matrix_for_t_evolution = U@np.diag(np.exp(-1j*evals*Delta_t))@U_inv
-            conjugate_matrix_for_t_evolution = np.conj(matrix_for_t_evolution.T)
+        t0 = time.time()
+        evals,U = np.linalg.eig(M_sector_H.toarray())
+        D = np.diag(evals)
+        U_inv = np.linalg.inv(U)
+        U_dag = np.conj(U.T)
+        U_dag_inv = np.linalg.inv(U_dag)
+        t1 = time.time()
+        time_taken = t1 - t0
+        print("Time taken to diagonalize M_sector_H: %.3f" % time_taken)
+        t0 = time.time()
+        
+        Delta_t = t[1] - t[0] #THIS CODE ASSUMES T VALUES ARE EVENLY SPACED
+        matrix_for_t_evolution = U@np.diag(np.exp(-1j*evals*Delta_t))@U_inv
+        conjugate_matrix_for_t_evolution = np.conj(matrix_for_t_evolution.T)
 
-            for n,eigenvalue in enumerate(unique_evals):
-                density_matrix = op_1_projectors[n]/np.trace(op_1_projectors[n])
-            
-                for i,t_value in enumerate(t):
-                    if i>0:
-                        density_matrix = matrix_for_t_evolution@density_matrix@np.conj(matrix_for_t_evolution.T)
-                        density_matrix = density_matrix/np.trace(density_matrix)
-                    results_all_sectors[h,i] += (eigenvalue*op_1_sector_dimensions[n]/(2**L))*np.trace(density_matrix@M_sector_op_2)
-            
-            t1 = time.time()
-            time_taken = t1 - t0
-            print("Time taken for time evolution with this Hamiltonian in this M sector: %.4f" % time_taken)
-                
+        for n,eigenvalue in enumerate(unique_evals):
+            density_matrix = op_1_projectors[n]/np.trace(op_1_projectors[n])
+            print("Eigenvalue %i" % n)
+        
+            for i,t_value in enumerate(t):
+                if i>0:
+                    density_matrix = matrix_for_t_evolution@density_matrix@np.conj(matrix_for_t_evolution.T)
+                    renormalization_factor = np.trace(density_matrix)
+                    if renormalization_factor > 10 or renormalization_factor < 0.1:
+                        factor = renormalization_factor/M_sector_dimension
+                        print("UH OH! The trace of the density matrix changed by more than 10x in a single time step... %.3f" % factor)
+                    density_matrix = density_matrix/renormalization_factor
+                results_all_sectors[i] += (eigenvalue*op_1_sector_dimensions[n]/(2**L))*np.trace(density_matrix@M_sector_op_2)
+        
+        t1 = time.time()
+        time_taken_per_tstep = (t1 - t0)/t.size
+        print("Time taken for time evolution per time step in this M sector: %.4f" % time_taken_per_tstep)
                 
     return results_all_sectors
     

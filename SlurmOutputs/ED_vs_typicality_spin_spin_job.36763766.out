@@ -1,0 +1,477 @@
+Requirement already satisfied: imageio in /home/users/dylan24/.local/lib/python3.9/site-packages (2.31.1)
+Requirement already satisfied: numpy in /share/software/user/open/py-numpy/1.24.2_py39/lib/python3.9/site-packages (from imageio) (1.24.2)
+Requirement already satisfied: pillow>=8.3.2 in /share/software/user/open/py-matplotlib/3.7.1_py39/lib/python3.9/site-packages (from imageio) (9.5.0)
+L=10,Delta_1=1.00,Delta_2=0.00,g = 0.00
+Doing ED
+M sector dimension: 1
+number of op_1 eigenvalues in this M sector: 1
+Time taken to diagonalize M_sector_H: 0.068
+Eigenvalue 0
+Time taken for time evolution per time step in this M sector: 0.0008
+M sector dimension: 10
+number of op_1 eigenvalues in this M sector: 5
+Time taken to diagonalize M_sector_H: 0.000
+Eigenvalue 0
+Eigenvalue 1
+Eigenvalue 2
+Eigenvalue 3
+Eigenvalue 4
+Time taken for time evolution per time step in this M sector: 0.0015
+M sector dimension: 45
+number of op_1 eigenvalues in this M sector: 17
+Time taken to diagonalize M_sector_H: 0.004
+Eigenvalue 0
+Eigenvalue 1
+Eigenvalue 2
+Eigenvalue 3
+Eigenvalue 4
+Eigenvalue 5
+Eigenvalue 6
+Eigenvalue 7
+Eigenvalue 8
+Eigenvalue 9
+Eigenvalue 10
+Eigenvalue 11
+Eigenvalue 12
+Eigenvalue 13
+Eigenvalue 14
+Eigenvalue 15
+Eigenvalue 16
+Time taken for time evolution per time step in this M sector: 0.0082
+M sector dimension: 120
+number of op_1 eigenvalues in this M sector: 21
+Time taken to diagonalize M_sector_H: 0.058
+Eigenvalue 0
+Eigenvalue 1
+Eigenvalue 2
+Eigenvalue 3
+Eigenvalue 4
+Eigenvalue 5
+Eigenvalue 6
+Eigenvalue 7
+Eigenvalue 8
+Eigenvalue 9
+Eigenvalue 10
+Eigenvalue 11
+Eigenvalue 12
+Eigenvalue 13
+Eigenvalue 14
+Eigenvalue 15
+Eigenvalue 16
+Eigenvalue 17
+Eigenvalue 18
+Eigenvalue 19
+Eigenvalue 20
+Time taken for time evolution per time step in this M sector: 0.0376
+M sector dimension: 210
+number of op_1 eigenvalues in this M sector: 37
+Time taken to diagonalize M_sector_H: 0.109
+Eigenvalue 0
+Eigenvalue 1
+Eigenvalue 2
+Eigenvalue 3
+Eigenvalue 4
+Eigenvalue 5
+Eigenvalue 6
+Eigenvalue 7
+Eigenvalue 8
+Eigenvalue 9
+Eigenvalue 10
+Eigenvalue 11
+Eigenvalue 12
+Eigenvalue 13
+Eigenvalue 14
+Eigenvalue 15
+Eigenvalue 16
+Eigenvalue 17
+Eigenvalue 18
+Eigenvalue 19
+Eigenvalue 20
+Eigenvalue 21
+Eigenvalue 22
+Eigenvalue 23
+Eigenvalue 24
+Eigenvalue 25
+Eigenvalue 26
+Eigenvalue 27
+Eigenvalue 28
+Eigenvalue 29
+Eigenvalue 30
+Eigenvalue 31
+Eigenvalue 32
+Eigenvalue 33
+Eigenvalue 34
+Eigenvalue 35
+Eigenvalue 36
+Time taken for time evolution per time step in this M sector: 0.1894
+M sector dimension: 252
+number of op_1 eigenvalues in this M sector: 25
+Time taken to diagonalize M_sector_H: 0.103
+Eigenvalue 0
+Eigenvalue 1
+Eigenvalue 2
+Eigenvalue 3
+Eigenvalue 4
+Eigenvalue 5
+Eigenvalue 6
+Eigenvalue 7
+Eigenvalue 8
+Eigenvalue 9
+Eigenvalue 10
+Eigenvalue 11
+Eigenvalue 12
+Eigenvalue 13
+Eigenvalue 14
+Eigenvalue 15
+Eigenvalue 16
+Eigenvalue 17
+Eigenvalue 18
+Eigenvalue 19
+Eigenvalue 20
+Eigenvalue 21
+Eigenvalue 22
+Eigenvalue 23
+Eigenvalue 24
+Time taken for time evolution per time step in this M sector: 0.1825
+M sector dimension: 210
+number of op_1 eigenvalues in this M sector: 37
+Time taken to diagonalize M_sector_H: 0.070
+Eigenvalue 0
+Eigenvalue 1
+Eigenvalue 2
+Eigenvalue 3
+Eigenvalue 4
+Eigenvalue 5
+Eigenvalue 6
+Eigenvalue 7
+Eigenvalue 8
+Eigenvalue 9
+Eigenvalue 10
+Eigenvalue 11
+Eigenvalue 12
+Eigenvalue 13
+Eigenvalue 14
+Eigenvalue 15
+Eigenvalue 16
+Eigenvalue 17
+Eigenvalue 18
+Eigenvalue 19
+Eigenvalue 20
+Eigenvalue 21
+Eigenvalue 22
+Eigenvalue 23
+Eigenvalue 24
+Eigenvalue 25
+Eigenvalue 26
+Eigenvalue 27
+Eigenvalue 28
+Eigenvalue 29
+Eigenvalue 30
+Eigenvalue 31
+Eigenvalue 32
+Eigenvalue 33
+Eigenvalue 34
+Eigenvalue 35
+Eigenvalue 36
+Time taken for time evolution per time step in this M sector: 0.1629
+M sector dimension: 120
+number of op_1 eigenvalues in this M sector: 21
+Time taken to diagonalize M_sector_H: 0.024
+Eigenvalue 0
+Eigenvalue 1
+Eigenvalue 2
+Eigenvalue 3
+Eigenvalue 4
+Eigenvalue 5
+Eigenvalue 6
+Eigenvalue 7
+Eigenvalue 8
+Eigenvalue 9
+Eigenvalue 10
+Eigenvalue 11
+Eigenvalue 12
+Eigenvalue 13
+Eigenvalue 14
+Eigenvalue 15
+Eigenvalue 16
+Eigenvalue 17
+Eigenvalue 18
+Eigenvalue 19
+Eigenvalue 20
+Time taken for time evolution per time step in this M sector: 0.0220
+M sector dimension: 45
+number of op_1 eigenvalues in this M sector: 17
+Time taken to diagonalize M_sector_H: 0.002
+Eigenvalue 0
+Eigenvalue 1
+Eigenvalue 2
+Eigenvalue 3
+Eigenvalue 4
+Eigenvalue 5
+Eigenvalue 6
+Eigenvalue 7
+Eigenvalue 8
+Eigenvalue 9
+Eigenvalue 10
+Eigenvalue 11
+Eigenvalue 12
+Eigenvalue 13
+Eigenvalue 14
+Eigenvalue 15
+Eigenvalue 16
+Time taken for time evolution per time step in this M sector: 0.0037
+M sector dimension: 10
+number of op_1 eigenvalues in this M sector: 5
+Time taken to diagonalize M_sector_H: 0.000
+Eigenvalue 0
+Eigenvalue 1
+Eigenvalue 2
+Eigenvalue 3
+Eigenvalue 4
+Time taken for time evolution per time step in this M sector: 0.0007
+M sector dimension: 1
+number of op_1 eigenvalues in this M sector: 1
+Time taken to diagonalize M_sector_H: 0.000
+Eigenvalue 0
+Time taken for time evolution per time step in this M sector: 0.0001
+ED took time 0.653 per time step
+Doing typicality
+run: 0
+time per run per time step is 0.382
+L=10,Delta_1=1.00,Delta_2=0.00,g = 0.20
+Doing ED
+M sector dimension: 1
+number of op_1 eigenvalues in this M sector: 1
+Time taken to diagonalize M_sector_H: 0.033
+Eigenvalue 0
+Time taken for time evolution per time step in this M sector: 0.0008
+M sector dimension: 10
+number of op_1 eigenvalues in this M sector: 5
+Time taken to diagonalize M_sector_H: 0.001
+Eigenvalue 0
+Eigenvalue 1
+Eigenvalue 2
+Eigenvalue 3
+Eigenvalue 4
+Time taken for time evolution per time step in this M sector: 0.0012
+M sector dimension: 45
+number of op_1 eigenvalues in this M sector: 17
+Time taken to diagonalize M_sector_H: 0.005
+Eigenvalue 0
+Eigenvalue 1
+Eigenvalue 2
+Eigenvalue 3
+Eigenvalue 4
+Eigenvalue 5
+Eigenvalue 6
+Eigenvalue 7
+Eigenvalue 8
+Eigenvalue 9
+Eigenvalue 10
+Eigenvalue 11
+Eigenvalue 12
+Eigenvalue 13
+Eigenvalue 14
+Eigenvalue 15
+Eigenvalue 16
+Time taken for time evolution per time step in this M sector: 0.0068
+M sector dimension: 120
+number of op_1 eigenvalues in this M sector: 21
+Time taken to diagonalize M_sector_H: 0.055
+Eigenvalue 0
+Eigenvalue 1
+Eigenvalue 2
+Eigenvalue 3
+Eigenvalue 4
+Eigenvalue 5
+Eigenvalue 6
+Eigenvalue 7
+Eigenvalue 8
+Eigenvalue 9
+Eigenvalue 10
+Eigenvalue 11
+Eigenvalue 12
+Eigenvalue 13
+Eigenvalue 14
+Eigenvalue 15
+Eigenvalue 16
+Eigenvalue 17
+Eigenvalue 18
+Eigenvalue 19
+Eigenvalue 20
+Time taken for time evolution per time step in this M sector: 0.0390
+M sector dimension: 210
+number of op_1 eigenvalues in this M sector: 37
+Time taken to diagonalize M_sector_H: 0.103
+Eigenvalue 0
+Eigenvalue 1
+Eigenvalue 2
+Eigenvalue 3
+Eigenvalue 4
+Eigenvalue 5
+Eigenvalue 6
+Eigenvalue 7
+Eigenvalue 8
+Eigenvalue 9
+Eigenvalue 10
+Eigenvalue 11
+Eigenvalue 12
+Eigenvalue 13
+Eigenvalue 14
+Eigenvalue 15
+Eigenvalue 16
+Eigenvalue 17
+Eigenvalue 18
+Eigenvalue 19
+Eigenvalue 20
+Eigenvalue 21
+Eigenvalue 22
+Eigenvalue 23
+Eigenvalue 24
+Eigenvalue 25
+Eigenvalue 26
+Eigenvalue 27
+Eigenvalue 28
+Eigenvalue 29
+Eigenvalue 30
+Eigenvalue 31
+Eigenvalue 32
+Eigenvalue 33
+Eigenvalue 34
+Eigenvalue 35
+Eigenvalue 36
+Time taken for time evolution per time step in this M sector: 0.1876
+M sector dimension: 252
+number of op_1 eigenvalues in this M sector: 25
+Time taken to diagonalize M_sector_H: 0.105
+Eigenvalue 0
+Eigenvalue 1
+Eigenvalue 2
+Eigenvalue 3
+Eigenvalue 4
+Eigenvalue 5
+Eigenvalue 6
+Eigenvalue 7
+Eigenvalue 8
+Eigenvalue 9
+Eigenvalue 10
+Eigenvalue 11
+Eigenvalue 12
+Eigenvalue 13
+Eigenvalue 14
+Eigenvalue 15
+Eigenvalue 16
+Eigenvalue 17
+Eigenvalue 18
+Eigenvalue 19
+Eigenvalue 20
+Eigenvalue 21
+Eigenvalue 22
+Eigenvalue 23
+Eigenvalue 24
+Time taken for time evolution per time step in this M sector: 0.1832
+M sector dimension: 210
+number of op_1 eigenvalues in this M sector: 37
+Time taken to diagonalize M_sector_H: 0.078
+Eigenvalue 0
+Eigenvalue 1
+Eigenvalue 2
+Eigenvalue 3
+Eigenvalue 4
+Eigenvalue 5
+Eigenvalue 6
+Eigenvalue 7
+Eigenvalue 8
+Eigenvalue 9
+Eigenvalue 10
+Eigenvalue 11
+Eigenvalue 12
+Eigenvalue 13
+Eigenvalue 14
+Eigenvalue 15
+Eigenvalue 16
+Eigenvalue 17
+Eigenvalue 18
+Eigenvalue 19
+Eigenvalue 20
+Eigenvalue 21
+Eigenvalue 22
+Eigenvalue 23
+Eigenvalue 24
+Eigenvalue 25
+Eigenvalue 26
+Eigenvalue 27
+Eigenvalue 28
+Eigenvalue 29
+Eigenvalue 30
+Eigenvalue 31
+Eigenvalue 32
+Eigenvalue 33
+Eigenvalue 34
+Eigenvalue 35
+Eigenvalue 36
+Time taken for time evolution per time step in this M sector: 0.1624
+M sector dimension: 120
+number of op_1 eigenvalues in this M sector: 21
+Time taken to diagonalize M_sector_H: 0.029
+Eigenvalue 0
+Eigenvalue 1
+Eigenvalue 2
+Eigenvalue 3
+Eigenvalue 4
+Eigenvalue 5
+Eigenvalue 6
+Eigenvalue 7
+Eigenvalue 8
+Eigenvalue 9
+Eigenvalue 10
+Eigenvalue 11
+Eigenvalue 12
+Eigenvalue 13
+Eigenvalue 14
+Eigenvalue 15
+Eigenvalue 16
+Eigenvalue 17
+Eigenvalue 18
+Eigenvalue 19
+Eigenvalue 20
+Time taken for time evolution per time step in this M sector: 0.0223
+M sector dimension: 45
+number of op_1 eigenvalues in this M sector: 17
+Time taken to diagonalize M_sector_H: 0.002
+Eigenvalue 0
+Eigenvalue 1
+Eigenvalue 2
+Eigenvalue 3
+Eigenvalue 4
+Eigenvalue 5
+Eigenvalue 6
+Eigenvalue 7
+Eigenvalue 8
+Eigenvalue 9
+Eigenvalue 10
+Eigenvalue 11
+Eigenvalue 12
+Eigenvalue 13
+Eigenvalue 14
+Eigenvalue 15
+Eigenvalue 16
+Time taken for time evolution per time step in this M sector: 0.0038
+M sector dimension: 10
+number of op_1 eigenvalues in this M sector: 5
+Time taken to diagonalize M_sector_H: 0.000
+Eigenvalue 0
+Eigenvalue 1
+Eigenvalue 2
+Eigenvalue 3
+Eigenvalue 4
+Time taken for time evolution per time step in this M sector: 0.0007
+M sector dimension: 1
+number of op_1 eigenvalues in this M sector: 1
+Time taken to diagonalize M_sector_H: 0.000
+Eigenvalue 0
+Time taken for time evolution per time step in this M sector: 0.0001
+ED took time 0.649 per time step
+Doing typicality
+run: 0
+time per run per time step is 0.375

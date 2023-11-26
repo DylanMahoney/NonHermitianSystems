@@ -43,3 +43,33 @@ L = 20, g=0.10, Delta_1 = 1.50, Delta_2=0.00 Started
 L = 20, g=0.20, Delta_1 = 1.50, Delta_2=1.50 Started
 L = 20, g=0.00, Delta_1 = 1.50, Delta_2=1.50 Started
 L = 20, g=0.20, Delta_1 = 1.50, Delta_2=0.00 Started
+Sector dimension: 8398
+Sector dimension: 8398
+Sector dimension: 8398
+Sector dimension: 8398
+Sector dimension: 8398
+Sector dimension: 8398
+L = 20, g=0.00, Delta_1 = 1.50, Delta_2=0.00 Time taken to get z's: 791.9972
+L = 20, g=0.20, Delta_1 = 1.50, Delta_2=1.50 Time taken to get z's: 804.3529
+L = 20, g=0.00, Delta_1 = 1.50, Delta_2=1.50 Time taken to get z's: 810.9680
+L = 20, g=0.10, Delta_1 = 1.50, Delta_2=0.00 Time taken to get z's: 830.3904
+L = 20, g=0.20, Delta_1 = 1.50, Delta_2=0.00 Time taken to get z's: 837.4221
+L = 20, g=0.10, Delta_1 = 1.50, Delta_2=1.50 Time taken to get z's: 865.2269
+L = 22, g=0.00, Delta_1 = 1.50, Delta_2=0.00 Started
+L = 22, g=0.00, Delta_1 = 1.50, Delta_2=1.50 Started
+L = 22, g=0.20, Delta_1 = 1.50, Delta_2=1.50 Started
+L = 22, g=0.10, Delta_1 = 1.50, Delta_2=0.00 Started
+L = 22, g=0.20, Delta_1 = 1.50, Delta_2=0.00 Started
+L = 22, g=0.10, Delta_1 = 1.50, Delta_2=1.50 Started
+Sector dimension: 29372
+Sector dimension: 29372
+Sector dimension: 29372
+Sector dimension: 29372
+Sector dimension: 29372
+Sector dimension: 29372
+L = 22, g=0.10, Delta_1 = 1.50, Delta_2=1.50 Time taken to get z's: 29306.6154
+L = 22, g=0.10, Delta_1 = 1.50, Delta_2=0.00 Time taken to get z's: 29390.3414
+L = 22, g=0.20, Delta_1 = 1.50, Delta_2=1.50 Time taken to get z's: 30291.3024
+L = 22, g=0.20, Delta_1 = 1.50, Delta_2=0.00 Time taken to get z's: 30595.4403
+L = 22, g=0.00, Delta_1 = 1.50, Delta_2=0.00 Time taken to get z's: 31794.7058
+L = 22, g=0.00, Delta_1 = 1.50, Delta_2=1.50 Time taken to get z's: 32482.1355

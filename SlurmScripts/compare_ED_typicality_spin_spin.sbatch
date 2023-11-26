@@ -2,9 +2,9 @@
 #SBATCH --job-name=ED_vs_typicality_spin_spin_job
 #SBATCH --output=../SlurmOutputs/ED_vs_typicality_spin_spin_job.%j.out
 #SBATCH --error=../SlurmOutputs/ED_vs_typicality_spin_spin_job.%j.err
-#SBATCH --time=0:10:00
+#SBATCH --time=0:5:00
 #SBATCH -c 1
-#SBATCH --mem=8GB
+#SBATCH --mem=2GB
 #SBATCH --mail-type=all
 #SBATCH --chdir=../ScriptsForDataGeneration
 #SBATCH --ntasks=2

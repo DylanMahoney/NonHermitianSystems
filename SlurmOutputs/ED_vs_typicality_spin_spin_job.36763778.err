@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "/home/users/dylan24/HatanoNelson/NonHermitianSystems/ScriptsForDataGeneration/compare_ED_typicality_spin_spin.py", line 51, in <module>
+    ED_results = ED_correlator(op_1,op_2,t,[H],L,M_projectors)
+TypeError: ED_correlator() missing 3 required positional arguments: 'H', 'L', and 'M_projectors'
+srun: error: sh02-01n29: task 0: Exited with exit code 1
+srun: Terminating StepId=36763778.0
+Traceback (most recent call last):
+  File "/home/users/dylan24/HatanoNelson/NonHermitianSystems/ScriptsForDataGeneration/compare_ED_typicality_spin_spin.py", line 51, in <module>
+    ED_results = ED_correlator(op_1,op_2,t,[H],L,M_projectors)
+TypeError: ED_correlator() missing 3 required positional arguments: 'H', 'L', and 'M_projectors'
+srun: error: sh02-01n49: task 0: Exited with exit code 1
+srun: Terminating StepId=36763778.1
