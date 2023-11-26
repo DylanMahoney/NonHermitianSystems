@@ -1,0 +1,13 @@
+slurmstepd: error: *** STEP 36729312.19 ON sh02-01n22 CANCELLED AT 2023-11-26T00:21:36 DUE TO TIME LIMIT ***
+slurmstepd: error: *** STEP 36729312.18 ON sh02-01n08 CANCELLED AT 2023-11-26T00:21:36 DUE TO TIME LIMIT ***
+slurmstepd: error: *** STEP 36729312.20 ON sh02-01n42 CANCELLED AT 2023-11-26T00:21:36 DUE TO TIME LIMIT ***
+slurmstepd: error: *** STEP 36729312.22 ON sh02-08n38 CANCELLED AT 2023-11-26T00:21:36 DUE TO TIME LIMIT ***
+slurmstepd: error: *** STEP 36729312.23 ON sh02-08n39 CANCELLED AT 2023-11-26T00:21:36 DUE TO TIME LIMIT ***
+slurmstepd: error: *** STEP 36729312.21 ON sh02-08n37 CANCELLED AT 2023-11-26T00:21:36 DUE TO TIME LIMIT ***
+slurmstepd: error: *** JOB 36729312 ON sh02-01n08 CANCELLED AT 2023-11-26T00:21:36 DUE TO TIME LIMIT ***
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.

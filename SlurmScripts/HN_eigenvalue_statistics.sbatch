@@ -2,8 +2,8 @@
 #SBATCH --job-name=HN_eigenvalue_statistics_job
 #SBATCH --output=../SlurmOutputs/HN_eigenvalue_statistics_job.%j.out
 #SBATCH --error=../SlurmOutputs/HN_eigenvalue_statistics_job.%j.err
-#SBATCH --time=08:00:00
-#SBATCH -c 1
+#SBATCH --time=16:00:00
+#SBATCH -c 2
 #SBATCH --mem=24GB
 #SBATCH --mail-type=all
 #SBATCH --chdir=../ScriptsForDataGeneration
@@ -27,12 +27,12 @@ do
   do
    for Delta_2 in 0 1.5 #2 Delta_2's
    do
-    srun -N 1 --ntasks=1 -c 1 python3.9 HN_eigenvalue_statistics.py --g $g --L $L --D1 $Delta_1 --D2 $Delta_2 &
+    srun --exclusive -N 1 --ntasks=1 -c 2 python3.9 -u HN_eigenvalue_statistics.py --g $g --L $L --D1 $Delta_1 --D2 $Delta_2 &
     #Consider removing the -u after I'm confident the parallelization works
+    #Given that the number of total nodes I've requested equals the number of tasks, I'm not sure whether or not to go with the --exclusive option...
    done
   done
  done
  wait #THIS WAIT MEANS THAT IT WAITS FOR ALL OF ONE L TO FINISH BEFORE STARTING THE NEXT L
 done
 wait
-#In retrospect I could've used several CPU's for each srun, since each node comes with more than one CPU anyway...
