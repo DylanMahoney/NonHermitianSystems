@@ -37,12 +37,11 @@ fig.set_size_inches(figure_width, figure_width/2)
 
 first_index = 0 #Later we might want to not show early times
 
-t_max = 20#20 or 30
-t_step = 0.1
+t_max = 30 #increased from 20
+t_step = 0.2 #increased from 0.1
 num_times = int(t_max/t_step)+1
 t = np.linspace(0,t_max,num_times)
-L = 20 #I also computed L=18 so that could be shown as a shadow
-#L = 22 needs more than 8GB RAM; 12GB is also not enough. EVEN 16GB IS NOT ENOUGH! Just do L = 18,20 for now
+L = 22 #I also computed L=18 so that could be shown as a shadow
 g_list = [0,0.1,0.2]
 Delta_1 = 1.5
 Delta_2_list = [0,1.5]
@@ -50,7 +49,7 @@ num_runs = 2
 
 color_list = get_list_of_colors_I_like(len(g_list))
 finite_size_eq = 1/(4*L)
-hydrodynamics_start_time_list = [3,4] #DETERMINED VIA EYEBALLS
+hydrodynamics_start_time_list = [5,5] #DETERMINED VIA EYEBALLS, AND IN RESPONSE TO THE SLOPES LOOKING FUNNY
 hydro_start_indices = [int(t/t_step) for t in hydrodynamics_start_time_list]
 
 
@@ -79,7 +78,7 @@ for i,Delta_2 in enumerate(Delta_2_list):
         popt,pcov = scipy.optimize.curve_fit(power_law_decay,t[hydro_start_index+1:last_value],avg_run[hydro_start_index+1:last_value],p0=0.66)
         optimal_alpha = popt[0]
         axs[i].plot(t[hydro_start_index+1:last_value],power_law_decay(t[hydro_start_index+1:last_value],optimal_alpha),linestyle='--',label='slope %.4f' % optimal_alpha,color=color_list[j])
-        
+        axs[i].axvline(x=t0,color='k',linestyle=':',label=r'$t = %i$' % t0)
         axs[i].plot(t[first_index:last_value+1],first_run[first_index:last_value+1],label="g = %.1f" % g,color=color_list[j])
         axs[i].plot(t[first_index:last_value+1],second_run[first_index:last_value+1],color=color_list[j])
     axs[i].axhline(y=finite_size_eq,color='k',label=r'$\frac{1}{4L}$')
@@ -93,7 +92,7 @@ for ax in axs.flatten():
 axs[0].legend(markerfirst=False,frameon=False)
 axs[1].legend(markerfirst=False,frameon=False)
 add_letter_labels(fig,axs,110,144,[r'$\Delta_2 = 0$',r'$\Delta_2 = 1.5$'],white_labels=False)
-filename = os.path.join(fig_dir,'HN_spin_spin_same_site.png')
+filename = os.path.join(fig_dir,'HN_spin_spin_same_site_L=%i.png'%L)
 
 fig.set_size_inches(figure_width,figure_width/2)
 fig.savefig(filename,dpi=120)

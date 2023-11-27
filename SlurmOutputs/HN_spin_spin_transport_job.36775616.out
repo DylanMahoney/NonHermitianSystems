@@ -1,3 +1,87 @@
 Requirement already satisfied: imageio in /home/users/dylan24/.local/lib/python3.9/site-packages (2.31.1)
 Requirement already satisfied: numpy in /share/software/user/open/py-numpy/1.24.2_py39/lib/python3.9/site-packages (from imageio) (1.24.2)
 Requirement already satisfied: pillow>=8.3.2 in /share/software/user/open/py-matplotlib/3.7.1_py39/lib/python3.9/site-packages (from imageio) (9.5.0)
+L = 20
+Got list of spin operators and M sector projectors in time 11.294
+g=0.10,Delta_2=0.00
+Got Hamiltonian
+run: 0
+run: 1
+Time per run per timestep: 3.342
+L = 20
+Got list of spin operators and M sector projectors in time 11.209
+g=0.20,Delta_2=1.50
+Got Hamiltonian
+run: 0
+run: 1
+Time per run per timestep: 3.388
+L = 20
+Got list of spin operators and M sector projectors in time 11.482
+g=0.00,Delta_2=1.50
+Got Hamiltonian
+run: 0
+run: 1
+Time per run per timestep: 3.447
+L = 20
+Got list of spin operators and M sector projectors in time 11.581
+g=0.20,Delta_2=0.00
+Got Hamiltonian
+run: 0
+run: 1
+Time per run per timestep: 3.442
+L = 20
+Got list of spin operators and M sector projectors in time 12.507
+g=0.00,Delta_2=0.00
+Got Hamiltonian
+run: 0
+run: 1
+Time per run per timestep: 3.803
+L = 20
+Got list of spin operators and M sector projectors in time 12.686
+g=0.10,Delta_2=1.50
+Got Hamiltonian
+run: 0
+run: 1
+Time per run per timestep: 4.065
+L = 22
+Got list of spin operators and M sector projectors in time 53.634
+g=0.20,Delta_2=1.50
+Got Hamiltonian
+run: 0
+run: 1
+Time per run per timestep: 19.735
+L = 22
+Got list of spin operators and M sector projectors in time 52.561
+g=0.10,Delta_2=1.50
+Got Hamiltonian
+run: 0
+run: 1
+Time per run per timestep: 19.879
+L = 22
+Got list of spin operators and M sector projectors in time 52.809
+g=0.00,Delta_2=1.50
+Got Hamiltonian
+run: 0
+run: 1
+Time per run per timestep: 20.158
+L = 22
+Got list of spin operators and M sector projectors in time 52.870
+g=0.10,Delta_2=0.00
+Got Hamiltonian
+run: 0
+run: 1
+Time per run per timestep: 20.317
+L = 22
+Got list of spin operators and M sector projectors in time 60.271
+g=0.00,Delta_2=0.00
+Got Hamiltonian
+run: 0
+run: 1
+Time per run per timestep: 23.130
+L = 22
+Got list of spin operators and M sector projectors in time 57.796
+g=0.20,Delta_2=0.00
+Got Hamiltonian
+run: 0
+run: 1
+Time per run per timestep: 23.394
