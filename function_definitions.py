@@ -44,10 +44,16 @@ def gen_s0sxsysz(L): #THIS FUNCTION COPIED FROM PHYSICS 470 COURSE MATERIALS
     return s0_list, sx_list,sy_list,sz_list
 
 def gen_spin_operators(L):
+    #Apparently sx_list or spinx_list can get up to about 1.4GB in memory for L=22!
+    #Same for the other lists -- let's add some manual garbage collection.
     s0_list, sx_list,sy_list,sz_list = gen_s0sxsysz(L)
+    del s0_list
     spinx_list = [0.5*sx for sx in sx_list]
+    del sx_list
     spiny_list = [0.5*sy for sy in sy_list]
+    del sy_list
     spinz_list = [0.5*sz for sz in sz_list]
+    del sz_list
     return spinx_list,spiny_list,spinz_list
 
 def gen_spinplus_spinminus(spinx_list,spiny_list):
@@ -59,6 +65,7 @@ def gen_spinplus_spinminus(spinx_list,spiny_list):
         spiny = spiny_list[i]
         spinplus_list.append(spinx + 1j*spiny)
         spinminus_list.append(spinx - 1j*spiny)
+        
     return spinplus_list,spinminus_list
 
 def gen_interaction_kdist(op_list, op_list2=[],k=1, bc='obc'): #TAKEN FROM PHYSICS 470 COURSE MATERIALS
@@ -83,10 +90,17 @@ def gen_current_operator(L):
     j_op = (1j/2)*j_op
     return j_op
 
-def construct_HN_Ham(L,bc = 'pbc',g = 0,Delta_1 = 1,Delta_2 = 0):
-    spinx_list,spiny_list,spinz_list = gen_spin_operators(L)
+def construct_HN_Ham(L,bc = 'pbc',g = 0,Delta_1 = 1,Delta_2 = 0,spin_operators_list=None):
+    if spin_operators_list == None:
+        spinx_list,spiny_list,spinz_list = gen_spin_operators(L)
+    else:
+        spinx_list = spin_operators_list[0]
+        spiny_list = spin_operators_list[1]
+        spinz_list = spin_operators_list[2]
     spinplus_list,spinminus_list = gen_spinplus_spinminus(spinx_list,spiny_list)
-    
+    #For L = 22 need to do some manual memory management...
+    del spinx_list
+    del spiny_list
     H = 0.5*np.exp(g)*gen_interaction_kdist(spinplus_list, spinminus_list,k=1, bc=bc)
     H = H + 0.5*np.exp(-g)*gen_interaction_kdist(spinminus_list, spinplus_list,k=1, bc=bc)
     
@@ -330,7 +344,6 @@ def diagonalize_spinz_operator_within_M_sectors(M_projectors,M_dimensions,spinz_
         M_projector = M_projectors[M_sector_index]
         M_dimension = M_dimensions[M_sector_index]
         M_sector_op_1 = M_projector@spinz_op@np.conj(M_projector.T)
-        
         
         if M_sector_index == 0: #spins all down
             unique_evals = [-0.5]

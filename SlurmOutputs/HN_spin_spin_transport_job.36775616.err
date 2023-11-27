@@ -1,0 +1,24 @@
+/home/users/dylan24/HatanoNelson/NonHermitianSystems/function_definitions.py:415: ComplexWarning: Casting complex values to real discards the imaginary part
+  results_all_sectors[j,i] += op_1_eval*op_1_dimension*EV/(2**L)
+/home/users/dylan24/HatanoNelson/NonHermitianSystems/function_definitions.py:415: ComplexWarning: Casting complex values to real discards the imaginary part
+  results_all_sectors[j,i] += op_1_eval*op_1_dimension*EV/(2**L)
+/home/users/dylan24/HatanoNelson/NonHermitianSystems/function_definitions.py:415: ComplexWarning: Casting complex values to real discards the imaginary part
+  results_all_sectors[j,i] += op_1_eval*op_1_dimension*EV/(2**L)
+/home/users/dylan24/HatanoNelson/NonHermitianSystems/function_definitions.py:415: ComplexWarning: Casting complex values to real discards the imaginary part
+  results_all_sectors[j,i] += op_1_eval*op_1_dimension*EV/(2**L)
+/home/users/dylan24/HatanoNelson/NonHermitianSystems/function_definitions.py:415: ComplexWarning: Casting complex values to real discards the imaginary part
+  results_all_sectors[j,i] += op_1_eval*op_1_dimension*EV/(2**L)
+/home/users/dylan24/HatanoNelson/NonHermitianSystems/function_definitions.py:415: ComplexWarning: Casting complex values to real discards the imaginary part
+  results_all_sectors[j,i] += op_1_eval*op_1_dimension*EV/(2**L)
+/home/users/dylan24/HatanoNelson/NonHermitianSystems/function_definitions.py:415: ComplexWarning: Casting complex values to real discards the imaginary part
+  results_all_sectors[j,i] += op_1_eval*op_1_dimension*EV/(2**L)
+/home/users/dylan24/HatanoNelson/NonHermitianSystems/function_definitions.py:415: ComplexWarning: Casting complex values to real discards the imaginary part
+  results_all_sectors[j,i] += op_1_eval*op_1_dimension*EV/(2**L)
+/home/users/dylan24/HatanoNelson/NonHermitianSystems/function_definitions.py:415: ComplexWarning: Casting complex values to real discards the imaginary part
+  results_all_sectors[j,i] += op_1_eval*op_1_dimension*EV/(2**L)
+/home/users/dylan24/HatanoNelson/NonHermitianSystems/function_definitions.py:415: ComplexWarning: Casting complex values to real discards the imaginary part
+  results_all_sectors[j,i] += op_1_eval*op_1_dimension*EV/(2**L)
+/home/users/dylan24/HatanoNelson/NonHermitianSystems/function_definitions.py:415: ComplexWarning: Casting complex values to real discards the imaginary part
+  results_all_sectors[j,i] += op_1_eval*op_1_dimension*EV/(2**L)
+/home/users/dylan24/HatanoNelson/NonHermitianSystems/function_definitions.py:415: ComplexWarning: Casting complex values to real discards the imaginary part
+  results_all_sectors[j,i] += op_1_eval*op_1_dimension*EV/(2**L)
