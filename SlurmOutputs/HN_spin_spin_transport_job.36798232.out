@@ -1,3 +1,45 @@
 Requirement already satisfied: imageio in /home/users/dylan24/.local/lib/python3.9/site-packages (2.31.1)
 Requirement already satisfied: numpy in /share/software/user/open/py-numpy/1.24.2_py39/lib/python3.9/site-packages (from imageio) (1.24.2)
 Requirement already satisfied: pillow>=8.3.2 in /share/software/user/open/py-matplotlib/3.7.1_py39/lib/python3.9/site-packages (from imageio) (9.5.0)
+L = 24
+Got list of spin operators and M sector projectors in time 282.488
+g=0.00,Delta_2=0.00
+Got Hamiltonian
+run: 0
+run: 1
+Time per run per timestep: 105.963
+L = 24
+Got list of spin operators and M sector projectors in time 297.155
+g=0.20,Delta_2=1.50
+Got Hamiltonian
+run: 0
+run: 1
+Time per run per timestep: 113.052
+L = 24
+Got list of spin operators and M sector projectors in time 292.263
+g=0.00,Delta_2=1.50
+Got Hamiltonian
+run: 0
+run: 1
+Time per run per timestep: 113.659
+L = 24
+Got list of spin operators and M sector projectors in time 282.829
+g=0.10,Delta_2=1.50
+Got Hamiltonian
+run: 0
+run: 1
+Time per run per timestep: 114.850
+L = 24
+Got list of spin operators and M sector projectors in time 292.535
+g=0.10,Delta_2=0.00
+Got Hamiltonian
+run: 0
+run: 1
+Time per run per timestep: 116.854
+L = 24
+Got list of spin operators and M sector projectors in time 297.687
+g=0.20,Delta_2=0.00
+Got Hamiltonian
+run: 0
+run: 1
+Time per run per timestep: 117.170

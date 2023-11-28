@@ -28,7 +28,7 @@ args = parser.parse_args()
 g = args.g
 
 L = 10
-D1_list = [1.0]
+D1_list = [1.5]
 D2_list = [0]
 num_runs = 200
 

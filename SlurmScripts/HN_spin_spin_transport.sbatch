@@ -2,9 +2,9 @@
 #SBATCH --job-name=HN_spin_spin_transport_job
 #SBATCH --output=../SlurmOutputs/HN_spin_spin_transport_job.%j.out
 #SBATCH --error=../SlurmOutputs/HN_spin_spin_transport_job.%j.err
-#SBATCH --time=24:00:00
+#SBATCH --time=72:00:00
 #SBATCH -c 4
-#SBATCH --mem=64GB
+#SBATCH --mem=320GB
 #SBATCH --mail-type=all
 #SBATCH --chdir=../ScriptsForDataGeneration
 #SBATCH --ntasks=6
@@ -19,8 +19,9 @@ ml load py-matplotlib/3.7.1_py39
 ml load py-scipy/1.10.1_py39
 pip3 install --user imageio
 
-
-for L in 24 #already did 20 and 22
+#For L = 22, need 16GB of RAM and about 2.5 hours with 150 time steps
+#For L = 24, need 64GB of RAM and about 10 hours with 150 time steps
+for L in 26 #already did 20 and 22 and 24
 do
  for g in 0 0.1 0.2
  do

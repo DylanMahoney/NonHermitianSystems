@@ -32,7 +32,7 @@ data_dir = get_data_directory(current_directory,folder_name)
 figure_width = 12
 color_list = get_list_of_colors_I_like(3)
 
-L = 18
+L = 22
 g=0.2
 Delta_1 = 1.5
 Delta_2_list = [0,1.5]
@@ -56,7 +56,7 @@ for i,Delta_2 in enumerate(Delta_2_list):
     axs[1,i].hist(r,bins=40,density=True,color=color_list[2])
     axs[1,i].set_xlim(left=0,right=1)
 
-    axs[1,i].set_ylabel("P(r)")
+    axs[1,i].set_ylabel(r"$P(\rho)$")
     
     axs[2,i].hist(theta,bins=40,density=True,color=color_list[2])
     axs[2,i].set_xlim(left=-np.pi,right=np.pi)
@@ -65,10 +65,10 @@ for i,Delta_2 in enumerate(Delta_2_list):
     axs[2,i].set_ylabel(r"$P(\theta)$")
 
     axs[0,i].set_xlabel(r"$\text{Re}(z)$")
-    axs[1,i].set_xlabel("r")
+    axs[1,i].set_xlabel(r"$\rho$")
     axs[2,i].set_xlabel(r"$\theta$")
     
-add_letter_labels(fig,axs,150,200,[r'$\Delta_2=0$',r'$\Delta_2=1.5$',r'$\Delta_2=0$',r'$\Delta_2=1.5$',r'$\Delta_2=0$',r'$\Delta_2=1.5$'],white_labels=True)
+add_letter_labels(fig,axs,155,207.5,[r'$\Delta_2=0$',r'$\Delta_2=1.5$',r'$\Delta_2=0$',r'$\Delta_2=1.5$',r'$\Delta_2=0$',r'$\Delta_2=1.5$'],white_labels=True)
 
 filename = os.path.join(fig_dir,'HN_eval_histg=%.2fL=%i.png' % (g,L))
 

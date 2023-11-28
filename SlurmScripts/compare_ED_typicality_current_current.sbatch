@@ -4,7 +4,7 @@
 #SBATCH --error=../SlurmOutputs/ED_vs_typicality_current_current_job.%j.err
 #SBATCH --time=8:00:00
 #SBATCH -c 2
-#SBATCH --mem=8GB
+#SBATCH --mem=4GB
 #SBATCH --mail-type=all
 #SBATCH --chdir=../ScriptsForDataGeneration
 #SBATCH --ntasks=2
