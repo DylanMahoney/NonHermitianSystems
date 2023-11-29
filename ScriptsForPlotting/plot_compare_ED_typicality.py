@@ -86,7 +86,7 @@ for i,g in enumerate(g_list):
         axs[j,i].fill_between(t,average_value - 2*run_sem,average_value+2*run_sem,color=bright_color,alpha=0.2) #https://jakevdp.github.io/PythonDataScienceHandbook/04.03-errorbars.html
         axs[j,i].plot(t,first_run,color=bright_color,linestyle=':',label='first run')
         
-        axs[j,i].set_ylim(top=1.5,bottom=0.015)
+        axs[j,i].set_ylim(top=1.5,bottom=0.01)
         
         axs[j,i].set_xscale('log')
         axs[j,i].set_yscale('log')
