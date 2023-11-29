@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "/home/users/dylan24/HatanoNelson/NonHermitianSystems/ScriptsForDataGeneration/random_potential_eigenvalue_statistics.py", line 36, in <module>
+    projector = M_projectors[L//2 + M] #The L//2th sector is the M = 0 sector
+TypeError: unsupported operand type(s) for +: 'int' and 'NoneType'

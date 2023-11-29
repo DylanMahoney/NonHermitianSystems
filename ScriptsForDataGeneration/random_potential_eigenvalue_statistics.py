@@ -32,6 +32,8 @@ L=14 #16 or 18 would be nice #for HN: [18,20,22] #L = 18 only takes a few minute
 Delta_1 = 1
 num_runs = 100 #Jonas said this was a reasonable number to do
 
+print("L = %i, W=%.2f,M=%i" % (L,W,M))
+
 M_projectors,M_dimensions = magnetization_projectors(L,return_dimensions=True)
 projector = M_projectors[L//2 + M] #The L//2th sector is the M = 0 sector
 dimension = M_dimensions[L//2 + M]
@@ -40,7 +42,6 @@ H_without_W_stuff = construct_HN_Ham(L,Delta_1 = Delta_1)
 spinx_list,spiny_list,spinz_list = gen_spin_operators(L)
 z_all_runs = np.zeros((num_runs,dimension),dtype=np.cdouble)
 evals_all_runs = np.zeros((num_runs,dimension),dtype=np.cdouble)
-print("L = %i, W=%.2f" % (L,W))
 t0 = time.time()
 for run in range(num_runs):
     local_potentials = 1j*np.random.uniform(low=-W,high=W,size=L)

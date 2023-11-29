@@ -27,5 +27,3 @@ do
  done
 done
 wait
-
-python3.9 random_potential_eigenvalue_statistics.py

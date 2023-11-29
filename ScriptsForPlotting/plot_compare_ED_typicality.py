@@ -66,8 +66,6 @@ for i,g in enumerate(g_list):
         else:
             typicality_data_filename = os.path.join(spin_typic_data_dir,'L=%ig=%.2fD1=%.2fD2=%.2f,%iruns_all_data.npy' % (L,g,Delta_1,Delta_2,num_runs))
             all_runs_data = np.load(typicality_data_filename)
-            print(all_runs_data.shape)
-            print("HAVE PRINT HERE")
         
         #Let's just do the same-site correlation function to reduce the runtime of the simulation
         average_value = np.mean(all_runs_data,axis=0)
@@ -77,10 +75,12 @@ for i,g in enumerate(g_list):
         
         ED_data_filename = os.path.join(data_dir,'L=%ig=%.2fD1=%.2fD2=%.2fED.npy' % (L,g,Delta_1,Delta_2))
         ED_data = np.load(ED_data_filename)
-        #At this point, ED_data has shape (1,201)
-        ED_data = ED_data[0,:]
+        #sometimes ED_data has shape (201,) but other times it has shape (1,201)
+        if ED_data.shape[0] == 1:
+            ED_data = ED_data[0,:]
         
-        bright_color = 'fuchsia'
+        
+        bright_color = color_list[0]
         axs[j,i].plot(t,ED_data,color='k',label='ED result')
         axs[j,i].plot(t,average_value,color=bright_color,linestyle=(0,(2.5,2.5)),label='typicality average') #+- 3 SEM = run std / sqrt(num_runs)
         axs[j,i].fill_between(t,average_value - 2*run_sem,average_value+2*run_sem,color=bright_color,alpha=0.2) #https://jakevdp.github.io/PythonDataScienceHandbook/04.03-errorbars.html
@@ -95,22 +95,17 @@ for i,g in enumerate(g_list):
         #ax.set_ylabel(correlator_notation_dict[type_of_correlation],fontsize=14)
         #ax.set_title(r"$g = %.2f$" % g,fontsize=16)
 
-axs[0,0].set_title("$g = 0.0$",fontsize=14)
-axs[0,1].set_title("$g = 0.2$",fontsize=14)
-
 axs[1,0].set_xlabel("time $t$",fontsize=14)
 axs[1,1].set_xlabel("time $t$",fontsize=14)
 
 axs[0,0].set_ylabel(r"$C_{ss}(0,t)$",fontsize=14)
-axs[1,0].set_ylabel(r"$C_{jj}(t)$",fontsize=14)
+axs[1,0].set_ylabel(r"$\mathcal{J}(t)$",fontsize=14)
 
 axs[0,0].legend(markerfirst=False,frameon=False)
 
-for i,ax in enumerate(axs.flatten()):
-    trans = mtransforms.ScaledTranslation(10/72, -10/72, fig.dpi_scale_trans)
-    ax.text(0.0, 1.0, labels[i], transform=ax.transAxes + trans,
-            fontsize='large', verticalalignment='top',fontweight='bold') #removed fontfamily = 'serif' #removed bbox=dict(facecolor='1.0', edgecolor='none', pad=3.0)
-filename = figures_folder_dir+'typicality_vs_ED.png'
-fig.set_size_inches(12,6) #CHANGED FROM 8 BY 8
+add_letter_labels(fig,axs,110,144,[r'$g=0$',r'$g=0.2$',r'$g=0$',r'$g=0.2$'],white_labels=False)
+
+filename = os.path.join(fig_dir,'typicality_vs_ED.png')
+fig.set_size_inches(figure_width,figure_width/2)
 fig.savefig(filename,dpi=120)
 plt.close(fig)
