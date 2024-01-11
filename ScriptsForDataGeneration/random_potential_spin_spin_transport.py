@@ -24,16 +24,17 @@ import argparse
 parser = argparse.ArgumentParser()
 parser.add_argument("--D1",type=float)
 parser.add_argument("--W",type=float)
+parser.add_argument("--L",type=int)
 args = parser.parse_args()
 Delta_1 = args.D1
 W = args.W
+L = args.L #Jonas said 16 or 18 would be good
 
 t_max = 30
 t_step = 0.2
-L = 18 #Jonas said 16 or 18 would be good
 num_times = int(t_max/t_step)+1
 t = np.linspace(0,t_max,num_times)
-nonHermitian_num_runs = 400
+nonHermitian_num_runs = 1000
 Hermitian_num_runs = 2 #We should need a lot fewer runs in the Hermitian case
 
 M_projectors,M_dimensions = magnetization_projectors(L,return_dimensions=True)
@@ -59,8 +60,9 @@ for run in range(num_runs): #average over the initial states and the random pote
     H = H_without_W_stuff + local_potential_term
     transport_results[run] = typicality_correlator(op_1_evals_list,op_1_projectors_list,op_1_sector_dimensions_list,op_2_list,M_projectors,M_dimensions,t,H,L,rng)
 t1 = time.time()
-time_per_run_per_tstep = (t1 - t0)/(num_runs*num_times)
-print("D1=%.2fW=%.2f Time per run per time step: %.3f" % (Delta_1,W,time_per_run_per_tstep))
 
 spin_spin_filename = os.path.join(data_dir,'L=%iD1=%.2fW=%.2f,%iruns_all_data.npy' % (L,Delta_1,W,num_runs))
 np.save(spin_spin_filename,transport_results)
+
+time_per_run_per_tstep = (t1 - t0)/(num_runs*num_times)
+print("L=%iD1=%.2fW=%.2f Time per run per time step: %.3f" % (L,Delta_1,W,time_per_run_per_tstep))

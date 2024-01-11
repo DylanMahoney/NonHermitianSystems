@@ -2,13 +2,13 @@
 #SBATCH --job-name=random_potential_spin_spin_transport_job
 #SBATCH --output=../SlurmOutputs/random_potential_spin_spin_transport_job.%j.out
 #SBATCH --error=../SlurmOutputs/random_potential_spin_spin_transport_job.%j.err
-#SBATCH --time=18:00:00
+#SBATCH --time=48:00:00
 #SBATCH -c 2
-#SBATCH --mem=8GB
+#SBATCH --mem=12GB
 #SBATCH --mail-type=all
 #SBATCH --chdir=../ScriptsForDataGeneration
-#SBATCH --ntasks=4
-#SBATCH -N 4
+#SBATCH --ntasks=8
+#SBATCH -N 8
 
 
 ml load system
@@ -21,12 +21,14 @@ ml load py-scipy/1.10.1_py39
 pip3 install --user imageio
 
 #W = 0 only involves two runs and it's really quick, so this script just does W = 0.5 and W = 1
-
-for D1 in 1 1.5
+for L in 16 18
 do
- for W in 0.5 1
+ for D1 in 1 1.5
  do
-  srun --exclusive -N 1 --ntasks=1 -c 2 python3.9 -u random_potential_spin_spin_transport.py --D1 $D1 --W $W &
+  for W in 0.5 1
+  do
+   srun --exclusive -N 1 --ntasks=1 -c 2 python3.9 -u random_potential_spin_spin_transport.py --L $L --D1 $D1 --W $W &
+  done
  done
 done
 wait
