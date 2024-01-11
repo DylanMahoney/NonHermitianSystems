@@ -55,8 +55,7 @@ for L in L_list:
             H_within_M0_sector = zero_M_projector@H@np.conj(zero_M_projector.T)
             
             t0 = time.time()
-            evals,matrix_of_right_eigenvectors = scipy.linalg.eig(H_within_M0_sector.toarray())
-            matrix_of_left_eigenvectors = np.conj(np.linalg.inv(matrix_of_right_eigenvectors).T)
+            matrix_of_left_eigenvectors,matrix_of_right_eigenvectors = get_biortho_evecs(H_within_M0_sector.toarray())
             t1 = time.time()
             time_taken = t1 - t0
             print("Time taken to get left and right eigenvectors: %.3f" % time_taken)

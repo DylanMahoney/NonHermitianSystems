@@ -4,7 +4,7 @@
 #SBATCH --error=../SlurmOutputs/RRVs_and_IPRs_job.%j.err
 #SBATCH --time=8:00:00
 #SBATCH -c 2
-#SBATCH --mem=8GB
+#SBATCH --mem=4GB
 #SBATCH --mail-type=all
 #SBATCH --chdir=../ScriptsForDataGeneration
 #SBATCH --ntasks=2

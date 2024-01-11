@@ -37,7 +37,7 @@ fig.set_size_inches(figure_width, figure_width/2)
 
 Delta_1_list = [1,1.5]#[1,1.5]
 W_list = [0,0.5,1]#[0,0.5,1]
-nonHermitian_num_runs = 400
+nonHermitian_num_runs = 1000
 Hermitian_num_runs = 2 #We should need a lot fewer runs in the Hermitian case
 
 color_list = get_list_of_colors_I_like(len(W_list))
