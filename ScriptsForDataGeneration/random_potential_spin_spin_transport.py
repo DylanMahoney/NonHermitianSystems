@@ -45,7 +45,6 @@ op_2_list = spinz_list
 op_1_evals_list,op_1_projectors_list,op_1_sector_dimensions_list = diagonalize_spinz_operator_within_M_sectors(M_projectors,M_dimensions,op_1)
 
 print("Delta_1=%.2f" % Delta_1)
-H_without_W_stuff = construct_HN_Ham(L,Delta_1 = Delta_1)
 print("W=%.2f" % W)
 if W > 0.0001:
     num_runs = nonHermitian_num_runs
@@ -54,10 +53,8 @@ else:
 transport_results = np.zeros((num_runs,len(op_2_list),num_times))
 t0 = time.time()
 for run in range(num_runs): #average over the initial states and the random potentials at the same time, since the two integrals involved in averaging should commute
-    print("D1=%.2fW=%.2frun: %i" % (Delta_1,W,run))
-    local_potentials = 1j*np.random.uniform(low=-W,high=W,size=L)
-    local_potential_term = gen_op_total([local_potentials[r]*spinz_list[r] for r in range(L)])
-    H = H_without_W_stuff + local_potential_term
+    print("D1=%.2fW=%.2f, run: %i" % (Delta_1,W,run))
+    H = construct_random_imaginary_potential_Ham(L,Delta_1,W,rng)
     transport_results[run] = typicality_correlator(op_1_evals_list,op_1_projectors_list,op_1_sector_dimensions_list,op_2_list,M_projectors,M_dimensions,t,H,L,rng)
 t1 = time.time()
 

@@ -108,6 +108,13 @@ def construct_HN_Ham(L,bc = 'pbc',g = 0,Delta_1 = 1,Delta_2 = 0,spin_operators_l
     H = H + Delta_2*gen_interaction_kdist(spinz_list,k=2,bc=bc)
     return H
 
+def construct_random_imaginary_potential_Ham(L,Delta_1,W,rng):
+    H_without_W_stuff = construct_HN_Ham(L,Delta_1 = Delta_1)
+    local_potentials = -1j*rng.uniform(low=0,high=W,size=L)
+    local_potential_term = gen_op_total([local_potentials[r]*(spinz_list[r]+0.5*sparse.eye(2**L, format='csr', dtype='complex')) for r in range(L)])
+    H = H_without_W_stuff + local_potential_term
+    return H
+
 def gen_op_total(op_list): #THIS FUNCTION STOLEN FROM PHYSICS 470
     L = len(op_list)
     tot = op_list[0]
