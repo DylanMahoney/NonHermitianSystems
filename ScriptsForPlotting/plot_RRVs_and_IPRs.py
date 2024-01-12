@@ -66,6 +66,8 @@ for j,g in enumerate(g_list):
                 
                 
                 IPRs_data_filename = os.path.join(data_dir,'L=%ig=%.2fD1=%.2fD2=%.2f,%iruns_all_data_eigen_IPR.npy' % (L,g,Delta_1,Delta_2,num_runs))
+                print("L=%i" % L)
+                print(np.load(IPRs_data_filename).shape)
                 IPR = np.mean(np.load(IPRs_data_filename),axis=0)
             
                 axs[2,j].plot(t,IPR,label='L=%i' % L,color=color)

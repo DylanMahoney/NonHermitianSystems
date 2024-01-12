@@ -39,10 +39,11 @@ t_step = 0.2 #increased from 0.1
 num_times = int(t_max/t_step)+1
 t = np.linspace(0,t_max,num_times)
 L = 24 #I also computed L=18 so that could be shown as a shadow
-g_list = [0,0.1,0.2]
+g_list = [0,0.1,0.15,0.2]
 Delta_1 = 1.5
 Delta_2_list = [0,1.5]
-num_runs = 2
+num_runs = 6
+#CHANGE TO USE ALL 6 RUNS
 
 first_time = 0.8 #We may not want to show early times when nothing interesting is happening
 first_index = int(first_time/t_step)

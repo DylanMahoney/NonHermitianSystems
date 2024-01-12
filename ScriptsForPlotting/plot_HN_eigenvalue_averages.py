@@ -72,7 +72,7 @@ for i,Delta_2 in enumerate(Delta_2_list):
     axs[1,i].tick_params(which='both',direction='in')
     for reference in ['Poisson','Ginibre']:
         if i ==0:
-            axs[0,i].axhline(y=r_prediction_dict[reference],label=reference,c='k',linestyle=linestyle_dict[reference])
+            axs[0,i].axhline(y=r_prediction_dict[reference],label=r'\Large{%s}' % reference,c='k',linestyle=linestyle_dict[reference])
         else:
             axs[0,i].axhline(y=r_prediction_dict[reference],c='k',linestyle=linestyle_dict[reference])
         axs[1,i].axhline(y=cos_prediction_dict[reference],c='k',linestyle=linestyle_dict[reference])
@@ -88,10 +88,12 @@ axs[1,1].set_xlabel(r"$L$")
 axs[0,0].legend(markerfirst=False,frameon=False,ncol=2,loc='upper center')
 
 #add_letter_labels(fig,axs,36,120,[r'$\Delta_2=0$',r'$\Delta_2=1.5$',r'$\Delta_2=0$',r'$\Delta_2=1.5$'],white_labels=False)
-x_to_put_text = 0.52
-y_to_put_text = 0.1
+y_to_put_text = 0.5
 #ADD IN LETTER LABELS
-
+axs[0,0].text(x = 19, y = 2/3 + (0.7381018 - (2/3))*y_to_put_text,s=r"{\Large\textbf{(a)}}",ha='center')
+axs[0,1].text(x = 19, y = 2/3 + (0.7381018 - (2/3))*y_to_put_text,s=r"{\Large\textbf{(b)}}",ha='center')
+axs[1,0].text(x=19, y = -0.2405161 + 0.2405161*y_to_put_text,s=r"{\Large\textbf{(c)}}",ha='center')
+axs[1,1].text(x=19, y = -0.2405161 + 0.2405161*y_to_put_text,s=r"{\Large\textbf{(d)}}",ha='center')
 
 
 filename = os.path.join(fig_dir,'average_r_cos_theta.pdf')

@@ -33,3 +33,5 @@
   results_all_sectors[j,i] += op_1_eval*op_1_dimension*EV/(2**L)
 /home/users/dylan24/HatanoNelson/NonHermitianSystems/function_definitions.py:423: ComplexWarning: Casting complex values to real discards the imaginary part
   results_all_sectors[j,i] += op_1_eval*op_1_dimension*EV/(2**L)
+slurmstepd: error: *** JOB 39303566 ON sh02-01n25 CANCELLED AT 2024-01-12T09:51:21 DUE TO TIME LIMIT ***
+slurmstepd: error: *** STEP 39303566.2 ON sh02-01n29 CANCELLED AT 2024-01-12T09:51:21 DUE TO TIME LIMIT ***
