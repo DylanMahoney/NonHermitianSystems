@@ -1,0 +1,60 @@
+
+[notice] A new release of pip is available: 23.3.1 -> 23.3.2
+[notice] To update, run: pip install --upgrade pip
+/home/users/dylan24/HatanoNelson/NonHermitianSystems/function_definitions.py:423: ComplexWarning: Casting complex values to real discards the imaginary part
+  results_all_sectors[j,i] += op_1_eval*op_1_dimension*EV/(2**L)
+/home/users/dylan24/HatanoNelson/NonHermitianSystems/function_definitions.py:423: ComplexWarning: Casting complex values to real discards the imaginary part
+  results_all_sectors[j,i] += op_1_eval*op_1_dimension*EV/(2**L)
+/home/users/dylan24/HatanoNelson/NonHermitianSystems/function_definitions.py:423: ComplexWarning: Casting complex values to real discards the imaginary part
+  results_all_sectors[j,i] += op_1_eval*op_1_dimension*EV/(2**L)
+/home/users/dylan24/HatanoNelson/NonHermitianSystems/function_definitions.py:423: ComplexWarning: Casting complex values to real discards the imaginary part
+  results_all_sectors[j,i] += op_1_eval*op_1_dimension*EV/(2**L)
+/home/users/dylan24/HatanoNelson/NonHermitianSystems/function_definitions.py:423: ComplexWarning: Casting complex values to real discards the imaginary part
+  results_all_sectors[j,i] += op_1_eval*op_1_dimension*EV/(2**L)
+/home/users/dylan24/HatanoNelson/NonHermitianSystems/function_definitions.py:423: ComplexWarning: Casting complex values to real discards the imaginary part
+  results_all_sectors[j,i] += op_1_eval*op_1_dimension*EV/(2**L)
+/home/users/dylan24/HatanoNelson/NonHermitianSystems/function_definitions.py:423: ComplexWarning: Casting complex values to real discards the imaginary part
+  results_all_sectors[j,i] += op_1_eval*op_1_dimension*EV/(2**L)
+/home/users/dylan24/HatanoNelson/NonHermitianSystems/function_definitions.py:423: ComplexWarning: Casting complex values to real discards the imaginary part
+  results_all_sectors[j,i] += op_1_eval*op_1_dimension*EV/(2**L)
+/home/users/dylan24/HatanoNelson/NonHermitianSystems/function_definitions.py:423: ComplexWarning: Casting complex values to real discards the imaginary part
+  results_all_sectors[j,i] += op_1_eval*op_1_dimension*EV/(2**L)
+/home/users/dylan24/HatanoNelson/NonHermitianSystems/function_definitions.py:423: ComplexWarning: Casting complex values to real discards the imaginary part
+  results_all_sectors[j,i] += op_1_eval*op_1_dimension*EV/(2**L)
+/home/users/dylan24/HatanoNelson/NonHermitianSystems/function_definitions.py:423: ComplexWarning: Casting complex values to real discards the imaginary part
+  results_all_sectors[j,i] += op_1_eval*op_1_dimension*EV/(2**L)
+/home/users/dylan24/HatanoNelson/NonHermitianSystems/function_definitions.py:423: ComplexWarning: Casting complex values to real discards the imaginary part
+  results_all_sectors[j,i] += op_1_eval*op_1_dimension*EV/(2**L)
+/home/users/dylan24/HatanoNelson/NonHermitianSystems/function_definitions.py:423: ComplexWarning: Casting complex values to real discards the imaginary part
+  results_all_sectors[j,i] += op_1_eval*op_1_dimension*EV/(2**L)
+/home/users/dylan24/HatanoNelson/NonHermitianSystems/function_definitions.py:423: ComplexWarning: Casting complex values to real discards the imaginary part
+  results_all_sectors[j,i] += op_1_eval*op_1_dimension*EV/(2**L)
+/home/users/dylan24/HatanoNelson/NonHermitianSystems/function_definitions.py:423: ComplexWarning: Casting complex values to real discards the imaginary part
+  results_all_sectors[j,i] += op_1_eval*op_1_dimension*EV/(2**L)
+/home/users/dylan24/HatanoNelson/NonHermitianSystems/function_definitions.py:423: ComplexWarning: Casting complex values to real discards the imaginary part
+  results_all_sectors[j,i] += op_1_eval*op_1_dimension*EV/(2**L)
+slurmstepd: error: Detected 1 oom_kill event in StepId=39303108.1. Some of the step tasks have been OOM Killed.
+srun: error: sh03-01n12: task 0: Out Of Memory
+srun: Terminating StepId=39303108.1
+slurmstepd: error: Detected 1 oom_kill event in StepId=39303108.7. Some of the step tasks have been OOM Killed.
+srun: error: sh03-01n57: task 0: Out Of Memory
+srun: Terminating StepId=39303108.7
+slurmstepd: error: Detected 1 oom_kill event in StepId=39303108.0. Some of the step tasks have been OOM Killed.
+srun: error: sh03-01n02: task 0: Out Of Memory
+srun: Terminating StepId=39303108.0
+slurmstepd: error: Detected 1 oom_kill event in StepId=39303108.6. Some of the step tasks have been OOM Killed.
+srun: error: sh03-01n50: task 0: Out Of Memory
+srun: Terminating StepId=39303108.6
+slurmstepd: error: Detected 1 oom_kill event in StepId=39303108.5. Some of the step tasks have been OOM Killed.
+srun: error: sh03-01n32: task 0: Out Of Memory
+srun: Terminating StepId=39303108.5
+slurmstepd: error: Detected 1 oom_kill event in StepId=39303108.4. Some of the step tasks have been OOM Killed.
+srun: error: sh03-01n29: task 0: Out Of Memory
+srun: Terminating StepId=39303108.4
+slurmstepd: error: Detected 1 oom_kill event in StepId=39303108.3. Some of the step tasks have been OOM Killed.
+srun: error: sh03-01n24: task 0: Out Of Memory
+srun: Terminating StepId=39303108.3
+slurmstepd: error: Detected 1 oom_kill event in StepId=39303108.2. Some of the step tasks have been OOM Killed.
+srun: error: sh03-01n17: task 0: Out Of Memory
+srun: Terminating StepId=39303108.2
+slurmstepd: error: Detected 1 oom_kill event in StepId=39303108.batch. Some of the step tasks have been OOM Killed.

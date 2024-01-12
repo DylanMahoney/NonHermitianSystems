@@ -2,9 +2,9 @@
 #SBATCH --job-name=random_potential_spin_spin_transport_job
 #SBATCH --output=../SlurmOutputs/random_potential_spin_spin_transport_job.%j.out
 #SBATCH --error=../SlurmOutputs/random_potential_spin_spin_transport_job.%j.err
-#SBATCH --time=48:00:00
+#SBATCH --time=36:00:00
 #SBATCH -c 2
-#SBATCH --mem=12GB
+#SBATCH --mem=4GB
 #SBATCH --mail-type=all
 #SBATCH --chdir=../ScriptsForDataGeneration
 #SBATCH --ntasks=8
@@ -32,5 +32,3 @@ do
  done
 done
 wait
-
-#In this past this has run out of memory when given only 8GB, but later it seemed fine

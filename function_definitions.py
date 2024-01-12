@@ -109,6 +109,7 @@ def construct_HN_Ham(L,bc = 'pbc',g = 0,Delta_1 = 1,Delta_2 = 0,spin_operators_l
     return H
 
 def construct_random_imaginary_potential_Ham(L,Delta_1,W,rng):
+    spinx_list,spiny_list,spinz_list = gen_spin_operators(L)
     H_without_W_stuff = construct_HN_Ham(L,Delta_1 = Delta_1)
     local_potentials = -1j*rng.uniform(low=0,high=W,size=L)
     local_potential_term = gen_op_total([local_potentials[r]*(spinz_list[r]+0.5*sparse.eye(2**L, format='csr', dtype='complex')) for r in range(L)])

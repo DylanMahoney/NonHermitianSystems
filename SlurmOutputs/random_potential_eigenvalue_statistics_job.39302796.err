@@ -1,0 +1,63 @@
+
+[notice] A new release of pip is available: 23.3.1 -> 23.3.2
+[notice] To update, run: pip install --upgrade pip
+Traceback (most recent call last):
+  File "/home/users/dylan24/HatanoNelson/NonHermitianSystems/ScriptsForDataGeneration/random_potential_eigenvalue_statistics.py", line 46, in <module>
+    H = construct_random_imaginary_potential_Ham(L,Delta_1,W,rng)
+  File "/home/users/dylan24/HatanoNelson/NonHermitianSystems/function_definitions.py", line 114, in construct_random_imaginary_potential_Ham
+    local_potential_term = gen_op_total([local_potentials[r]*(spinz_list[r]+0.5*sparse.eye(2**L, format='csr', dtype='complex')) for r in range(L)])
+  File "/home/users/dylan24/HatanoNelson/NonHermitianSystems/function_definitions.py", line 114, in <listcomp>
+    local_potential_term = gen_op_total([local_potentials[r]*(spinz_list[r]+0.5*sparse.eye(2**L, format='csr', dtype='complex')) for r in range(L)])
+NameError: name 'spinz_list' is not defined
+srun: error: sh02-01n06: task 0: Exited with exit code 1
+srun: Terminating StepId=39302796.0
+Traceback (most recent call last):
+  File "/home/users/dylan24/HatanoNelson/NonHermitianSystems/ScriptsForDataGeneration/random_potential_eigenvalue_statistics.py", line 46, in <module>
+    H = construct_random_imaginary_potential_Ham(L,Delta_1,W,rng)
+  File "/home/users/dylan24/HatanoNelson/NonHermitianSystems/function_definitions.py", line 114, in construct_random_imaginary_potential_Ham
+    local_potential_term = gen_op_total([local_potentials[r]*(spinz_list[r]+0.5*sparse.eye(2**L, format='csr', dtype='complex')) for r in range(L)])
+  File "/home/users/dylan24/HatanoNelson/NonHermitianSystems/function_definitions.py", line 114, in <listcomp>
+    local_potential_term = gen_op_total([local_potentials[r]*(spinz_list[r]+0.5*sparse.eye(2**L, format='csr', dtype='complex')) for r in range(L)])
+NameError: name 'spinz_list' is not defined
+srun: error: sh02-01n10: task 0: Exited with exit code 1
+srun: Terminating StepId=39302796.1
+Traceback (most recent call last):
+  File "/home/users/dylan24/HatanoNelson/NonHermitianSystems/ScriptsForDataGeneration/random_potential_eigenvalue_statistics.py", line 46, in <module>
+    H = construct_random_imaginary_potential_Ham(L,Delta_1,W,rng)
+  File "/home/users/dylan24/HatanoNelson/NonHermitianSystems/function_definitions.py", line 114, in construct_random_imaginary_potential_Ham
+    local_potential_term = gen_op_total([local_potentials[r]*(spinz_list[r]+0.5*sparse.eye(2**L, format='csr', dtype='complex')) for r in range(L)])
+  File "/home/users/dylan24/HatanoNelson/NonHermitianSystems/function_definitions.py", line 114, in <listcomp>
+    local_potential_term = gen_op_total([local_potentials[r]*(spinz_list[r]+0.5*sparse.eye(2**L, format='csr', dtype='complex')) for r in range(L)])
+NameError: name 'spinz_list' is not defined
+srun: error: sh02-01n21: task 0: Exited with exit code 1
+srun: Terminating StepId=39302796.4
+Traceback (most recent call last):
+  File "/home/users/dylan24/HatanoNelson/NonHermitianSystems/ScriptsForDataGeneration/random_potential_eigenvalue_statistics.py", line 46, in <module>
+    H = construct_random_imaginary_potential_Ham(L,Delta_1,W,rng)
+  File "/home/users/dylan24/HatanoNelson/NonHermitianSystems/function_definitions.py", line 114, in construct_random_imaginary_potential_Ham
+    local_potential_term = gen_op_total([local_potentials[r]*(spinz_list[r]+0.5*sparse.eye(2**L, format='csr', dtype='complex')) for r in range(L)])
+  File "/home/users/dylan24/HatanoNelson/NonHermitianSystems/function_definitions.py", line 114, in <listcomp>
+    local_potential_term = gen_op_total([local_potentials[r]*(spinz_list[r]+0.5*sparse.eye(2**L, format='csr', dtype='complex')) for r in range(L)])
+NameError: name 'spinz_list' is not defined
+srun: error: sh02-01n13: task 0: Exited with exit code 1
+srun: Terminating StepId=39302796.3
+Traceback (most recent call last):
+  File "/home/users/dylan24/HatanoNelson/NonHermitianSystems/ScriptsForDataGeneration/random_potential_eigenvalue_statistics.py", line 46, in <module>
+    H = construct_random_imaginary_potential_Ham(L,Delta_1,W,rng)
+  File "/home/users/dylan24/HatanoNelson/NonHermitianSystems/function_definitions.py", line 114, in construct_random_imaginary_potential_Ham
+    local_potential_term = gen_op_total([local_potentials[r]*(spinz_list[r]+0.5*sparse.eye(2**L, format='csr', dtype='complex')) for r in range(L)])
+  File "/home/users/dylan24/HatanoNelson/NonHermitianSystems/function_definitions.py", line 114, in <listcomp>
+    local_potential_term = gen_op_total([local_potentials[r]*(spinz_list[r]+0.5*sparse.eye(2**L, format='csr', dtype='complex')) for r in range(L)])
+NameError: name 'spinz_list' is not defined
+srun: error: sh02-01n12: task 0: Exited with exit code 1
+srun: Terminating StepId=39302796.2
+Traceback (most recent call last):
+  File "/home/users/dylan24/HatanoNelson/NonHermitianSystems/ScriptsForDataGeneration/random_potential_eigenvalue_statistics.py", line 46, in <module>
+    H = construct_random_imaginary_potential_Ham(L,Delta_1,W,rng)
+  File "/home/users/dylan24/HatanoNelson/NonHermitianSystems/function_definitions.py", line 114, in construct_random_imaginary_potential_Ham
+    local_potential_term = gen_op_total([local_potentials[r]*(spinz_list[r]+0.5*sparse.eye(2**L, format='csr', dtype='complex')) for r in range(L)])
+  File "/home/users/dylan24/HatanoNelson/NonHermitianSystems/function_definitions.py", line 114, in <listcomp>
+    local_potential_term = gen_op_total([local_potentials[r]*(spinz_list[r]+0.5*sparse.eye(2**L, format='csr', dtype='complex')) for r in range(L)])
+NameError: name 'spinz_list' is not defined
+srun: error: sh02-02n10: task 0: Exited with exit code 1
+srun: Terminating StepId=39302796.5

@@ -1,3 +1,5 @@
+#https://stackoverflow.com/questions/13369888/matplotlib-y-axis-label-on-right-side
+
 import sys
 import os
 
@@ -20,7 +22,8 @@ rng = np.random.default_rng(2128971964) #WHO YOU GONNA CALL?
 plt.rc('text', usetex=True)
 plt.rcParams.update({
     "text.usetex": True,
-    "font.family": "Computer Modern"
+"font.family": "Computer Modern",
+'font.size': 12
 })
 plt.rc('text.latex', preamble=r'\usepackage{amsmath,braket}')
 plt.rcParams['figure.constrained_layout.use'] = True
@@ -29,15 +32,156 @@ folder_name = 'HNEigenvalueStatistics'
 fig_dir = get_fig_directory(current_directory,folder_name)
 data_dir = get_data_directory(current_directory,folder_name)
 
-figure_width = 12
-color_list = get_list_of_colors_I_like(3)
+histogram_color = get_list_of_colors_I_like(2)[1]
 
 L = 22
 g=0.2
 Delta_1 = 1.5
 Delta_2_list = [0,1.5]
 fig,axs = plt.subplots(3,2)
+mosaic = """
+    AABB
+    AACC
+    DDEE
+    DDFF
+    
+    """
+fig = plt.figure()
+ax_dict = fig.subplot_mosaic(mosaic)
+plt.style.use('Solarize_Light2')
 
+x_to_put_text = 0.52
+y_to_put_text = 0.1
+#the above are proportions of the overall data range plotted
+
+noNNN_z_filename = os.path.join(data_dir,'L=%i,g=%.2f,D1=%.2f,D2=%.2f_zs.npy' % (L,g,Delta_1,0))
+z = np.load(noNNN_z_filename)
+x = np.real(z)
+y = np.imag(z)
+r = np.abs(z)
+theta = np.angle(z)
+
+ax_dict['A'].hist2d(x,y,bins=40,range = [[-1.1, 1.1], [-1.1, 1.1]],density=True)
+ax_dict['A'].set_xlim(left=-1.1,right=1.1)
+ax_dict['A'].set_ylim(bottom=-1.1,top=1.1)
+
+ax_dict['A'].set_xticks(ticks=[],labels=[])
+
+ax_dict['A'].set_ylabel(r"$\Im(z)$")
+#ax_dict['A'].set_aspect(1)
+#ax_dict['A'].set_xlabel(r"$\Re(z)$")
+
+#ax_dict['A'].tick_params(which='both',direction='in')
+#ax_dict['A'].tick_params(left=False,bottom=False)
+#ax_dict['A'].set_aspect('equal')
+ax_dict['A'].text(x=-1.1+2.2*x_to_put_text,y=-1.1+2.2*y_to_put_text,s=r"{\Large\textbf(a) $\Delta_2 = 0$}",color='w')
+
+ax_dict['B'].hist(r,bins=40,density=True,color=histogram_color)
+ax_dict['B'].set_xlim(left=0,right=1)
+ax_dict['B'].set_ylim(bottom=0,top=2.5)
+#ax_dict['B'].tick_params(left=False,bottom=False)
+#ax_dict['B'].set_xlabel(r"$\rho$")
+ax_dict['B'].yaxis.set_label_position("right")
+ax_dict['B'].yaxis.tick_right()
+ax_dict['B'].set_xticks(ticks=[],labels=[])
+ax_dict['B'].set_ylabel(r"$P(\rho)$")
+#ax_dict['B'].set_yticks(ticks=[0,2],labels=[r"$0.0$",r"$2.0$"])
+#ax_dict['B'].set_aspect(0.5)
+x_left, x_right = ax_dict['B'].get_xlim()
+y_low, y_high = ax_dict['B'].get_ylim()
+ratio = 0.5
+#ax_dict['B'].set_aspect(abs((x_right-x_left)/(y_low-y_high))*ratio)
+ax_dict['B'].text(x=0+1*x_to_put_text,y=0+2.5*y_to_put_text,s=r"{\Large\textbf(b) $\Delta_2 = 0$}",color='w')
+
+ax_dict['C'].hist(theta,bins=40,density=True,color=histogram_color)
+ax_dict['C'].set_xlim(left=-np.pi,right=np.pi)
+ax_dict['C'].set_xticks(ticks = [-np.pi,-np.pi/2,0,np.pi/2,np.pi],labels=[r"$-\pi$", r"$-\frac \pi 2$", r"$0$", r"$\frac \pi 2 $", r"$\pi$"])
+ax_dict['C'].set_ylim(bottom=0,top=0.22)
+ax_dict['C'].set_yticks(ticks=[0,1/(2*np.pi)],labels=[r"$0$",r"$\frac{1}{2\pi}$"])
+#ax_dict['C'].tick_params(left=False,bottom=False)
+
+ax_dict['C'].yaxis.set_label_position("right")
+ax_dict['C'].yaxis.tick_right()
+ax_dict['C'].set_xticks(ticks=[],labels=[])
+
+ax_dict['C'].set_ylabel(r"$P(\theta)$")
+x_left, x_right = ax_dict['C'].get_xlim()
+y_low, y_high = ax_dict['C'].get_ylim()
+ratio = 0.5
+#ax_dict['C'].set_aspect(abs((x_right-x_left)/(y_low-y_high))*ratio)
+#ax_dict['C'].set_aspect(0.5)
+#ax_dict['C'].set_xlabel(r"$\theta$")
+ax_dict['C'].text(x=-np.pi+2*np.pi*x_to_put_text,y=0+0.22*y_to_put_text,s=r"{\Large\textbf(c) $\Delta_2 = 0$}",color='w')
+
+NNN_z_filename = os.path.join(data_dir,'L=%i,g=%.2f,D1=%.2f,D2=%.2f_zs.npy' % (L,g,Delta_1,1.5))
+z = np.load(NNN_z_filename)
+x = np.real(z)
+y = np.imag(z)
+r = np.abs(z)
+theta = np.angle(z)
+
+ax_dict['D'].hist2d(x,y,bins=40,range = [[-1.1, 1.1], [-1.1, 1.1]],density=True)
+ax_dict['D'].set_xlim(left=-1.1,right=1.1)
+ax_dict['D'].set_ylim(bottom=-1.1,top=1.1)
+
+ax_dict['D'].set_ylabel(r"$\Im(z)$")
+ax_dict['D'].set_xlabel(r"$\Re(z)$")
+#ax_dict['D'].set_aspect(1)
+
+#ax_dict['D'].set_aspect('equal')
+#ax_dict['D'].tick_params(left=False,bottom=False)
+ax_dict['D'].text(x=-1.1+2.2*x_to_put_text,y=-1.1+2.2*y_to_put_text,s=r"{\Large\textbf(d) $\Delta_2 = 1.5$}",color='w')
+
+ax_dict['E'].hist(r,bins=40,density=True,color=histogram_color)
+ax_dict['E'].set_xlim(left=0,right=1)
+ax_dict['E'].set_ylim(bottom=0,top=2.5)
+#ax_dict['E'].tick_params(left=False,bottom=False)
+
+ax_dict['E'].yaxis.set_label_position("right")
+ax_dict['E'].yaxis.tick_right()
+ax_dict['E'].set_xticks(ticks=[],labels=[])
+print("preferred P(rho) limits")
+print(ax_dict['E'].get_ylim())
+
+ax_dict['E'].set_ylabel(r"$P(\rho)$")
+x_left, x_right = ax_dict['E'].get_xlim()
+y_low, y_high = ax_dict['E'].get_ylim()
+ratio = 0.5
+#ax_dict['E'].set_aspect(abs((x_right-x_left)/(y_low-y_high))*ratio)
+#ax_dict['E'].set_aspect(0.5)
+#ax_dict['E'].set_xlabel(r"$\rho$")
+ax_dict['E'].text(x=0+1*x_to_put_text,y=0+2.5*y_to_put_text,s=r"{\Large\textbf(e) $\Delta_2 = 1.5$}",color='w')
+
+ax_dict['F'].hist(theta,bins=40,density=True,color=histogram_color)
+ax_dict['F'].set_xlim(left=-np.pi,right=np.pi)
+ax_dict['F'].set_xticks(ticks = [-np.pi,0,np.pi],labels=[r"$-\pi$ {\Large or} $0$", r"$0$ {\Large or} $\frac 1 2 $", r"$\pi$ {\Large or} $1$"])
+print("preferred P(theta) limits")
+print(ax_dict['F'].get_ylim())
+ax_dict['F'].set_ylim(bottom=0,top=0.22)
+#ax_dict['F'].tick_params(left=False,bottom=False)
+
+ax_dict['F'].yaxis.set_label_position("right")
+ax_dict['F'].yaxis.tick_right()
+
+ax_dict['F'].set_ylabel(r"$P(\theta)$")
+ax_dict['F'].set_yticks(ticks=[0,1/(2*np.pi)],labels=[r"$0$",r"$\frac{1}{2\pi}$"])
+ax_dict['F'].set_xlabel(r"$\theta$ {\Large or} $\rho$")
+x_left, x_right = ax_dict['F'].get_xlim()
+y_low, y_high = ax_dict['F'].get_ylim()
+ratio = 0.5
+#ax_dict['F'].set_aspect(abs((x_right-x_left)/(y_low-y_high))*ratio)
+#ax_dict['F'].set_aspect(0.5)
+ax_dict['F'].text(x=-np.pi+2*np.pi*x_to_put_text,y=0+0.22*y_to_put_text,s=r"{\Large\textbf(f) $\Delta_2 = 1.5$}",color='w')
+
+#ADD LETTERS AFTER REST IN PLACE
+
+#SET ASPECT RATIO AFTER REST IN PLACE
+
+filename = os.path.join(fig_dir,'HN_eval_hists.pdf')
+fig.savefig(filename,bbox_inches='tight')
+plt.close(fig)
+
+exit()
 for i,Delta_2 in enumerate(Delta_2_list):
     z_filename = os.path.join(data_dir,'L=%i,g=%.2f,D1=%.2f,D2=%.2f_zs.npy' % (L,g,Delta_1,Delta_2))
     z = np.load(z_filename)

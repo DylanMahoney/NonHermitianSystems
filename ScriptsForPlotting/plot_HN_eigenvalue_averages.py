@@ -20,7 +20,8 @@ rng = np.random.default_rng(2128971964) #WHO YOU GONNA CALL?
 plt.rc('text', usetex=True)
 plt.rcParams.update({
     "text.usetex": True,
-    "font.family": "Computer Modern"
+"font.family": "Computer Modern",
+'font.size': 12
 })
 plt.rc('text.latex', preamble=r'\usepackage{amsmath,braket}')
 plt.rcParams['figure.constrained_layout.use'] = True
@@ -42,6 +43,8 @@ Delta_1 = 1.5
 g_list = [0.1,0.2]
 Delta_2_list = [0,1.5]
 fig,axs = plt.subplots(2,2,sharex='col',sharey='row')
+plt.style.use('Solarize_Light2')
+alphabet = ['a','b','c','d']
 color_list = get_list_of_colors_I_like(len(g_list))
 
 for i,Delta_2 in enumerate(Delta_2_list):
@@ -58,12 +61,15 @@ for i,Delta_2 in enumerate(Delta_2_list):
     
     for j,g in enumerate(g_list):
         if i == 0:
-            axs[0,i].scatter(L_list,r_mean_array[j,:],color=color_list[j],label='g=%.2f' % g,alpha=0.8)
+            label = r'$g=0$' if g == 0 else r'g=%.1f' % g
+            axs[0,i].plot(L_list,r_mean_array[j,:],'.',markersize=10,color=color_list[j],label=label,alpha=0.8)
         else:
-            axs[0,i].scatter(L_list,r_mean_array[j,:],color=color_list[j],alpha=0.8)
-        axs[1,i].scatter(L_list,cos_mean_array[j,:],color=color_list[j],alpha=0.8)
+            axs[0,i].plot(L_list,r_mean_array[j,:],'.',markersize=10,color=color_list[j],alpha=0.8)
+        axs[1,i].plot(L_list,cos_mean_array[j,:],'.',markersize=10,color=color_list[j],alpha=0.8)
     axs[0,i].set_xticks(L_list)
     axs[1,i].set_xticks(L_list)
+    axs[0,i].tick_params(which='both',direction='in')
+    axs[1,i].tick_params(which='both',direction='in')
     for reference in ['Poisson','Ginibre']:
         if i ==0:
             axs[0,i].axhline(y=r_prediction_dict[reference],label=reference,c='k',linestyle=linestyle_dict[reference])
@@ -76,17 +82,19 @@ for i,Delta_2 in enumerate(Delta_2_list):
 axs[0,0].set_ylabel(r"$\langle r \rangle$")
 axs[1,0].set_ylabel(r"$\langle \cos(\theta) \rangle$")
 
-axs[1,0].set_xlabel("L")
-axs[1,1].set_xlabel("L")
+axs[1,0].set_xlabel(r"$L$")
+axs[1,1].set_xlabel(r"$L$")
 
-axs[0,0].legend(markerfirst=False,frameon=False,ncol=2)
+axs[0,0].legend(markerfirst=False,frameon=False,ncol=2,loc='upper center')
 
-add_letter_labels(fig,axs,36,120,[r'$\Delta_2=0$',r'$\Delta_2=1.5$',r'$\Delta_2=0$',r'$\Delta_2=1.5$'],white_labels=False)
+#add_letter_labels(fig,axs,36,120,[r'$\Delta_2=0$',r'$\Delta_2=1.5$',r'$\Delta_2=0$',r'$\Delta_2=1.5$'],white_labels=False)
+x_to_put_text = 0.52
+y_to_put_text = 0.1
+#ADD IN LETTER LABELS
 
 
-filename = os.path.join(fig_dir,'average_r_cos_theta.png')
 
-fig.set_size_inches(figure_width, figure_width/2)
+filename = os.path.join(fig_dir,'average_r_cos_theta.pdf')
 
-fig.savefig(filename,dpi=120)
+fig.savefig(filename,bbox_inches='tight')
 plt.close(fig)

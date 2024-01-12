@@ -38,7 +38,7 @@ num_times = int(t_max/t_step)+1
 t = np.linspace(0,t_max,num_times)
 
 #L = 22 needs more than 8GB of RAM; 12GB works for a single run
-num_runs = 2
+num_runs = 6
 
 print("L = %i" % L)
 t0 = time.time()
