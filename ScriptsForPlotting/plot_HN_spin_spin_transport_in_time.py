@@ -20,7 +20,8 @@ rng = np.random.default_rng(2128971964) #WHO YOU GONNA CALL?
 plt.rc('text', usetex=True)
 plt.rcParams.update({
     "text.usetex": True,
-    "font.family": "Computer Modern"
+"font.family": "Computer Modern",
+'font.size': 12
 })
 plt.rc('text.latex', preamble=r'\usepackage{amsmath,braket}')
 plt.rcParams['figure.constrained_layout.use'] = True
@@ -29,10 +30,9 @@ folder_name = 'HNSpinSpinTransport'
 fig_dir = get_fig_directory(current_directory,folder_name)
 data_dir = get_data_directory(current_directory,folder_name)
 
-figure_width = 12
-
 #FIRST LET'S PLOT THE SAME-SITE CORRELATION AS A FUNCTION OF TIME
 fig,axs = plt.subplots(1,2,sharey=True)
+plt.style.use('Solarize_Light2')
 
 t_max = 30 #increased from 20
 t_step = 0.2 #increased from 0.1
@@ -60,42 +60,49 @@ for i,Delta_2 in enumerate(Delta_2_list):
         data_filename = os.path.join(data_dir,'L=%ig=%.2fD1=%.2fD2=%.2f,%iruns_all_data.npy' % (L,g,Delta_1,Delta_2,num_runs))
         data = np.load(data_filename)
         same_site_data = data[:,L//2,:]
-        first_run = same_site_data[0,:]
-        second_run = same_site_data[1,:]
-        #Let's cut off everything after one of the runs hits 1/(4*L) for visual cleanliness and typicality reliability
-        min_of_two_runs = np.minimum(first_run,second_run)
+        avg_run = np.mean(same_site_data,axis=0)
+        #Let's cut off everything after the run average hits 1/(4*L) for visual cleanliness and typicality reliability and finite size effects
         last_value = t.size
-        if np.min(min_of_two_runs) <= finite_size_eq:
-            last_value = np.argmax(min_of_two_runs <= finite_size_eq) #First time it hits or drops below eq
+        if np.min(avg_run) <= finite_size_eq:
+            last_value = np.argmax(avg_run <= finite_size_eq) #First time it hits or drops below eq
         
         #Let's fit a power law to the average of the two runs, starting at hydro_start_index
         #TODO: put this into a function so that I don't copy-paste a bunch of code for the other spin-spin transport figure
         #TODO: verify that this does what it's supposed to while under less time pressure
         hydro_start_index = hydro_start_indices[i]
-        avg_run = np.mean(same_site_data,axis=0)
+        
         starting_value = avg_run[hydro_start_index]
         t0 = t[hydro_start_index]
         def power_law_decay(t,alpha): # = const (t - t0)^{- \alpha}
             return starting_value*t0**alpha*t**(-alpha)
         popt,pcov = scipy.optimize.curve_fit(power_law_decay,t[hydro_start_index:last_value],avg_run[hydro_start_index:last_value],p0=0.66)
         optimal_alpha = popt[0]
-        axs[i].plot(t[hydro_start_index:last_value],power_law_decay(t[hydro_start_index:last_value],optimal_alpha),linestyle='--',label='slope %.4f' % optimal_alpha,color=color_list[j])
-        axs[i].axvline(x=t0,color='k',linestyle=':',label=r'$t = %i$' % t0)
-        axs[i].plot(t[first_index:last_value+1],first_run[first_index:last_value+1],label="g = %.1f" % g,color=color_list[j])
-        axs[i].plot(t[first_index:last_value+1],second_run[first_index:last_value+1],color=color_list[j])
-    axs[i].axhline(y=finite_size_eq,color='k',label=r'$\frac{1}{4L}$')
+        axs[i].plot(t[hydro_start_index:last_value],power_law_decay(t[hydro_start_index:last_value],optimal_alpha),linestyle='--',color=color_list[j])
+        #ADD TEXT CONTAINING OPTIMAL ALPHA
+        if j == 0:
+            axs[i].text(x=15,y=0.03,s=r"$\propto t^{-%.2f}$" % optimal_alpha,color=color_list[j])
+        if j == 3:
+            axs[i].text(x=4,y=0.012,s=r"$\propto t^{-%.2f}$" % optimal_alpha,color=color_list[j])
+        axs[i].plot(t[first_index:last_value+1],avg_run[first_index:last_value+1],label="g = %.2f" % g,color=color_list[j])
+    print(finite_size_eq)
+    axs[i].axhline(y=finite_size_eq,color='k',label=r'$\frac{1}{4L}$',ls='--')
 
-axs[0].set_ylabel("$C_{ss}(t)$",fontsize=14)
+axs[0].set_ylabel(r"\Large $\mathcal{C}(0,t)$")
 for ax in axs.flatten():
     ax.set_xlabel("$t$")
     ax.set_xscale('log')
     ax.set_yscale('log')
+for ax in axs.flatten():
+    x_left, x_right = ax.get_xlim()
+    y_low, y_high = ax.get_ylim()
+    ratio = 0.0085
+    ax.set_aspect(abs((x_right-x_left)/(y_low-y_high))*ratio)
 
 axs[0].legend(markerfirst=False,frameon=False)
-axs[1].legend(markerfirst=False,frameon=False)
-add_letter_labels(fig,axs,124,72,[r'$\Delta_2 = 0$',r'$\Delta_2 = 1.5$'],white_labels=False)
-filename = os.path.join(fig_dir,'HN_spin_spin_same_site_L=%i.png'%L)
-
-fig.set_size_inches(figure_width,figure_width/2)
-fig.savefig(filename,dpi=120)
+#axs[1].legend(markerfirst=False,frameon=False)
+axs[0].text(x=0.8,y=0.015,s=r"{\Large\textbf{(a)} $\Delta_2 = 0$}")
+axs[1].text(x=0.8,y=0.015,s=r"{\Large\textbf{(b)} $\Delta_2 = 1.5$}")
+#add_letter_labels(fig,axs,124,72,[r'$\Delta_2 = 0$',r'$\Delta_2 = 1.5$'],white_labels=False)
+filename = os.path.join(fig_dir,'HN_spin_spin_same_site_L=%i.pdf'%L)
+fig.savefig(filename,bbox_inches='tight')
 plt.close(fig)

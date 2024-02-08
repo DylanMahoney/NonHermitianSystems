@@ -88,12 +88,12 @@ axs[1,1].set_xlabel(r"$L$")
 axs[0,0].legend(markerfirst=False,frameon=False,ncol=2,loc='upper center')
 
 #add_letter_labels(fig,axs,36,120,[r'$\Delta_2=0$',r'$\Delta_2=1.5$',r'$\Delta_2=0$',r'$\Delta_2=1.5$'],white_labels=False)
-y_to_put_text = 0.5
+y_to_put_text = 0.2
 #ADD IN LETTER LABELS
-axs[0,0].text(x = 19, y = 2/3 + (0.7381018 - (2/3))*y_to_put_text,s=r"{\Large\textbf{(a)}}",ha='center')
-axs[0,1].text(x = 19, y = 2/3 + (0.7381018 - (2/3))*y_to_put_text,s=r"{\Large\textbf{(b)}}",ha='center')
-axs[1,0].text(x=19, y = -0.2405161 + 0.2405161*y_to_put_text,s=r"{\Large\textbf{(c)}}",ha='center')
-axs[1,1].text(x=19, y = -0.2405161 + 0.2405161*y_to_put_text,s=r"{\Large\textbf{(d)}}",ha='center')
+axs[0,0].text(x = 16.5, y = 2/3 + (0.7381018 - (2/3))*y_to_put_text,s=r"{\Large\textbf{(a)}}",ha='center')
+axs[0,1].text(x = 16.5, y = 2/3 + (0.7381018 - (2/3))*y_to_put_text,s=r"{\Large\textbf{(b)}}",ha='center')
+axs[1,0].text(x=16.5, y = -0.2405161 + 0.2405161*y_to_put_text,s=r"{\Large\textbf{(c)}}",ha='center')
+axs[1,1].text(x=16.5, y = -0.2405161 + 0.2405161*y_to_put_text,s=r"{\Large\textbf{(d)}}",ha='center')
 
 
 filename = os.path.join(fig_dir,'average_r_cos_theta.pdf')

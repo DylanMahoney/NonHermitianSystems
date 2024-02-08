@@ -1,5 +1,5 @@
 #https://stackoverflow.com/questions/13369888/matplotlib-y-axis-label-on-right-side
-
+#IS RIGHT-ALIGNING THE LETTERS REALLY THE RIGHT CHOICE?
 import sys
 import os
 
@@ -50,7 +50,7 @@ fig = plt.figure()
 ax_dict = fig.subplot_mosaic(mosaic)
 plt.style.use('Solarize_Light2')
 
-x_to_put_text = 0.52
+x_to_put_text = 0.95
 y_to_put_text = 0.1
 #the above are proportions of the overall data range plotted
 
@@ -68,13 +68,13 @@ ax_dict['A'].set_ylim(bottom=-1.1,top=1.1)
 ax_dict['A'].set_xticks(ticks=[],labels=[])
 
 ax_dict['A'].set_ylabel(r"$\Im(z)$")
-#ax_dict['A'].set_aspect(1)
+ax_dict['A'].set_aspect(1)
 #ax_dict['A'].set_xlabel(r"$\Re(z)$")
 
 #ax_dict['A'].tick_params(which='both',direction='in')
 #ax_dict['A'].tick_params(left=False,bottom=False)
 #ax_dict['A'].set_aspect('equal')
-ax_dict['A'].text(x=-1.1+2.2*x_to_put_text,y=-1.1+2.2*y_to_put_text,s=r"{\Large\textbf(a) $\Delta_2 = 0$}",color='w')
+ax_dict['A'].text(x=-1.1+2.2*x_to_put_text,y=-1.1+2.2*y_to_put_text,s=r"{\Large\textbf{(a)} $\Delta_2 = 0$}",color='w',ha='right')
 
 ax_dict['B'].hist(r,bins=40,density=True,color=histogram_color)
 ax_dict['B'].set_xlim(left=0,right=1)
@@ -91,7 +91,7 @@ x_left, x_right = ax_dict['B'].get_xlim()
 y_low, y_high = ax_dict['B'].get_ylim()
 ratio = 0.5
 #ax_dict['B'].set_aspect(abs((x_right-x_left)/(y_low-y_high))*ratio)
-ax_dict['B'].text(x=0+1*x_to_put_text,y=0+2.5*y_to_put_text,s=r"{\Large\textbf(b) $\Delta_2 = 0$}",color='w')
+ax_dict['B'].text(x=0+1*x_to_put_text,y=0+2.5*y_to_put_text,s=r"{\Large\textbf{(b)} $\Delta_2 = 0$}",color='w',ha='right')
 
 ax_dict['C'].hist(theta,bins=40,density=True,color=histogram_color)
 ax_dict['C'].set_xlim(left=-np.pi,right=np.pi)
@@ -111,7 +111,7 @@ ratio = 0.5
 #ax_dict['C'].set_aspect(abs((x_right-x_left)/(y_low-y_high))*ratio)
 #ax_dict['C'].set_aspect(0.5)
 #ax_dict['C'].set_xlabel(r"$\theta$")
-ax_dict['C'].text(x=-np.pi+2*np.pi*x_to_put_text,y=0+0.22*y_to_put_text,s=r"{\Large\textbf(c) $\Delta_2 = 0$}",color='w')
+ax_dict['C'].text(x=-np.pi+2*np.pi*x_to_put_text,y=0+0.22*y_to_put_text,s=r"{\Large\textbf{(c)} $\Delta_2 = 0$}",color='w',ha='right')
 
 NNN_z_filename = os.path.join(data_dir,'L=%i,g=%.2f,D1=%.2f,D2=%.2f_zs.npy' % (L,g,Delta_1,1.5))
 z = np.load(NNN_z_filename)
@@ -126,11 +126,11 @@ ax_dict['D'].set_ylim(bottom=-1.1,top=1.1)
 
 ax_dict['D'].set_ylabel(r"$\Im(z)$")
 ax_dict['D'].set_xlabel(r"$\Re(z)$")
-#ax_dict['D'].set_aspect(1)
+ax_dict['D'].set_aspect(1)
 
 #ax_dict['D'].set_aspect('equal')
 #ax_dict['D'].tick_params(left=False,bottom=False)
-ax_dict['D'].text(x=-1.1+2.2*x_to_put_text,y=-1.1+2.2*y_to_put_text,s=r"{\Large\textbf(d) $\Delta_2 = 1.5$}",color='w')
+ax_dict['D'].text(x=-1.1+2.2*x_to_put_text,y=-1.1+2.2*y_to_put_text,s=r"{\Large\textbf{(d)} $\Delta_2 = 1.5$}",color='w',ha='right')
 
 ax_dict['E'].hist(r,bins=40,density=True,color=histogram_color)
 ax_dict['E'].set_xlim(left=0,right=1)
@@ -150,7 +150,7 @@ ratio = 0.5
 #ax_dict['E'].set_aspect(abs((x_right-x_left)/(y_low-y_high))*ratio)
 #ax_dict['E'].set_aspect(0.5)
 #ax_dict['E'].set_xlabel(r"$\rho$")
-ax_dict['E'].text(x=0+1*x_to_put_text,y=0+2.5*y_to_put_text,s=r"{\Large\textbf(e) $\Delta_2 = 1.5$}",color='w')
+ax_dict['E'].text(x=0+1*x_to_put_text,y=0+2.5*y_to_put_text,s=r"{\Large\textbf{(e)} $\Delta_2 = 1.5$}",color='w',ha='right')
 
 ax_dict['F'].hist(theta,bins=40,density=True,color=histogram_color)
 ax_dict['F'].set_xlim(left=-np.pi,right=np.pi)
@@ -171,7 +171,7 @@ y_low, y_high = ax_dict['F'].get_ylim()
 ratio = 0.5
 #ax_dict['F'].set_aspect(abs((x_right-x_left)/(y_low-y_high))*ratio)
 #ax_dict['F'].set_aspect(0.5)
-ax_dict['F'].text(x=-np.pi+2*np.pi*x_to_put_text,y=0+0.22*y_to_put_text,s=r"{\Large\textbf(f) $\Delta_2 = 1.5$}",color='w')
+ax_dict['F'].text(x=-np.pi+2*np.pi*x_to_put_text,y=0+0.22*y_to_put_text,s=r"{\Large\textbf{(f)} $\Delta_2 = 1.5$}",color='w',ha='right')
 
 #ADD LETTERS AFTER REST IN PLACE
 
