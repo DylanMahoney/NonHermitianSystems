@@ -77,10 +77,17 @@ for i,Delta_2 in enumerate(Delta_2_list):
             return starting_value*t0**alpha*t**(-alpha)
         popt,pcov = scipy.optimize.curve_fit(power_law_decay,t[hydro_start_index:last_value],avg_run[hydro_start_index:last_value],p0=0.66)
         optimal_alpha = popt[0]
+        print("D2=%.2f, g=%.2f, optimal_alpha=%.2f" % (Delta_2,g,optimal_alpha))
         axs[i].plot(t[hydro_start_index:last_value],power_law_decay(t[hydro_start_index:last_value],optimal_alpha),linestyle='--',color=color_list[j])
         #ADD TEXT CONTAINING OPTIMAL ALPHA
         if j == 0:
             axs[i].text(x=15,y=0.03,s=r"$\propto t^{-%.2f}$" % optimal_alpha,color=color_list[j])
+        if j == 1 and i == 0:
+            axs[i].text(x=24,y=0.012,s=r"$\propto t^{-%.2f}$" % optimal_alpha,color=color_list[j])
+        if j == 1 and i == 1:
+            axs[i].text(x=20,y=0.016,s=r"$\propto t^{-%.2f}$" % optimal_alpha,color=color_list[j])
+        if j == 2:
+            axs[i].text(x=15,y=0.0085,s=r"$\propto t^{-%.2f}$" % optimal_alpha,color=color_list[j])
         if j == 3:
             axs[i].text(x=4,y=0.012,s=r"$\propto t^{-%.2f}$" % optimal_alpha,color=color_list[j])
         axs[i].plot(t[first_index:last_value+1],avg_run[first_index:last_value+1],label="g = %.2f" % g,color=color_list[j])

@@ -35,7 +35,7 @@ color_list = get_list_of_colors_I_like(3)
 
 r_prediction_dict = {'Poisson':2/3,'Ginibre':0.7381018}
 cos_prediction_dict = {'Poisson':0,'Ginibre':-0.2405161}
-linestyle_dict = {'Poisson':'-','Ginibre':'-.'}
+linestyle_dict = {'Poisson':':','Ginibre':'-.'}
 #TAKEN FROM https://arxiv.org/abs/1910.12784
 
 L_list = [16,18,20,22] #change to [18,20,22] after finishes running
@@ -62,10 +62,10 @@ for i,Delta_2 in enumerate(Delta_2_list):
     for j,g in enumerate(g_list):
         if i == 0:
             label = r'$g=0$' if g == 0 else r'g=%.1f' % g
-            axs[0,i].plot(L_list,r_mean_array[j,:],'.',markersize=10,color=color_list[j],label=label,alpha=0.8)
+            axs[0,i].plot(L_list,r_mean_array[j,:],'.',markersize=14,color=color_list[j],label=label,alpha=0.8)
         else:
-            axs[0,i].plot(L_list,r_mean_array[j,:],'.',markersize=10,color=color_list[j],alpha=0.8)
-        axs[1,i].plot(L_list,cos_mean_array[j,:],'.',markersize=10,color=color_list[j],alpha=0.8)
+            axs[0,i].plot(L_list,r_mean_array[j,:],'.',markersize=14,color=color_list[j],alpha=0.8)
+        axs[1,i].plot(L_list,cos_mean_array[j,:],'.',markersize=14,color=color_list[j],alpha=0.8)
     axs[0,i].set_xticks(L_list)
     axs[1,i].set_xticks(L_list)
     axs[0,i].tick_params(which='both',direction='in')
@@ -79,21 +79,22 @@ for i,Delta_2 in enumerate(Delta_2_list):
     
     #axs[j,1].set_xlabel("L")
 
-axs[0,0].set_ylabel(r"$\langle r \rangle$")
+axs[0,0].set_ylabel(r"$\langle \varrho \rangle$")
 axs[1,0].set_ylabel(r"$\langle \cos(\theta) \rangle$")
 
 axs[1,0].set_xlabel(r"$L$")
 axs[1,1].set_xlabel(r"$L$")
 
-axs[0,0].legend(markerfirst=False,frameon=False,ncol=2,loc='upper center')
+axs[0,0].legend(markerfirst=False,frameon=False,ncol=2,bbox_to_anchor=(0.5,0.5),loc='lower center')
 
 #add_letter_labels(fig,axs,36,120,[r'$\Delta_2=0$',r'$\Delta_2=1.5$',r'$\Delta_2=0$',r'$\Delta_2=1.5$'],white_labels=False)
-y_to_put_text = 0.2
+y_to_put_text = 0.09
 #ADD IN LETTER LABELS
-axs[0,0].text(x = 16.5, y = 2/3 + (0.7381018 - (2/3))*y_to_put_text,s=r"{\Large\textbf{(a)}}",ha='center')
-axs[0,1].text(x = 16.5, y = 2/3 + (0.7381018 - (2/3))*y_to_put_text,s=r"{\Large\textbf{(b)}}",ha='center')
-axs[1,0].text(x=16.5, y = -0.2405161 + 0.2405161*y_to_put_text,s=r"{\Large\textbf{(c)}}",ha='center')
-axs[1,1].text(x=16.5, y = -0.2405161 + 0.2405161*y_to_put_text,s=r"{\Large\textbf{(d)}}",ha='center')
+L_for_letters = 16.2
+axs[0,0].text(x = L_for_letters, y = 2/3 + (0.7381018 - (2/3))*y_to_put_text,s=r"{\Large\textbf{(a)}}",ha='center')
+axs[0,1].text(x = L_for_letters, y = 2/3 + (0.7381018 - (2/3))*y_to_put_text,s=r"{\Large\textbf{(b)}}",ha='center')
+axs[1,0].text(x=L_for_letters, y = -0.2405161 + 0.2405161*y_to_put_text,s=r"{\Large\textbf{(c)}}",ha='center')
+axs[1,1].text(x=L_for_letters, y = -0.2405161 + 0.2405161*y_to_put_text,s=r"{\Large\textbf{(d)}}",ha='center')
 
 
 filename = os.path.join(fig_dir,'average_r_cos_theta.pdf')

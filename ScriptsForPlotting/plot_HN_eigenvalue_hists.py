@@ -15,6 +15,7 @@ import numpy as np #USE DTYPE np.cdouble FOR COMPLEX THINGS
 from scipy import linalg
 import matplotlib.pyplot as plt
 import matplotlib.transforms as mtransforms
+import matplotlib.gridspec
 import time
 
 plt.rcParams['text.usetex'] = True
@@ -38,21 +39,45 @@ L = 22
 g=0.2
 Delta_1 = 1.5
 Delta_2_list = [0,1.5]
-fig,axs = plt.subplots(3,2)
-mosaic = """
-    AABB
-    AACC
-    DDEE
-    DDFF
-    
-    """
-fig = plt.figure()
-ax_dict = fig.subplot_mosaic(mosaic)
-plt.style.use('Solarize_Light2')
+#fig,axs = plt.subplots(3,2)
+#mosaic = """
+#    AABB
+#    AACC
+#    DDEE
+#    DDFF
+#    
+#    """
+#fig = plt.figure()
+#ax_dict = fig.subplot_mosaic(mosaic)
+#plt.style.use('Solarize_Light2')
+#https://stackoverflow.com/questions/52560527/how-to-fully-customize-subplot-size
+total_width = 8 #measured in eigth-inches
+total_height = 6 #measured in eigth-inches
+text_height = 0.1 #measured in eigth-inches
+left_width = 4.2
+right_width = total_width - left_width
 
-x_to_put_text = 0.95
-y_to_put_text = 0.1
+gs = matplotlib.gridspec.GridSpec(8,3, width_ratios=[text_height,(left_width-text_height),right_width], 
+                                       height_ratios=[total_height/4 - text_height,text_height,total_height/4 - text_height,text_height,total_height/4 - text_height,text_height,total_height/4 - text_height,text_height])
+
+fig = plt.figure()
+taller = True
+if taller:
+    fig.set_size_inches(6.4,6.4)
+ax_dict = {}
+ax_dict['A'] = fig.add_subplot(gs[0:3,1])
+ax_dict['B'] = fig.add_subplot(gs[0,2])
+ax_dict['C'] = fig.add_subplot(gs[2,2])
+
+ax_dict['D'] = fig.add_subplot(gs[4:7,1])
+ax_dict['E'] = fig.add_subplot(gs[4,2])
+ax_dict['F'] = fig.add_subplot(gs[6,2])
+
+x_to_put_text = 0.975
+y_to_put_text = 0.07
 #the above are proportions of the overall data range plotted
+y_position_of_x_labels = -0.1
+x_position_of_y_labels = -0.05
 
 noNNN_z_filename = os.path.join(data_dir,'L=%i,g=%.2f,D1=%.2f,D2=%.2f_zs.npy' % (L,g,Delta_1,0))
 z = np.load(noNNN_z_filename)
@@ -65,15 +90,24 @@ ax_dict['A'].hist2d(x,y,bins=40,range = [[-1.1, 1.1], [-1.1, 1.1]],density=True)
 ax_dict['A'].set_xlim(left=-1.1,right=1.1)
 ax_dict['A'].set_ylim(bottom=-1.1,top=1.1)
 
-ax_dict['A'].set_xticks(ticks=[],labels=[])
+#ax_dict['A'].set_yticks(ticks=[-1,1],labels=[r"$-1$",r"$1$"])
+#ax_dict['A'].set_ylabel(r"$\Im(z)$")
+#ax_dict['A'].yaxis.set_label_coords(x_position_of_y_labels, 0.5)
 
 ax_dict['A'].set_ylabel(r"$\Im(z)$")
-ax_dict['A'].set_aspect(1)
+ax_dict['A'].set_xlabel(r"$\Re(z)$")
+ax_dict['A'].set_yticks(ticks=[-1,1],labels=[r"$-1$",r"$1$"])
+ax_dict['A'].set_xticks(ticks=[-1,1],labels=[r"$-1$",r"$1$"])
+#ax_dict['A'].set_xticks(ticks=[],labels=[])
+ax_dict['A'].yaxis.set_label_coords(x_position_of_y_labels, 0.5)
+ax_dict['A'].xaxis.set_label_coords(0.5, y_position_of_x_labels/4) #A and D are a different size from the others
+#ax_dict['A'].xaxis.tick_top()
+#ax_dict['A'].set_aspect(1)
 #ax_dict['A'].set_xlabel(r"$\Re(z)$")
 
 #ax_dict['A'].tick_params(which='both',direction='in')
 #ax_dict['A'].tick_params(left=False,bottom=False)
-#ax_dict['A'].set_aspect('equal')
+ax_dict['A'].set_aspect('equal')
 ax_dict['A'].text(x=-1.1+2.2*x_to_put_text,y=-1.1+2.2*y_to_put_text,s=r"{\Large\textbf{(a)} $\Delta_2 = 0$}",color='w',ha='right')
 
 ax_dict['B'].hist(r,bins=40,density=True,color=histogram_color)
@@ -83,28 +117,36 @@ ax_dict['B'].set_ylim(bottom=0,top=2.5)
 #ax_dict['B'].set_xlabel(r"$\rho$")
 ax_dict['B'].yaxis.set_label_position("right")
 ax_dict['B'].yaxis.tick_right()
-ax_dict['B'].set_xticks(ticks=[],labels=[])
-ax_dict['B'].set_ylabel(r"$P(\rho)$")
-#ax_dict['B'].set_yticks(ticks=[0,2],labels=[r"$0.0$",r"$2.0$"])
+ax_dict['B'].set_xticks(ticks=[0,1],labels=[r"0",r"1"])
+ax_dict['B'].set_ylabel(r"$P(\varrho)$")
+ax_dict['B'].set_yticks(ticks=[0,2],labels=[r"$0$",r"$2$"])
 #ax_dict['B'].set_aspect(0.5)
 x_left, x_right = ax_dict['B'].get_xlim()
 y_low, y_high = ax_dict['B'].get_ylim()
-ratio = 0.5
+ratio = (total_height/4 - text_height)/right_width #0.5
 #ax_dict['B'].set_aspect(abs((x_right-x_left)/(y_low-y_high))*ratio)
+print("I just changed the aspect ratio?")
 ax_dict['B'].text(x=0+1*x_to_put_text,y=0+2.5*y_to_put_text,s=r"{\Large\textbf{(b)} $\Delta_2 = 0$}",color='w',ha='right')
+ax_dict['B'].set_xlabel(r"$\varrho$")
+ax_dict['B'].xaxis.set_label_coords(0.5, y_position_of_x_labels)
+if taller:
+    ax_dict['B'].yaxis.set_label_coords(1-x_position_of_y_labels/2,0.4)
 
 ax_dict['C'].hist(theta,bins=40,density=True,color=histogram_color)
 ax_dict['C'].set_xlim(left=-np.pi,right=np.pi)
-ax_dict['C'].set_xticks(ticks = [-np.pi,-np.pi/2,0,np.pi/2,np.pi],labels=[r"$-\pi$", r"$-\frac \pi 2$", r"$0$", r"$\frac \pi 2 $", r"$\pi$"])
+ax_dict['C'].set_xticks(ticks = [-np.pi,np.pi],labels=[r"$-\pi$", r"$\pi$"])
 ax_dict['C'].set_ylim(bottom=0,top=0.22)
 ax_dict['C'].set_yticks(ticks=[0,1/(2*np.pi)],labels=[r"$0$",r"$\frac{1}{2\pi}$"])
 #ax_dict['C'].tick_params(left=False,bottom=False)
 
+ax_dict['C'].set_ylabel(r"$P(\theta)$")
 ax_dict['C'].yaxis.set_label_position("right")
 ax_dict['C'].yaxis.tick_right()
-ax_dict['C'].set_xticks(ticks=[],labels=[])
+if taller:
+    ax_dict['C'].yaxis.set_label_coords(1-x_position_of_y_labels/2,0.333)
+#ax_dict['C'].set_xticks(ticks=[],labels=[])
 
-ax_dict['C'].set_ylabel(r"$P(\theta)$")
+ax_dict['C'].set_xlabel(r"$\theta$")
 x_left, x_right = ax_dict['C'].get_xlim()
 y_low, y_high = ax_dict['C'].get_ylim()
 ratio = 0.5
@@ -112,6 +154,7 @@ ratio = 0.5
 #ax_dict['C'].set_aspect(0.5)
 #ax_dict['C'].set_xlabel(r"$\theta$")
 ax_dict['C'].text(x=-np.pi+2*np.pi*x_to_put_text,y=0+0.22*y_to_put_text,s=r"{\Large\textbf{(c)} $\Delta_2 = 0$}",color='w',ha='right')
+ax_dict['C'].xaxis.set_label_coords(0.5, y_position_of_x_labels)
 
 NNN_z_filename = os.path.join(data_dir,'L=%i,g=%.2f,D1=%.2f,D2=%.2f_zs.npy' % (L,g,Delta_1,1.5))
 z = np.load(NNN_z_filename)
@@ -126,10 +169,16 @@ ax_dict['D'].set_ylim(bottom=-1.1,top=1.1)
 
 ax_dict['D'].set_ylabel(r"$\Im(z)$")
 ax_dict['D'].set_xlabel(r"$\Re(z)$")
-ax_dict['D'].set_aspect(1)
+ax_dict['D'].set_yticks(ticks=[-1,1],labels=[r"$-1$",r"$1$"])
+ax_dict['D'].set_xticks(ticks=[-1,1],labels=[r"$-1$",r"$1$"])
+#ax_dict['D'].set_xticks(ticks=[],labels=[])
+ax_dict['D'].yaxis.set_label_coords(x_position_of_y_labels, 0.5)
+ax_dict['D'].xaxis.set_label_coords(0.5, y_position_of_x_labels/4) #A and D are a different size from the others
+#ax_dict['D'].set_aspect(1)
 
-#ax_dict['D'].set_aspect('equal')
+ax_dict['D'].set_aspect('equal')
 #ax_dict['D'].tick_params(left=False,bottom=False)
+#ax_dict['D'].text(x=-1.1+2.2*x_to_put_text,y=-1.1+2.2*y_to_put_text,s=r"{\Large\textbf{(d)} $\Delta_2 = 1.5$}",color='w',ha='right')
 ax_dict['D'].text(x=-1.1+2.2*x_to_put_text,y=-1.1+2.2*y_to_put_text,s=r"{\Large\textbf{(d)} $\Delta_2 = 1.5$}",color='w',ha='right')
 
 ax_dict['E'].hist(r,bins=40,density=True,color=histogram_color)
@@ -139,11 +188,12 @@ ax_dict['E'].set_ylim(bottom=0,top=2.5)
 
 ax_dict['E'].yaxis.set_label_position("right")
 ax_dict['E'].yaxis.tick_right()
-ax_dict['E'].set_xticks(ticks=[],labels=[])
+ax_dict['E'].set_xticks(ticks=[0,1],labels=[r"0",r"1"])
+ax_dict['E'].set_yticks(ticks=[0,2],labels=[r"$0$",r"$2$"])
 print("preferred P(rho) limits")
 print(ax_dict['E'].get_ylim())
 
-ax_dict['E'].set_ylabel(r"$P(\rho)$")
+ax_dict['E'].set_ylabel(r"$P(\varrho)$")
 x_left, x_right = ax_dict['E'].get_xlim()
 y_low, y_high = ax_dict['E'].get_ylim()
 ratio = 0.5
@@ -151,10 +201,15 @@ ratio = 0.5
 #ax_dict['E'].set_aspect(0.5)
 #ax_dict['E'].set_xlabel(r"$\rho$")
 ax_dict['E'].text(x=0+1*x_to_put_text,y=0+2.5*y_to_put_text,s=r"{\Large\textbf{(e)} $\Delta_2 = 1.5$}",color='w',ha='right')
+ax_dict['E'].set_xlabel(r"$\varrho$")
+ax_dict['E'].xaxis.set_label_coords(0.5, y_position_of_x_labels)
+if taller:
+    ax_dict['E'].yaxis.set_label_coords(1-x_position_of_y_labels/2,0.4)
 
 ax_dict['F'].hist(theta,bins=40,density=True,color=histogram_color)
 ax_dict['F'].set_xlim(left=-np.pi,right=np.pi)
-ax_dict['F'].set_xticks(ticks = [-np.pi,0,np.pi],labels=[r"$-\pi$ {\Large or} $0$", r"$0$ {\Large or} $\frac 1 2 $", r"$\pi$ {\Large or} $1$"])
+#ax_dict['F'].set_xticks(ticks = [-np.pi,0,np.pi],labels=[r"$-\pi$ {\Large or} $0$", r"$0$ {\Large or} $\frac 1 2 $", r"$\pi$ {\Large or} $1$"])
+ax_dict['F'].set_xticks(ticks = [-np.pi,np.pi],labels=[r"$-\pi$", r"$\pi$"])
 print("preferred P(theta) limits")
 print(ax_dict['F'].get_ylim())
 ax_dict['F'].set_ylim(bottom=0,top=0.22)
@@ -165,7 +220,11 @@ ax_dict['F'].yaxis.tick_right()
 
 ax_dict['F'].set_ylabel(r"$P(\theta)$")
 ax_dict['F'].set_yticks(ticks=[0,1/(2*np.pi)],labels=[r"$0$",r"$\frac{1}{2\pi}$"])
-ax_dict['F'].set_xlabel(r"$\theta$ {\Large or} $\rho$")
+#ax_dict['F'].set_xlabel(r"$\theta$ {\Large or} $\varrho$")
+ax_dict['F'].set_xlabel(r"$\theta$")
+ax_dict['F'].xaxis.set_label_coords(0.5, y_position_of_x_labels)
+if taller:
+    ax_dict['F'].yaxis.set_label_coords(1-x_position_of_y_labels/2,0.333)
 x_left, x_right = ax_dict['F'].get_xlim()
 y_low, y_high = ax_dict['F'].get_ylim()
 ratio = 0.5
@@ -173,11 +232,7 @@ ratio = 0.5
 #ax_dict['F'].set_aspect(0.5)
 ax_dict['F'].text(x=-np.pi+2*np.pi*x_to_put_text,y=0+0.22*y_to_put_text,s=r"{\Large\textbf{(f)} $\Delta_2 = 1.5$}",color='w',ha='right')
 
-#ADD LETTERS AFTER REST IN PLACE
-
-#SET ASPECT RATIO AFTER REST IN PLACE
-
-filename = os.path.join(fig_dir,'HN_eval_hists.pdf')
+filename = os.path.join(fig_dir,'fig1.pdf')
 fig.savefig(filename,bbox_inches='tight')
 plt.close(fig)
 

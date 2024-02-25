@@ -1,0 +1,320 @@
+
+[notice] A new release of pip is available: 23.3.2 -> 24.0
+[notice] To update, run: pip install --upgrade pip
+/scratch/users/dylan24/NonHermitianSystems/NonHermitianSystems/function_definitions.py:423: ComplexWarning: Casting complex values to real discards the imaginary part
+  results_all_sectors[j,i] += op_1_eval*op_1_dimension*EV/(2**L)
+/scratch/users/dylan24/NonHermitianSystems/NonHermitianSystems/function_definitions.py:423: ComplexWarning: Casting complex values to real discards the imaginary part
+  results_all_sectors[j,i] += op_1_eval*op_1_dimension*EV/(2**L)
+/scratch/users/dylan24/NonHermitianSystems/NonHermitianSystems/function_definitions.py:423: ComplexWarning: Casting complex values to real discards the imaginary part
+  results_all_sectors[j,i] += op_1_eval*op_1_dimension*EV/(2**L)
+/scratch/users/dylan24/NonHermitianSystems/NonHermitianSystems/function_definitions.py:423: ComplexWarning: Casting complex values to real discards the imaginary part
+  results_all_sectors[j,i] += op_1_eval*op_1_dimension*EV/(2**L)
+/scratch/users/dylan24/NonHermitianSystems/NonHermitianSystems/function_definitions.py:423: ComplexWarning: Casting complex values to real discards the imaginary part
+  results_all_sectors[j,i] += op_1_eval*op_1_dimension*EV/(2**L)
+/scratch/users/dylan24/NonHermitianSystems/NonHermitianSystems/function_definitions.py:423: ComplexWarning: Casting complex values to real discards the imaginary part
+  results_all_sectors[j,i] += op_1_eval*op_1_dimension*EV/(2**L)
+/scratch/users/dylan24/NonHermitianSystems/NonHermitianSystems/function_definitions.py:423: ComplexWarning: Casting complex values to real discards the imaginary part
+  results_all_sectors[j,i] += op_1_eval*op_1_dimension*EV/(2**L)
+/scratch/users/dylan24/NonHermitianSystems/NonHermitianSystems/function_definitions.py:423: ComplexWarning: Casting complex values to real discards the imaginary part
+  results_all_sectors[j,i] += op_1_eval*op_1_dimension*EV/(2**L)
+/scratch/users/dylan24/NonHermitianSystems/NonHermitianSystems/function_definitions.py:423: ComplexWarning: Casting complex values to real discards the imaginary part
+  results_all_sectors[j,i] += op_1_eval*op_1_dimension*EV/(2**L)
+/scratch/users/dylan24/NonHermitianSystems/NonHermitianSystems/function_definitions.py:423: ComplexWarning: Casting complex values to real discards the imaginary part
+  results_all_sectors[j,i] += op_1_eval*op_1_dimension*EV/(2**L)
+/scratch/users/dylan24/NonHermitianSystems/NonHermitianSystems/function_definitions.py:423: ComplexWarning: Casting complex values to real discards the imaginary part
+  results_all_sectors[j,i] += op_1_eval*op_1_dimension*EV/(2**L)
+/scratch/users/dylan24/NonHermitianSystems/NonHermitianSystems/function_definitions.py:423: ComplexWarning: Casting complex values to real discards the imaginary part
+  results_all_sectors[j,i] += op_1_eval*op_1_dimension*EV/(2**L)
+/scratch/users/dylan24/NonHermitianSystems/NonHermitianSystems/function_definitions.py:423: ComplexWarning: Casting complex values to real discards the imaginary part
+  results_all_sectors[j,i] += op_1_eval*op_1_dimension*EV/(2**L)
+/scratch/users/dylan24/NonHermitianSystems/NonHermitianSystems/function_definitions.py:423: ComplexWarning: Casting complex values to real discards the imaginary part
+  results_all_sectors[j,i] += op_1_eval*op_1_dimension*EV/(2**L)
+/scratch/users/dylan24/NonHermitianSystems/NonHermitianSystems/function_definitions.py:423: ComplexWarning: Casting complex values to real discards the imaginary part
+  results_all_sectors[j,i] += op_1_eval*op_1_dimension*EV/(2**L)
+/scratch/users/dylan24/NonHermitianSystems/NonHermitianSystems/function_definitions.py:423: ComplexWarning: Casting complex values to real discards the imaginary part
+  results_all_sectors[j,i] += op_1_eval*op_1_dimension*EV/(2**L)
+/scratch/users/dylan24/NonHermitianSystems/NonHermitianSystems/function_definitions.py:423: ComplexWarning: Casting complex values to real discards the imaginary part
+  results_all_sectors[j,i] += op_1_eval*op_1_dimension*EV/(2**L)
+/scratch/users/dylan24/NonHermitianSystems/NonHermitianSystems/function_definitions.py:423: ComplexWarning: Casting complex values to real discards the imaginary part
+  results_all_sectors[j,i] += op_1_eval*op_1_dimension*EV/(2**L)
+/scratch/users/dylan24/NonHermitianSystems/NonHermitianSystems/function_definitions.py:423: ComplexWarning: Casting complex values to real discards the imaginary part
+  results_all_sectors[j,i] += op_1_eval*op_1_dimension*EV/(2**L)
+/scratch/users/dylan24/NonHermitianSystems/NonHermitianSystems/function_definitions.py:423: ComplexWarning: Casting complex values to real discards the imaginary part
+  results_all_sectors[j,i] += op_1_eval*op_1_dimension*EV/(2**L)
+/scratch/users/dylan24/NonHermitianSystems/NonHermitianSystems/function_definitions.py:423: ComplexWarning: Casting complex values to real discards the imaginary part
+  results_all_sectors[j,i] += op_1_eval*op_1_dimension*EV/(2**L)
+/scratch/users/dylan24/NonHermitianSystems/NonHermitianSystems/function_definitions.py:423: ComplexWarning: Casting complex values to real discards the imaginary part
+  results_all_sectors[j,i] += op_1_eval*op_1_dimension*EV/(2**L)
+/scratch/users/dylan24/NonHermitianSystems/NonHermitianSystems/function_definitions.py:423: ComplexWarning: Casting complex values to real discards the imaginary part
+  results_all_sectors[j,i] += op_1_eval*op_1_dimension*EV/(2**L)
+/scratch/users/dylan24/NonHermitianSystems/NonHermitianSystems/function_definitions.py:423: ComplexWarning: Casting complex values to real discards the imaginary part
+  results_all_sectors[j,i] += op_1_eval*op_1_dimension*EV/(2**L)
+/scratch/users/dylan24/NonHermitianSystems/NonHermitianSystems/function_definitions.py:423: ComplexWarning: Casting complex values to real discards the imaginary part
+  results_all_sectors[j,i] += op_1_eval*op_1_dimension*EV/(2**L)
+/scratch/users/dylan24/NonHermitianSystems/NonHermitianSystems/function_definitions.py:423: ComplexWarning: Casting complex values to real discards the imaginary part
+  results_all_sectors[j,i] += op_1_eval*op_1_dimension*EV/(2**L)
+/scratch/users/dylan24/NonHermitianSystems/NonHermitianSystems/function_definitions.py:423: ComplexWarning: Casting complex values to real discards the imaginary part
+  results_all_sectors[j,i] += op_1_eval*op_1_dimension*EV/(2**L)
+/scratch/users/dylan24/NonHermitianSystems/NonHermitianSystems/function_definitions.py:423: ComplexWarning: Casting complex values to real discards the imaginary part
+  results_all_sectors[j,i] += op_1_eval*op_1_dimension*EV/(2**L)
+/scratch/users/dylan24/NonHermitianSystems/NonHermitianSystems/function_definitions.py:423: ComplexWarning: Casting complex values to real discards the imaginary part
+  results_all_sectors[j,i] += op_1_eval*op_1_dimension*EV/(2**L)
+/scratch/users/dylan24/NonHermitianSystems/NonHermitianSystems/function_definitions.py:423: ComplexWarning: Casting complex values to real discards the imaginary part
+  results_all_sectors[j,i] += op_1_eval*op_1_dimension*EV/(2**L)
+/scratch/users/dylan24/NonHermitianSystems/NonHermitianSystems/function_definitions.py:423: ComplexWarning: Casting complex values to real discards the imaginary part
+  results_all_sectors[j,i] += op_1_eval*op_1_dimension*EV/(2**L)
+/scratch/users/dylan24/NonHermitianSystems/NonHermitianSystems/function_definitions.py:423: ComplexWarning: Casting complex values to real discards the imaginary part
+  results_all_sectors[j,i] += op_1_eval*op_1_dimension*EV/(2**L)
+/scratch/users/dylan24/NonHermitianSystems/NonHermitianSystems/function_definitions.py:423: ComplexWarning: Casting complex values to real discards the imaginary part
+  results_all_sectors[j,i] += op_1_eval*op_1_dimension*EV/(2**L)
+/scratch/users/dylan24/NonHermitianSystems/NonHermitianSystems/function_definitions.py:423: ComplexWarning: Casting complex values to real discards the imaginary part
+  results_all_sectors[j,i] += op_1_eval*op_1_dimension*EV/(2**L)
+/scratch/users/dylan24/NonHermitianSystems/NonHermitianSystems/function_definitions.py:423: ComplexWarning: Casting complex values to real discards the imaginary part
+  results_all_sectors[j,i] += op_1_eval*op_1_dimension*EV/(2**L)
+/scratch/users/dylan24/NonHermitianSystems/NonHermitianSystems/function_definitions.py:423: ComplexWarning: Casting complex values to real discards the imaginary part
+  results_all_sectors[j,i] += op_1_eval*op_1_dimension*EV/(2**L)
+/scratch/users/dylan24/NonHermitianSystems/NonHermitianSystems/function_definitions.py:423: ComplexWarning: Casting complex values to real discards the imaginary part
+  results_all_sectors[j,i] += op_1_eval*op_1_dimension*EV/(2**L)
+/scratch/users/dylan24/NonHermitianSystems/NonHermitianSystems/function_definitions.py:423: ComplexWarning: Casting complex values to real discards the imaginary part
+  results_all_sectors[j,i] += op_1_eval*op_1_dimension*EV/(2**L)
+/scratch/users/dylan24/NonHermitianSystems/NonHermitianSystems/function_definitions.py:423: ComplexWarning: Casting complex values to real discards the imaginary part
+  results_all_sectors[j,i] += op_1_eval*op_1_dimension*EV/(2**L)
+/scratch/users/dylan24/NonHermitianSystems/NonHermitianSystems/function_definitions.py:423: ComplexWarning: Casting complex values to real discards the imaginary part
+  results_all_sectors[j,i] += op_1_eval*op_1_dimension*EV/(2**L)
+/scratch/users/dylan24/NonHermitianSystems/NonHermitianSystems/function_definitions.py:423: ComplexWarning: Casting complex values to real discards the imaginary part
+  results_all_sectors[j,i] += op_1_eval*op_1_dimension*EV/(2**L)
+/scratch/users/dylan24/NonHermitianSystems/NonHermitianSystems/function_definitions.py:423: ComplexWarning: Casting complex values to real discards the imaginary part
+  results_all_sectors[j,i] += op_1_eval*op_1_dimension*EV/(2**L)
+/scratch/users/dylan24/NonHermitianSystems/NonHermitianSystems/function_definitions.py:423: ComplexWarning: Casting complex values to real discards the imaginary part
+  results_all_sectors[j,i] += op_1_eval*op_1_dimension*EV/(2**L)
+/scratch/users/dylan24/NonHermitianSystems/NonHermitianSystems/function_definitions.py:423: ComplexWarning: Casting complex values to real discards the imaginary part
+  results_all_sectors[j,i] += op_1_eval*op_1_dimension*EV/(2**L)
+/scratch/users/dylan24/NonHermitianSystems/NonHermitianSystems/function_definitions.py:423: ComplexWarning: Casting complex values to real discards the imaginary part
+  results_all_sectors[j,i] += op_1_eval*op_1_dimension*EV/(2**L)
+/scratch/users/dylan24/NonHermitianSystems/NonHermitianSystems/function_definitions.py:423: ComplexWarning: Casting complex values to real discards the imaginary part
+/scratch/users/dylan24/NonHermitianSystems/NonHermitianSystems/function_definitions.py:423: ComplexWarning: Casting complex values to real discards the imaginary part
+  results_all_sectors[j,i] += op_1_eval*op_1_dimension*EV/(2**L)
+  results_all_sectors[j,i] += op_1_eval*op_1_dimension*EV/(2**L)
+/scratch/users/dylan24/NonHermitianSystems/NonHermitianSystems/function_definitions.py:423: ComplexWarning: Casting complex values to real discards the imaginary part
+  results_all_sectors[j,i] += op_1_eval*op_1_dimension*EV/(2**L)
+/scratch/users/dylan24/NonHermitianSystems/NonHermitianSystems/function_definitions.py:423: ComplexWarning: Casting complex values to real discards the imaginary part
+  results_all_sectors[j,i] += op_1_eval*op_1_dimension*EV/(2**L)
+/scratch/users/dylan24/NonHermitianSystems/NonHermitianSystems/function_definitions.py:423: ComplexWarning: Casting complex values to real discards the imaginary part
+  results_all_sectors[j,i] += op_1_eval*op_1_dimension*EV/(2**L)
+/scratch/users/dylan24/NonHermitianSystems/NonHermitianSystems/function_definitions.py:423: ComplexWarning: Casting complex values to real discards the imaginary part
+  results_all_sectors[j,i] += op_1_eval*op_1_dimension*EV/(2**L)
+/scratch/users/dylan24/NonHermitianSystems/NonHermitianSystems/function_definitions.py:423: ComplexWarning: Casting complex values to real discards the imaginary part
+  results_all_sectors[j,i] += op_1_eval*op_1_dimension*EV/(2**L)
+/scratch/users/dylan24/NonHermitianSystems/NonHermitianSystems/function_definitions.py:423: ComplexWarning: Casting complex values to real discards the imaginary part
+/scratch/users/dylan24/NonHermitianSystems/NonHermitianSystems/function_definitions.py:423: ComplexWarning: Casting complex values to real discards the imaginary part
+  results_all_sectors[j,i] += op_1_eval*op_1_dimension*EV/(2**L)
+  results_all_sectors[j,i] += op_1_eval*op_1_dimension*EV/(2**L)
+/scratch/users/dylan24/NonHermitianSystems/NonHermitianSystems/function_definitions.py:423: ComplexWarning: Casting complex values to real discards the imaginary part
+  results_all_sectors[j,i] += op_1_eval*op_1_dimension*EV/(2**L)
+/scratch/users/dylan24/NonHermitianSystems/NonHermitianSystems/function_definitions.py:423: ComplexWarning: Casting complex values to real discards the imaginary part
+  results_all_sectors[j,i] += op_1_eval*op_1_dimension*EV/(2**L)
+/scratch/users/dylan24/NonHermitianSystems/NonHermitianSystems/function_definitions.py:423: ComplexWarning: Casting complex values to real discards the imaginary part
+  results_all_sectors[j,i] += op_1_eval*op_1_dimension*EV/(2**L)
+/scratch/users/dylan24/NonHermitianSystems/NonHermitianSystems/function_definitions.py:423: ComplexWarning: Casting complex values to real discards the imaginary part
+  results_all_sectors[j,i] += op_1_eval*op_1_dimension*EV/(2**L)
+/scratch/users/dylan24/NonHermitianSystems/NonHermitianSystems/function_definitions.py:423: ComplexWarning: Casting complex values to real discards the imaginary part
+  results_all_sectors[j,i] += op_1_eval*op_1_dimension*EV/(2**L)
+/scratch/users/dylan24/NonHermitianSystems/NonHermitianSystems/function_definitions.py:423: ComplexWarning: Casting complex values to real discards the imaginary part
+  results_all_sectors[j,i] += op_1_eval*op_1_dimension*EV/(2**L)
+/scratch/users/dylan24/NonHermitianSystems/NonHermitianSystems/function_definitions.py:423: ComplexWarning: Casting complex values to real discards the imaginary part
+  results_all_sectors[j,i] += op_1_eval*op_1_dimension*EV/(2**L)
+/scratch/users/dylan24/NonHermitianSystems/NonHermitianSystems/function_definitions.py:423: ComplexWarning: Casting complex values to real discards the imaginary part
+  results_all_sectors[j,i] += op_1_eval*op_1_dimension*EV/(2**L)
+/scratch/users/dylan24/NonHermitianSystems/NonHermitianSystems/function_definitions.py:423: ComplexWarning: Casting complex values to real discards the imaginary part
+  results_all_sectors[j,i] += op_1_eval*op_1_dimension*EV/(2**L)
+/scratch/users/dylan24/NonHermitianSystems/NonHermitianSystems/function_definitions.py:423: ComplexWarning: Casting complex values to real discards the imaginary part
+  results_all_sectors[j,i] += op_1_eval*op_1_dimension*EV/(2**L)
+/scratch/users/dylan24/NonHermitianSystems/NonHermitianSystems/function_definitions.py:423: ComplexWarning: Casting complex values to real discards the imaginary part
+  results_all_sectors[j,i] += op_1_eval*op_1_dimension*EV/(2**L)
+/scratch/users/dylan24/NonHermitianSystems/NonHermitianSystems/function_definitions.py:423: ComplexWarning: Casting complex values to real discards the imaginary part
+  results_all_sectors[j,i] += op_1_eval*op_1_dimension*EV/(2**L)
+/scratch/users/dylan24/NonHermitianSystems/NonHermitianSystems/function_definitions.py:423: ComplexWarning: Casting complex values to real discards the imaginary part
+  results_all_sectors[j,i] += op_1_eval*op_1_dimension*EV/(2**L)
+/scratch/users/dylan24/NonHermitianSystems/NonHermitianSystems/function_definitions.py:423: ComplexWarning: Casting complex values to real discards the imaginary part
+  results_all_sectors[j,i] += op_1_eval*op_1_dimension*EV/(2**L)
+/scratch/users/dylan24/NonHermitianSystems/NonHermitianSystems/function_definitions.py:423: ComplexWarning: Casting complex values to real discards the imaginary part
+  results_all_sectors[j,i] += op_1_eval*op_1_dimension*EV/(2**L)
+/scratch/users/dylan24/NonHermitianSystems/NonHermitianSystems/function_definitions.py:423: ComplexWarning: Casting complex values to real discards the imaginary part
+  results_all_sectors[j,i] += op_1_eval*op_1_dimension*EV/(2**L)
+/scratch/users/dylan24/NonHermitianSystems/NonHermitianSystems/function_definitions.py:423: ComplexWarning: Casting complex values to real discards the imaginary part
+  results_all_sectors[j,i] += op_1_eval*op_1_dimension*EV/(2**L)
+/scratch/users/dylan24/NonHermitianSystems/NonHermitianSystems/function_definitions.py:423: ComplexWarning: Casting complex values to real discards the imaginary part
+  results_all_sectors[j,i] += op_1_eval*op_1_dimension*EV/(2**L)
+/scratch/users/dylan24/NonHermitianSystems/NonHermitianSystems/function_definitions.py:423: ComplexWarning: Casting complex values to real discards the imaginary part
+  results_all_sectors[j,i] += op_1_eval*op_1_dimension*EV/(2**L)
+/scratch/users/dylan24/NonHermitianSystems/NonHermitianSystems/function_definitions.py:423: ComplexWarning: Casting complex values to real discards the imaginary part
+  results_all_sectors[j,i] += op_1_eval*op_1_dimension*EV/(2**L)
+/scratch/users/dylan24/NonHermitianSystems/NonHermitianSystems/function_definitions.py:423: ComplexWarning: Casting complex values to real discards the imaginary part
+  results_all_sectors[j,i] += op_1_eval*op_1_dimension*EV/(2**L)
+/scratch/users/dylan24/NonHermitianSystems/NonHermitianSystems/function_definitions.py:423: ComplexWarning: Casting complex values to real discards the imaginary part
+  results_all_sectors[j,i] += op_1_eval*op_1_dimension*EV/(2**L)
+/scratch/users/dylan24/NonHermitianSystems/NonHermitianSystems/function_definitions.py:423: ComplexWarning: Casting complex values to real discards the imaginary part
+  results_all_sectors[j,i] += op_1_eval*op_1_dimension*EV/(2**L)
+/scratch/users/dylan24/NonHermitianSystems/NonHermitianSystems/function_definitions.py:423: ComplexWarning: Casting complex values to real discards the imaginary part
+  results_all_sectors[j,i] += op_1_eval*op_1_dimension*EV/(2**L)
+/scratch/users/dylan24/NonHermitianSystems/NonHermitianSystems/function_definitions.py:423: ComplexWarning: Casting complex values to real discards the imaginary part
+  results_all_sectors[j,i] += op_1_eval*op_1_dimension*EV/(2**L)
+/scratch/users/dylan24/NonHermitianSystems/NonHermitianSystems/function_definitions.py:423: ComplexWarning: Casting complex values to real discards the imaginary part
+  results_all_sectors[j,i] += op_1_eval*op_1_dimension*EV/(2**L)
+/scratch/users/dylan24/NonHermitianSystems/NonHermitianSystems/function_definitions.py:423: ComplexWarning: Casting complex values to real discards the imaginary part
+/scratch/users/dylan24/NonHermitianSystems/NonHermitianSystems/function_definitions.py:423: ComplexWarning: Casting complex values to real discards the imaginary part
+  results_all_sectors[j,i] += op_1_eval*op_1_dimension*EV/(2**L)
+  results_all_sectors[j,i] += op_1_eval*op_1_dimension*EV/(2**L)
+/scratch/users/dylan24/NonHermitianSystems/NonHermitianSystems/function_definitions.py:423: ComplexWarning: Casting complex values to real discards the imaginary part
+  results_all_sectors[j,i] += op_1_eval*op_1_dimension*EV/(2**L)
+/scratch/users/dylan24/NonHermitianSystems/NonHermitianSystems/function_definitions.py:423: ComplexWarning: Casting complex values to real discards the imaginary part
+  results_all_sectors[j,i] += op_1_eval*op_1_dimension*EV/(2**L)
+/scratch/users/dylan24/NonHermitianSystems/NonHermitianSystems/function_definitions.py:423: ComplexWarning: Casting complex values to real discards the imaginary part
+  results_all_sectors[j,i] += op_1_eval*op_1_dimension*EV/(2**L)
+/scratch/users/dylan24/NonHermitianSystems/NonHermitianSystems/function_definitions.py:423: ComplexWarning: Casting complex values to real discards the imaginary part
+  results_all_sectors[j,i] += op_1_eval*op_1_dimension*EV/(2**L)
+/scratch/users/dylan24/NonHermitianSystems/NonHermitianSystems/function_definitions.py:423: ComplexWarning: Casting complex values to real discards the imaginary part
+  results_all_sectors[j,i] += op_1_eval*op_1_dimension*EV/(2**L)
+/scratch/users/dylan24/NonHermitianSystems/NonHermitianSystems/function_definitions.py:423: ComplexWarning: Casting complex values to real discards the imaginary part
+  results_all_sectors[j,i] += op_1_eval*op_1_dimension*EV/(2**L)
+/scratch/users/dylan24/NonHermitianSystems/NonHermitianSystems/function_definitions.py:423: ComplexWarning: Casting complex values to real discards the imaginary part
+  results_all_sectors[j,i] += op_1_eval*op_1_dimension*EV/(2**L)
+/scratch/users/dylan24/NonHermitianSystems/NonHermitianSystems/function_definitions.py:423: ComplexWarning: Casting complex values to real discards the imaginary part
+  results_all_sectors[j,i] += op_1_eval*op_1_dimension*EV/(2**L)
+/scratch/users/dylan24/NonHermitianSystems/NonHermitianSystems/function_definitions.py:423: ComplexWarning: Casting complex values to real discards the imaginary part
+  results_all_sectors[j,i] += op_1_eval*op_1_dimension*EV/(2**L)
+/scratch/users/dylan24/NonHermitianSystems/NonHermitianSystems/function_definitions.py:423: ComplexWarning: Casting complex values to real discards the imaginary part
+  results_all_sectors[j,i] += op_1_eval*op_1_dimension*EV/(2**L)
+/scratch/users/dylan24/NonHermitianSystems/NonHermitianSystems/function_definitions.py:423: ComplexWarning: Casting complex values to real discards the imaginary part
+  results_all_sectors[j,i] += op_1_eval*op_1_dimension*EV/(2**L)
+/scratch/users/dylan24/NonHermitianSystems/NonHermitianSystems/function_definitions.py:423: ComplexWarning: Casting complex values to real discards the imaginary part
+  results_all_sectors[j,i] += op_1_eval*op_1_dimension*EV/(2**L)
+/scratch/users/dylan24/NonHermitianSystems/NonHermitianSystems/function_definitions.py:423: ComplexWarning: Casting complex values to real discards the imaginary part
+  results_all_sectors[j,i] += op_1_eval*op_1_dimension*EV/(2**L)
+/scratch/users/dylan24/NonHermitianSystems/NonHermitianSystems/function_definitions.py:423: ComplexWarning: Casting complex values to real discards the imaginary part
+  results_all_sectors[j,i] += op_1_eval*op_1_dimension*EV/(2**L)
+/scratch/users/dylan24/NonHermitianSystems/NonHermitianSystems/function_definitions.py:423: ComplexWarning: Casting complex values to real discards the imaginary part
+  results_all_sectors[j,i] += op_1_eval*op_1_dimension*EV/(2**L)
+/scratch/users/dylan24/NonHermitianSystems/NonHermitianSystems/function_definitions.py:423: ComplexWarning: Casting complex values to real discards the imaginary part
+  results_all_sectors[j,i] += op_1_eval*op_1_dimension*EV/(2**L)
+/scratch/users/dylan24/NonHermitianSystems/NonHermitianSystems/function_definitions.py:423: ComplexWarning: Casting complex values to real discards the imaginary part
+  results_all_sectors[j,i] += op_1_eval*op_1_dimension*EV/(2**L)
+/scratch/users/dylan24/NonHermitianSystems/NonHermitianSystems/function_definitions.py:423: ComplexWarning: Casting complex values to real discards the imaginary part
+  results_all_sectors[j,i] += op_1_eval*op_1_dimension*EV/(2**L)
+/scratch/users/dylan24/NonHermitianSystems/NonHermitianSystems/function_definitions.py:423: ComplexWarning: Casting complex values to real discards the imaginary part
+  results_all_sectors[j,i] += op_1_eval*op_1_dimension*EV/(2**L)
+/scratch/users/dylan24/NonHermitianSystems/NonHermitianSystems/function_definitions.py:423: ComplexWarning: Casting complex values to real discards the imaginary part
+  results_all_sectors[j,i] += op_1_eval*op_1_dimension*EV/(2**L)
+/scratch/users/dylan24/NonHermitianSystems/NonHermitianSystems/function_definitions.py:423: ComplexWarning: Casting complex values to real discards the imaginary part
+  results_all_sectors[j,i] += op_1_eval*op_1_dimension*EV/(2**L)
+/scratch/users/dylan24/NonHermitianSystems/NonHermitianSystems/function_definitions.py:423: ComplexWarning: Casting complex values to real discards the imaginary part
+  results_all_sectors[j,i] += op_1_eval*op_1_dimension*EV/(2**L)
+/scratch/users/dylan24/NonHermitianSystems/NonHermitianSystems/function_definitions.py:423: ComplexWarning: Casting complex values to real discards the imaginary part
+  results_all_sectors[j,i] += op_1_eval*op_1_dimension*EV/(2**L)
+/scratch/users/dylan24/NonHermitianSystems/NonHermitianSystems/function_definitions.py:423: ComplexWarning: Casting complex values to real discards the imaginary part
+  results_all_sectors[j,i] += op_1_eval*op_1_dimension*EV/(2**L)
+/scratch/users/dylan24/NonHermitianSystems/NonHermitianSystems/function_definitions.py:423: ComplexWarning: Casting complex values to real discards the imaginary part
+  results_all_sectors[j,i] += op_1_eval*op_1_dimension*EV/(2**L)
+/scratch/users/dylan24/NonHermitianSystems/NonHermitianSystems/function_definitions.py:423: ComplexWarning: Casting complex values to real discards the imaginary part
+  results_all_sectors[j,i] += op_1_eval*op_1_dimension*EV/(2**L)
+/scratch/users/dylan24/NonHermitianSystems/NonHermitianSystems/function_definitions.py:423: ComplexWarning: Casting complex values to real discards the imaginary part
+  results_all_sectors[j,i] += op_1_eval*op_1_dimension*EV/(2**L)
+/scratch/users/dylan24/NonHermitianSystems/NonHermitianSystems/function_definitions.py:423: ComplexWarning: Casting complex values to real discards the imaginary part
+  results_all_sectors[j,i] += op_1_eval*op_1_dimension*EV/(2**L)
+/scratch/users/dylan24/NonHermitianSystems/NonHermitianSystems/function_definitions.py:423: ComplexWarning: Casting complex values to real discards the imaginary part
+  results_all_sectors[j,i] += op_1_eval*op_1_dimension*EV/(2**L)
+/scratch/users/dylan24/NonHermitianSystems/NonHermitianSystems/function_definitions.py:423: ComplexWarning: Casting complex values to real discards the imaginary part
+  results_all_sectors[j,i] += op_1_eval*op_1_dimension*EV/(2**L)
+/scratch/users/dylan24/NonHermitianSystems/NonHermitianSystems/function_definitions.py:423: ComplexWarning: Casting complex values to real discards the imaginary part
+  results_all_sectors[j,i] += op_1_eval*op_1_dimension*EV/(2**L)
+/scratch/users/dylan24/NonHermitianSystems/NonHermitianSystems/function_definitions.py:423: ComplexWarning: Casting complex values to real discards the imaginary part
+  results_all_sectors[j,i] += op_1_eval*op_1_dimension*EV/(2**L)
+/scratch/users/dylan24/NonHermitianSystems/NonHermitianSystems/function_definitions.py:423: ComplexWarning: Casting complex values to real discards the imaginary part
+  results_all_sectors[j,i] += op_1_eval*op_1_dimension*EV/(2**L)
+/scratch/users/dylan24/NonHermitianSystems/NonHermitianSystems/function_definitions.py:423: ComplexWarning: Casting complex values to real discards the imaginary part
+  results_all_sectors[j,i] += op_1_eval*op_1_dimension*EV/(2**L)
+/scratch/users/dylan24/NonHermitianSystems/NonHermitianSystems/function_definitions.py:423: ComplexWarning: Casting complex values to real discards the imaginary part
+  results_all_sectors[j,i] += op_1_eval*op_1_dimension*EV/(2**L)
+/scratch/users/dylan24/NonHermitianSystems/NonHermitianSystems/function_definitions.py:423: ComplexWarning: Casting complex values to real discards the imaginary part
+  results_all_sectors[j,i] += op_1_eval*op_1_dimension*EV/(2**L)
+/scratch/users/dylan24/NonHermitianSystems/NonHermitianSystems/function_definitions.py:423: ComplexWarning: Casting complex values to real discards the imaginary part
+  results_all_sectors[j,i] += op_1_eval*op_1_dimension*EV/(2**L)
+/scratch/users/dylan24/NonHermitianSystems/NonHermitianSystems/function_definitions.py:423: ComplexWarning: Casting complex values to real discards the imaginary part
+  results_all_sectors[j,i] += op_1_eval*op_1_dimension*EV/(2**L)
+slurmstepd: error: *** STEP 40872970.48 ON sh02-08n39 CANCELLED AT 2024-02-12T01:32:50 DUE TO TIME LIMIT ***
+slurmstepd: error: *** STEP 40872970.33 ON sh02-01n13 CANCELLED AT 2024-02-12T01:32:50 DUE TO TIME LIMIT ***
+slurmstepd: error: *** STEP 40872970.35 ON sh02-01n15 CANCELLED AT 2024-02-12T01:32:50 DUE TO TIME LIMIT ***
+slurmstepd: error: *** STEP 40872970.31 ON sh02-01n05 CANCELLED AT 2024-02-12T01:32:50 DUE TO TIME LIMIT ***
+slurmstepd: error: *** STEP 40872970.41 ON sh02-01n24 CANCELLED AT 2024-02-12T01:32:50 DUE TO TIME LIMIT ***
+slurmstepd: error: *** STEP 40872970.43 ON sh02-01n31 CANCELLED AT 2024-02-12T01:32:50 DUE TO TIME LIMIT ***
+slurmstepd: error: *** STEP 40872970.46 ON sh02-01n38 CANCELLED AT 2024-02-12T01:32:50 DUE TO TIME LIMIT ***
+slurmstepd: error: *** STEP 40872970.44 ON sh02-01n32 CANCELLED AT 2024-02-12T01:32:50 DUE TO TIME LIMIT ***
+slurmstepd: error: *** STEP 40872970.38 ON sh02-01n20 CANCELLED AT 2024-02-12T01:32:50 DUE TO TIME LIMIT ***
+slurmstepd: error: *** STEP 40872970.37 ON sh02-01n18 CANCELLED AT 2024-02-12T01:32:50 DUE TO TIME LIMIT ***
+slurmstepd: error: *** STEP 40872970.47 ON sh02-08n37 CANCELLED AT 2024-02-12T01:32:50 DUE TO TIME LIMIT ***
+slurmstepd: error: *** STEP 40872970.42 ON sh02-01n29 CANCELLED AT 2024-02-12T01:32:50 DUE TO TIME LIMIT ***
+slurmstepd: error: *** STEP 40872970.40 ON sh02-01n22 CANCELLED AT 2024-02-12T01:32:50 DUE TO TIME LIMIT ***
+slurmstepd: error: *** STEP 40872970.49 ON sh02-08n45 CANCELLED AT 2024-02-12T01:32:50 DUE TO TIME LIMIT ***
+slurmstepd: error: *** STEP 40872970.52 ON sh02-08n49 CANCELLED AT 2024-02-12T01:32:50 DUE TO TIME LIMIT ***
+slurmstepd: error: *** JOB 40872970 ON sh02-01n04 CANCELLED AT 2024-02-12T01:32:50 DUE TO TIME LIMIT ***
+slurmstepd: error: *** STEP 40872970.32 ON sh02-01n09 CANCELLED AT 2024-02-12T01:32:50 DUE TO TIME LIMIT ***
+slurmstepd: error: *** STEP 40872970.54 ON sh02-08n54 CANCELLED AT 2024-02-12T01:32:50 DUE TO TIME LIMIT ***
+slurmstepd: error: *** STEP 40872970.36 ON sh02-01n17 CANCELLED AT 2024-02-12T01:32:50 DUE TO TIME LIMIT ***
+slurmstepd: error: *** STEP 40872970.45 ON sh02-01n36 CANCELLED AT 2024-02-12T01:32:50 DUE TO TIME LIMIT ***
+slurmstepd: error: *** STEP 40872970.58 ON sh02-10n46 CANCELLED AT 2024-02-12T01:32:50 DUE TO TIME LIMIT ***
+slurmstepd: error: *** STEP 40872970.50 ON sh02-08n46 CANCELLED AT 2024-02-12T01:32:50 DUE TO TIME LIMIT ***
+slurmstepd: error: *** STEP 40872970.57 ON sh02-10n43 CANCELLED AT 2024-02-12T01:32:50 DUE TO TIME LIMIT ***
+slurmstepd: error: *** STEP 40872970.56 ON sh02-10n41 CANCELLED AT 2024-02-12T01:32:50 DUE TO TIME LIMIT ***
+slurmstepd: error: *** STEP 40872970.51 ON sh02-08n47 CANCELLED AT 2024-02-12T01:32:50 DUE TO TIME LIMIT ***
+slurmstepd: error: *** STEP 40872970.53 ON sh02-08n51 CANCELLED AT 2024-02-12T01:32:50 DUE TO TIME LIMIT ***
+slurmstepd: error: *** STEP 40872970.55 ON sh02-08n56 CANCELLED AT 2024-02-12T01:32:50 DUE TO TIME LIMIT ***
+slurmstepd: error: *** STEP 40872970.34 ON sh02-01n14 CANCELLED AT 2024-02-12T01:32:50 DUE TO TIME LIMIT ***
+slurmstepd: error: *** STEP 40872970.59 ON sh02-10n47 CANCELLED AT 2024-02-12T01:32:50 DUE TO TIME LIMIT ***
+slurmstepd: error: *** STEP 40872970.39 ON sh02-01n21 CANCELLED AT 2024-02-12T01:32:50 DUE TO TIME LIMIT ***
+slurmstepd: error: *** STEP 40872970.30 ON sh02-01n04 CANCELLED AT 2024-02-12T01:32:50 DUE TO TIME LIMIT ***
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: error: sh02-01n29: task 0: Terminated
+srun: Terminating StepId=40872970.42
+srun: error: sh02-01n38: task 0: Terminated
+srun: Terminating StepId=40872970.46
+srun: error: sh02-01n22: task 0: Terminated
+srun: Terminating StepId=40872970.40
+srun: error: sh02-01n24: task 0: Terminated
+srun: Terminating StepId=40872970.41
+srun: error: sh02-01n21: task 0: Terminated
+srun: Terminating StepId=40872970.39
+srun: error: sh02-01n14: task 0: Terminated
+srun: Terminating StepId=40872970.34
+srun: error: sh02-01n09: task 0: Terminated
+srun: Terminating StepId=40872970.32
+srun: error: sh02-08n51: task 0: Terminated
+srun: Terminating StepId=40872970.53
