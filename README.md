@@ -12,3 +12,5 @@ TODO: Note that there's two different notions of projector in this code: one goe
 TODO: Note that RawData also includes data created during testing that isn't used in the actual plots, as well as all of the plotted data. Provide pointer to the data ctually used in plotting.
 
 TODO: Note that some large pickle files from the diagonalization of the current operator may not be synced to GitHub
+
+TODO: Specify which plotting scripts each figure was made by, and which data generation scripts each plotting script relies on

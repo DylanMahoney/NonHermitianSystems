@@ -51,6 +51,7 @@ Delta_2_list = [0,1.5]
 #ax_dict = fig.subplot_mosaic(mosaic)
 #plt.style.use('Solarize_Light2')
 #https://stackoverflow.com/questions/52560527/how-to-fully-customize-subplot-size
+#UPON FURTHER CONSIDERATION, THIS CODE IS A LITTLE WEIRD, BUT IT PRODUCES GOOD RESULTS IMO
 total_width = 8 #measured in eigth-inches
 total_height = 6 #measured in eigth-inches
 text_height = 0.1 #measured in eigth-inches
