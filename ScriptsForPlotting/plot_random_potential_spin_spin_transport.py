@@ -63,7 +63,7 @@ hydro_start_time = 9
 hydro_start_index = int(hydro_start_time/t_step)
 
 #SHOULD WE MENTION IN THE PAPER THAT LOOKING AT DIFFERENT W'S WOULD BE A NICE THING TO DO / SOMETHING THAT CONFUSED US?
-alternate_version = True
+alternate_version = False
 if alternate_version:
     L_list = [small_L,large_L]
 else:
@@ -160,8 +160,17 @@ for L in L_list: #COULD ALSO ADD BACK IN SMALL_L
             t0 = t[hydro_start_index]
             def power_law_decay(t,alpha): # = const (t - t0)^{- \alpha}
                 return starting_value*t0**alpha*t**(-alpha)
-            popt,pcov = scipy.optimize.curve_fit(power_law_decay,t[hydro_start_index:last_value],run_average[hydro_start_index:last_value],p0=0.66)
+            #sigma = np.cov(same_site_data[:,hydro_start_index:last_value],rowvar=False,bias = True)#covariance matrix of {C(0,t_i) for each t_i}. bias=True to be consistent with 1/sqrt(N) convention used elsewhere in paper
+            #print(sigma.shape)
+            #print(sem.shape)
+            #print(sem[hydro_start_index:last_value].shape)
+            sigma = std[hydro_start_index:last_value] #DON'T USE CROSS-CORRELATIONS BETWEEN DIFFERENT TIMES BECAUSE IT RESULTS IN REALLY WEIRD RESULTS
+            print("sigma = standard_deviations")
+            #print(np.sqrt(np.diag(sigma))/np.sqrt(total_num_runs) - sem[hydro_start_index:last_value])
+            #print("^should be all 0's after square rooting^")
+            popt,pcov = scipy.optimize.curve_fit(power_law_decay,t[hydro_start_index:last_value],run_average[hydro_start_index:last_value],p0=0.66,sigma=sigma)
             optimal_alpha = popt[0]
+            print(optimal_alpha)
             axs[0].plot(t[hydro_start_index:last_value],power_law_decay(t[hydro_start_index:last_value],optimal_alpha),linestyle='--',color=color_list[j])
             #if j == 0:
             #    ax.text(x=20,y=0.015,s=r"$\propto t^{-%.2f}$" % optimal_alpha,color=color_list[j])
@@ -178,22 +187,33 @@ for L in L_list: #COULD ALSO ADD BACK IN SMALL_L
         if L == large_L:
             time_slice_data = data[:,:,time_slice_index]
             axs[1].plot(np.arange(L),np.mean(time_slice_data,axis=0),marker_list[j],label=r'$W=%i$' % W,color=color_list[j],markersize=10,mew=2)
-axs[1].set_ylabel(r"$\mathcal{C}(r,%i)$" % time_slice)
+axs[1].set_ylabel(r"$C(r,%i)$" % time_slice)
 #axs[1].yaxis.set_label_position("right")
 #axs[1].yaxis.tick_right()
-axs[1].set_xlabel("$L$")
-axs[1].set_xticks(np.arange(0,18,3),np.arange(0,18,3))
+axs[1].set_xlabel("$r$")
+axs[1].set_xticks(np.arange(0,18,3),np.arange(0,18,3) - L//2)
 axs[1].set_yscale('log')
 axs[1].legend(markerfirst=False,frameon=False)
 
-axs[0].set_ylabel("$\mathcal{C}(0,t)$")
-axs[0].set_xlabel("$t$")
-axs[0].xaxis.set_label_position("top")
-axs[0].xaxis.tick_top()
-axs[0].xaxis.set_label_coords(0.5, 1.05)
+axs[0].set_ylabel("$C(0,t)$")
+axs[0].set_xlabel("time $t$")
+#axs[0].xaxis.set_label_position("top")
+#axs[0].xaxis.tick_top()
+axs[0].xaxis.set_label_coords(0.5, -0.05)
 axs[0].set_xscale('log')
 axs[0].set_yscale('log')
 axs[0].legend(markerfirst=False,frameon=False)
+
+x_to_put_letter = 0.03
+y_to_put_letter = 0.15
+(y_min,y_max) = axs[0].get_ylim()
+(x_min,x_max) = axs[0].get_xlim()
+print(x_min,x_max)
+axs[0].text(x=10**(np.log10(x_min) + (np.log10(x_max) - np.log10(x_min))*x_to_put_letter),y=10**(np.log10(y_max) - (np.log10(y_max) - np.log10(y_min))*y_to_put_letter),s=r"{\Large\textbf{(a)}}",ha='center',va='center')
+(y_min,y_max) = axs[1].get_ylim()
+(x_min,x_max) = axs[1].get_xlim()
+print(x_min,x_max)
+axs[1].text(x=x_min + (x_max - x_min)*x_to_put_letter,y=10**(np.log10(y_max) - (np.log10(y_max) - np.log10(y_min))*y_to_put_letter),s=r"{\Large\textbf{(b)}}",ha='center',va='center')
 #add_letter_labels(fig,axs,72,30,[r'$\Delta_1 = 1.0$',r'$\Delta_1 = 1.5$'],white_labels=False)
 
 #labels = [r'\textbf{(a): $\Delta_1 = %.1f$}' % Delta_1_list[0],r'\textbf{(b): $\Delta_1 = %.1f$}' % Delta_1_list[1],r'\textbf{(c)}',r'\textbf{(d)}',r'\textbf{(e)}',r'\textbf{(f)}']
