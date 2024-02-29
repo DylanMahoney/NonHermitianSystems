@@ -317,7 +317,7 @@ def ED_correlator(op_1_evals_list,op_1_projectors_list,op_1_sector_dimensions_li
                 
     return results_all_sectors
     
-def diagonalize_operator(operator,tol=1e-8):  #As long as the largest numerical error difference between identical eigenvalues is smaller than the smallest genuine gap between eigenvalues,
+def diagonalize_operator(operator,tol=1e-8,verbose=False):  #As long as the largest numerical error difference between identical eigenvalues is smaller than the smallest genuine gap between eigenvalues,
     #there exists some tolerance that will yield the correct decomposition with no duplicates in unique_evals
     #tolerance is for determining when two eigenvalues are the "same" in the presence of numerical error
     Hilbert_space_dimension = operator.shape[0]
@@ -343,6 +343,17 @@ def diagonalize_operator(operator,tol=1e-8):  #As long as the largest numerical 
                 sector_index = np.argmin(np.abs(unique_evals - nth_eval))
                 projectors[sector_index] = projectors[sector_index] + np.outer(nth_evec,np.conj(nth_evec))
                 sector_dimensions[sector_index] += 1
+    if verbose:
+        #The below code verifies that this worked
+        print("\/ eigenvalues with repeats \/")
+        print(evals)
+        print("\/ (hopefully) eigenvalues without repeats \/")
+        print(unique_evals)
+        #CHECK THAT THE DECOMPOSITION, WHEN SUMMED BACK UP, EQUALS OP_1
+        should_equal_operator = np.zeros(operator.shape,dtype='complex128')
+        for n,eigenvalue in enumerate(unique_evals):
+            should_equal_operator += eigenvalue*projectors[n]
+        print("maximum difference between operator and the thing that should equal operator: %.10f" % np.max(np.abs(sector_op_1 - should_equal_op_1)))
     return unique_evals,projectors,sector_dimensions
 
 def diagonalize_spinz_operator_within_M_sectors(M_projectors,M_dimensions,spinz_op):
@@ -371,7 +382,9 @@ def diagonalize_spinz_operator_within_M_sectors(M_projectors,M_dimensions,spinz_
         op_1_projectors_list.append(op_1_projectors)
         op_1_sector_dimensions_list.append(op_1_sector_dimensions)
     return op_1_evals_list,op_1_projectors_list,op_1_sector_dimensions_list
-    
+
+#THE BELOW FUNCTION ALLEGEDLY HAS IPR FUNCTIONALITY, BUT I THINK IT MIGHT BE BROKEN
+#I DON'T WANT TO REMOVE ITS IPR FUNCTIONALITY TO AVOID ACCIDENTALLY BREAKING ITS PRIMARY FUNCTIONALITY, SO I'LL WRITE ANOTHER FUNCTION
 def typicality_correlator(op_1_evals_list,op_1_projectors_list,op_1_sector_dimensions_list,op_2_list,M_projectors,M_dimensions,t,H,L,rng,
 eigen_IPR=None,matrices_of_left_eigenvectors=None):
     if eigen_IPR == None:
@@ -429,6 +442,65 @@ eigen_IPR=None,matrices_of_left_eigenvectors=None):
         return results_all_sectors,IPRs
     return results_all_sectors
 
+def typicality_correlator_with_IPRs(op_1_evals_list,op_1_projectors_list,op_1_sector_dimensions_list,op_2_list,M_projectors,M_dimensions,t,H,L,rng,four_eigen_matrices,verbose=False):
+    #Method RL: normalize such that right eigenvectors are each normalized, then inner product with left
+    #Method RR: normalize such that right eigenvectors are each normalized, then inner product with right
+    #Method LR: normalize such that left eigenvectors are each normalized, then inner product with right
+    #Method LL: normalize such that left eigenvectors are each normalized, then inner product with left
+    
+    num_times = t.size
+    zero_M_projector = M_projectors[L//2] #The L//2th sector is the M = 0 sector
+    zero_M_sector_dimension = M_dimensions[L//2]
+    num_M_sectors = len(M_dimensions)
+
+    results_all_sectors = np.zeros((len(op_2_list),num_times))
+    IPRs = np.zeros((4,num_times)) #order is RL,RR,LR,LL
+    anomalous_norms = np.zeros((4,num_times))
+    entropies = np.zeros((4,num_times))
+                
+    for M_sector_index in range(num_M_sectors):
+        M_projector = M_projectors[M_sector_index]
+        M_dimension = M_dimensions[M_sector_index]
+
+        M_sector_H =M_projector@H@np.conj(M_projector.T)
+        
+        op_1_evals = op_1_evals_list[M_sector_index]
+        op_1_projectors = op_1_projectors_list[M_sector_index]
+        op_1_sector_dimensions = op_1_sector_dimensions_list[M_sector_index]
+        num_op_1_sectors = len(op_1_evals)
+        
+        M_sector_op_2_list = [M_projector@op_2@np.conj(M_projector.T) for op_2 in op_2_list]
+        
+        M_sector_state = gen_random_state(rng,M_dimension,gave_dimension=True,normalize=False)
+        
+        for op_1_sector_index in range(num_op_1_sectors):
+            op_1_eval = op_1_evals[op_1_sector_index]
+            op_1_projector = op_1_projectors[op_1_sector_index]
+            op_1_dimension = op_1_sector_dimensions[op_1_sector_index]
+            #print("Op_1 sector dimension within M sector: %i" % op_1_dimension)
+            
+            state = op_1_projector@M_sector_state
+            state = state/np.linalg.norm(state)
+            for i,t_value in enumerate(t):
+                if i > 0:
+                    Delta_t = t[i] - t[i-1]
+                    state = solve_Schrodinger_equation(M_sector_H,state,Delta_t)
+                state = state/np.linalg.norm(state)
+                for j,M_sector_op_2 in enumerate(M_sector_op_2_list):
+                    EV = np.conj(state)@M_sector_op_2@state
+                    results_all_sectors[j,i] += op_1_eval*op_1_dimension*EV/(2**L)
+                if M_sector_index == L//2:
+                    for j,eigen_matrix in enumerate(four_eigen_matrices):
+                        state_in_eigenbasis = np.conj(eigen_matrix.T)@state #normalize state (it's already normalized) then find its coefficients in the eigenbasis
+                        #ON FEB 27 2024 I CHANGED THE ABOVE FROM matrix_of_left_eigenvectors to matrix_of_right_eigenvectors in order to match the paper.
+                        #if verbose and i==20:
+                        #    check_state_in_eigenbasis_is_correct(state,state_in_eigenbasis,matrix_of_right_eigenvectors)
+                        anomalous_norms[j,i] += op_1_dimension*np.sum(np.abs(state_in_eigenbasis)**2)/zero_M_sector_dimension
+                        IPRs[j,i] += op_1_dimension*np.sum(np.abs(state_in_eigenbasis)**4)/zero_M_sector_dimension
+                        fake_probabilities = np.abs(state_in_eigenbasis)**2/np.sum(np.abs(state_in_eigenbasis)**2)
+                        entropies[j,i] += op_1_dimension*(-1)*np.sum(fake_probabilities*np.log2(fake_probabilities))/zero_M_sector_dimension
+    return results_all_sectors,anomalous_norms,IPRs,entropies
+
 def evals_to_zs(evals):
     z = np.zeros(evals.size,dtype=complex)
     for k,lam in enumerate(evals):
@@ -462,3 +534,49 @@ def get_biortho_evecs(H):
     matrix_of_left_eigenvectors,matrix_of_right_eigenvectors = biorthogonalize(L_matrix,R_matrix)
     matrix_of_left_eigenvectors = np.conj(matrix_of_left_eigenvectors.T) #goes from left eigenvectors being rows to being columns
     return matrix_of_left_eigenvectors,matrix_of_right_eigenvectors
+
+def check_that_left_and_right_eigenvectors_are_eigenvectors(M,evals,matrix_of_left_eigenvectors,matrix_of_right_eigenvectors):
+    sector_dimension = M.shape[0]
+    print(np.round(evals,10))
+    print("^ evals rounded to 10 decimal places^")
+    
+    expected_left_results = np.zeros((sector_dimension,sector_dimension),dtype='complex')
+    for i in range(sector_dimension):
+        expected_left_results[i,:] = evals[i]*np.conj(matrix_of_left_eigenvectors.T)[i,:]
+    expected_right_results = np.zeros((sector_dimension,sector_dimension),dtype='complex')
+    for i in range(sector_dimension):
+        expected_right_results[:,i] = evals[i]*matrix_of_right_eigenvectors[:,i]
+
+    print(np.max(np.abs(np.conj(matrix_of_left_eigenvectors.T)@M - expected_left_results)))
+    print("^np.max(np.abs(np.conj(matrix_of_left_eigenvectors.T)@M - expected_left_results))^")
+    print(np.max(np.abs(expected_left_results)))
+    print("^np.max(np.abs(expected_left_results))^")
+    
+    print(np.max(np.abs(M@matrix_of_right_eigenvectors - expected_right_results)))
+    print("^np.max(np.abs(M@matrix_of_right_eigenvectors - expected_right_results))^")
+    print(np.max(np.abs(expected_right_results)))
+    print("^np.max(np.abs(expected_right_results))^")
+    print(sector_dimension)
+    print("^sector_dimension^")
+def biorthogonalize(L,R): #https://joshuagoings.com/2015/04/03/biorthogonalizing-left-and-right-eigenvectors-the-easy-lazy-way/
+    M = L@R
+    M_L,M_U = scipy.linalg.lu(M,permute_l=True)
+    return np.linalg.inv(M_L)@L,R@np.linalg.inv(M_U)
+def check_that_eigenvectors_are_biorthogonal(matrix_of_left_eigenvectors,matrix_of_right_eigenvectors):
+    dimension = matrix_of_left_eigenvectors.shape[0]
+    should_be_identity = np.conj(matrix_of_left_eigenvectors.T)@matrix_of_right_eigenvectors
+    print(np.max(np.abs(should_be_identity - np.eye(dimension,dtype='complex128'))))
+    print("^np.max(np.abs(should_be_identity - np.eye(dimension,dtype='complex128')))^")
+    #print(np.median(np.abs(np.diag(should_be_identity))))
+    #print("^np.median(np.abs(should_be_diagonal))^")
+def check_state_in_eigenbasis_is_correct(state,state_in_eigenbasis,matrix_of_right_eigenvectors):
+    sector_dimension = matrix_of_right_eigenvectors.shape[0]
+    should_also_equal_state = np.zeros(sector_dimension,dtype='complex128')
+    for k in range(sector_dimension):
+        should_also_equal_state += state_in_eigenbasis[k]*matrix_of_right_eigenvectors[:,k]
+    print("state has norm %.5f" % np.linalg.norm(state))
+    print("should also equal state has norm %.5f" % np.linalg.norm(should_also_equal_state))
+    should_be_zero = np.sum(np.abs(state - should_also_equal_state)**2)
+    print("Should be zero: %.10f" % should_be_zero)
+    L2_norm_of_state_in_eigenbasis = np.linalg.norm(state_in_eigenbasis)
+    print("L2_norm_of_state_in_eigenbasis: %.10f" % L2_norm_of_state_in_eigenbasis)

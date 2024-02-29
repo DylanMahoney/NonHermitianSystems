@@ -1,5 +1,5 @@
 # NonHermitianSystems
-Code for paper "Transport and Integrability Breaking in Non-Hermitian Quantum Systems"
+Code for paper "Transport and Integrability Breaking in Non-Hermitian Quantum Systems". If you're reading this right now, it means that we have made the paper public but that I haven't yet made the code base pretty and nicely commented. Sorry! I'll try to get to that soon.
 
 TODO: In this file I should specify which versions I'm using of all of the packages I've installed.
 

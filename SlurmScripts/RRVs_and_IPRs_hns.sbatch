@@ -7,8 +7,9 @@
 #SBATCH --mem=64GB
 #SBATCH --mail-type=all
 #SBATCH --chdir=../ScriptsForDataGeneration
-#SBATCH --ntasks=18
-#SBATCH -N 18
+#SBATCH --ntasks=12
+#SBATCH -N 12
+#SBATCH --partition=hns,normal
 
 ml load system
 ml load texlive/2019
@@ -23,7 +24,7 @@ for L in 10 12 14
 do
  for g in 0 0.2
  do
-  for D1 in 1 1.25 1.5
+  for D1 in 1 1.5
   do
    srun -N 1 --ntasks=1 -c 2 python3.9 RRVs_and_IPRs_fresh.py --g $g --D1 $D1 --L $L &
   done
