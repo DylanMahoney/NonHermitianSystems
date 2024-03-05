@@ -1,0 +1,717 @@
+Requirement already satisfied: imageio in /home/users/dylan24/.local/lib/python3.9/site-packages (2.31.1)
+Requirement already satisfied: numpy in /share/software/user/open/py-numpy/1.24.2_py39/lib/python3.9/site-packages (from imageio) (1.24.2)
+Requirement already satisfied: pillow>=8.3.2 in /share/software/user/open/py-matplotlib/3.7.1_py39/lib/python3.9/site-packages (from imageio) (9.5.0)
+Diagonalizing op_1 for typicality took time 0.037
+L=14,Delta_1=1.50,Delta_2=0.00,g = 0.20
+1.3322676295501878e-15
+^Checking if each right eigenvector is normalized^
+708
+^number of eigenvalues with |imaginary part| > 1e-10^
+Time taken to get left and right eigenvectors: 107.943
+[-7.45448451-0.j         -7.02511167-0.21348974j -7.02511167+0.21348974j
+ ... -0.31250595-0.j         -0.19607461+0.j
+ -0.31103858+0.j        ]
+^ evals rounded to 10 decimal places^
+6.189013850050269e-14
+^np.max(np.abs(np.conj(matrix_of_left_eigenvectors.T)@M - expected_left_results))^
+2.4029942619100404
+^np.max(np.abs(expected_left_results))^
+9.78140357882234e-13
+^np.max(np.abs(M@matrix_of_right_eigenvectors - expected_right_results))^
+32.631452959472654
+^np.max(np.abs(expected_right_results))^
+3432
+^sector_dimension^
+7.45931459012296e-15
+^np.max(np.abs(should_be_identity - np.eye(dimension,dtype='complex128')))^
+1.050270981295402e-13
+^Checking if each left eigenvector is normalized^
+9.437768770559727e-15
+^np.max(np.abs(should_be_identity - np.eye(dimension,dtype='complex128')))^
+^Hopefully biorthogonality has been maintained^
+run: 0
+run: 1
+run: 2
+run: 3
+run: 4
+run: 5
+run: 6
+run: 7
+run: 8
+run: 9
+run: 10
+run: 11
+run: 12
+run: 13
+run: 14
+run: 15
+run: 16
+run: 17
+run: 18
+run: 19
+run: 20
+run: 21
+run: 22
+run: 23
+run: 24
+run: 25
+run: 26
+run: 27
+run: 28
+run: 29
+run: 30
+run: 31
+run: 32
+run: 33
+run: 34
+run: 35
+run: 36
+run: 37
+run: 38
+run: 39
+run: 40
+run: 41
+run: 42
+run: 43
+run: 44
+run: 45
+run: 46
+run: 47
+run: 48
+run: 49
+run: 50
+run: 51
+run: 52
+run: 53
+run: 54
+run: 55
+run: 56
+run: 57
+run: 58
+run: 59
+run: 60
+run: 61
+run: 62
+run: 63
+run: 64
+run: 65
+run: 66
+run: 67
+run: 68
+run: 69
+run: 70
+run: 71
+run: 72
+run: 73
+run: 74
+run: 75
+run: 76
+run: 77
+run: 78
+run: 79
+run: 80
+run: 81
+run: 82
+run: 83
+run: 84
+run: 85
+run: 86
+run: 87
+run: 88
+run: 89
+run: 90
+run: 91
+run: 92
+run: 93
+run: 94
+run: 95
+run: 96
+run: 97
+run: 98
+run: 99
+run: 100
+run: 101
+run: 102
+run: 103
+run: 104
+run: 105
+run: 106
+run: 107
+run: 108
+run: 109
+run: 110
+run: 111
+run: 112
+run: 113
+run: 114
+run: 115
+run: 116
+run: 117
+run: 118
+run: 119
+run: 120
+run: 121
+run: 122
+run: 123
+run: 124
+run: 125
+run: 126
+run: 127
+run: 128
+run: 129
+run: 130
+run: 131
+run: 132
+run: 133
+run: 134
+run: 135
+run: 136
+run: 137
+run: 138
+run: 139
+run: 140
+run: 141
+run: 142
+run: 143
+run: 144
+run: 145
+run: 146
+run: 147
+run: 148
+run: 149
+Typicality time per run: 190.947
+Diagonalizing op_1 for typicality took time 0.030
+L=14,Delta_1=1.00,Delta_2=0.00,g = 0.20
+6.661338147750939e-16
+^Checking if each right eigenvector is normalized^
+2052
+^number of eigenvalues with |imaginary part| > 1e-10^
+Time taken to get left and right eigenvectors: 144.109
+[-6.34421489+0.j         -5.91625218-0.33527661j -5.91625218+0.33527661j
+ ...  0.01816776+0.j         -0.21882764+0.j
+ -0.19327387+0.j        ]
+^ evals rounded to 10 decimal places^
+3.7227350608866304e-14
+^np.max(np.abs(np.conj(matrix_of_left_eigenvectors.T)@M - expected_left_results))^
+1.4118598298490446
+^np.max(np.abs(expected_left_results))^
+3.0776301532193243e-13
+^np.max(np.abs(M@matrix_of_right_eigenvectors - expected_right_results))^
+17.91809995135606
+^np.max(np.abs(expected_right_results))^
+3432
+^sector_dimension^
+8.296271088900922e-15
+^np.max(np.abs(should_be_identity - np.eye(dimension,dtype='complex128')))^
+4.9960036108132044e-14
+^Checking if each left eigenvector is normalized^
+9.493542985708793e-15
+^np.max(np.abs(should_be_identity - np.eye(dimension,dtype='complex128')))^
+^Hopefully biorthogonality has been maintained^
+run: 0
+run: 1
+run: 2
+run: 3
+run: 4
+run: 5
+run: 6
+run: 7
+run: 8
+run: 9
+run: 10
+run: 11
+run: 12
+run: 13
+run: 14
+run: 15
+run: 16
+run: 17
+run: 18
+run: 19
+run: 20
+run: 21
+run: 22
+run: 23
+run: 24
+run: 25
+run: 26
+run: 27
+run: 28
+run: 29
+run: 30
+run: 31
+run: 32
+run: 33
+run: 34
+run: 35
+run: 36
+run: 37
+run: 38
+run: 39
+run: 40
+run: 41
+run: 42
+run: 43
+run: 44
+run: 45
+run: 46
+run: 47
+run: 48
+run: 49
+run: 50
+run: 51
+run: 52
+run: 53
+run: 54
+run: 55
+run: 56
+run: 57
+run: 58
+run: 59
+run: 60
+run: 61
+run: 62
+run: 63
+run: 64
+run: 65
+run: 66
+run: 67
+run: 68
+run: 69
+run: 70
+run: 71
+run: 72
+run: 73
+run: 74
+run: 75
+run: 76
+run: 77
+run: 78
+run: 79
+run: 80
+run: 81
+run: 82
+run: 83
+run: 84
+run: 85
+run: 86
+run: 87
+run: 88
+run: 89
+run: 90
+run: 91
+run: 92
+run: 93
+run: 94
+run: 95
+run: 96
+run: 97
+run: 98
+run: 99
+run: 100
+run: 101
+run: 102
+run: 103
+run: 104
+run: 105
+run: 106
+run: 107
+run: 108
+run: 109
+run: 110
+run: 111
+run: 112
+run: 113
+run: 114
+run: 115
+run: 116
+run: 117
+run: 118
+run: 119
+run: 120
+run: 121
+run: 122
+run: 123
+run: 124
+run: 125
+run: 126
+run: 127
+run: 128
+run: 129
+run: 130
+run: 131
+run: 132
+run: 133
+run: 134
+run: 135
+run: 136
+run: 137
+run: 138
+run: 139
+run: 140
+run: 141
+run: 142
+run: 143
+run: 144
+run: 145
+run: 146
+run: 147
+run: 148
+run: 149
+Typicality time per run: 222.235
+Diagonalizing op_1 for typicality took time 0.032
+L=14,Delta_1=1.50,Delta_2=0.00,g = 0.00
+7.771561172376096e-16
+^Checking if each right eigenvector is normalized^
+0
+^number of eigenvalues with |imaginary part| > 1e-10^
+Time taken to get left and right eigenvectors: 138.541
+[-7.38980248+0.j -7.20400879+0.j -6.74534489+0.j ... -0.39841945+0.j
+ -0.4211017 +0.j -0.22027936+0.j]
+^ evals rounded to 10 decimal places^
+6.039613253960852e-14
+^np.max(np.abs(np.conj(matrix_of_left_eigenvectors.T)@M - expected_left_results))^
+3.0162621587377587
+^np.max(np.abs(expected_left_results))^
+6.039613253960852e-14
+^np.max(np.abs(M@matrix_of_right_eigenvectors - expected_right_results))^
+3.0162621587377547
+^np.max(np.abs(expected_right_results))^
+3432
+^sector_dimension^
+6.66134653535707e-16
+^np.max(np.abs(should_be_identity - np.eye(dimension,dtype='complex128')))^
+3.441691376337985e-14
+^Checking if each left eigenvector is normalized^
+6.661343794634861e-16
+^np.max(np.abs(should_be_identity - np.eye(dimension,dtype='complex128')))^
+^Hopefully biorthogonality has been maintained^
+run: 0
+run: 1
+run: 2
+run: 3
+run: 4
+run: 5
+run: 6
+run: 7
+run: 8
+run: 9
+run: 10
+run: 11
+run: 12
+run: 13
+run: 14
+run: 15
+run: 16
+run: 17
+run: 18
+run: 19
+run: 20
+run: 21
+run: 22
+run: 23
+run: 24
+run: 25
+run: 26
+run: 27
+run: 28
+run: 29
+run: 30
+run: 31
+run: 32
+run: 33
+run: 34
+run: 35
+run: 36
+run: 37
+run: 38
+run: 39
+run: 40
+run: 41
+run: 42
+run: 43
+run: 44
+run: 45
+run: 46
+run: 47
+run: 48
+run: 49
+run: 50
+run: 51
+run: 52
+run: 53
+run: 54
+run: 55
+run: 56
+run: 57
+run: 58
+run: 59
+run: 60
+run: 61
+run: 62
+run: 63
+run: 64
+run: 65
+run: 66
+run: 67
+run: 68
+run: 69
+run: 70
+run: 71
+run: 72
+run: 73
+run: 74
+run: 75
+run: 76
+run: 77
+run: 78
+run: 79
+run: 80
+run: 81
+run: 82
+run: 83
+run: 84
+run: 85
+run: 86
+run: 87
+run: 88
+run: 89
+run: 90
+run: 91
+run: 92
+run: 93
+run: 94
+run: 95
+run: 96
+run: 97
+run: 98
+run: 99
+run: 100
+run: 101
+run: 102
+run: 103
+run: 104
+run: 105
+run: 106
+run: 107
+run: 108
+run: 109
+run: 110
+run: 111
+run: 112
+run: 113
+run: 114
+run: 115
+run: 116
+run: 117
+run: 118
+run: 119
+run: 120
+run: 121
+run: 122
+run: 123
+run: 124
+run: 125
+run: 126
+run: 127
+run: 128
+run: 129
+run: 130
+run: 131
+run: 132
+run: 133
+run: 134
+run: 135
+run: 136
+run: 137
+run: 138
+run: 139
+run: 140
+run: 141
+run: 142
+run: 143
+run: 144
+run: 145
+run: 146
+run: 147
+run: 148
+run: 149
+Typicality time per run: 224.089
+Diagonalizing op_1 for typicality took time 0.035
+L=14,Delta_1=1.00,Delta_2=0.00,g = 0.00
+1.4432899320127035e-15
+^Checking if each right eigenvector is normalized^
+0
+^number of eigenvalues with |imaginary part| > 1e-10^
+Time taken to get left and right eigenvectors: 119.468
+[-6.26354953+0.j -5.95644382+0.j -5.55856283-0.j ...  0.03444678+0.j
+  0.0319744 +0.j  0.12419333+0.j]
+^ evals rounded to 10 decimal places^
+4.707345624410664e-14
+^np.max(np.abs(np.conj(matrix_of_left_eigenvectors.T)@M - expected_left_results))^
+1.928860427799027
+^np.max(np.abs(expected_left_results))^
+4.6629367034256575e-14
+^np.max(np.abs(M@matrix_of_right_eigenvectors - expected_right_results))^
+1.928860427799017
+^np.max(np.abs(expected_right_results))^
+3432
+^sector_dimension^
+1.3322676299493051e-15
+^np.max(np.abs(should_be_identity - np.eye(dimension,dtype='complex128')))^
+5.639932965095795e-14
+^Checking if each left eigenvector is normalized^
+1.4432899320161987e-15
+^np.max(np.abs(should_be_identity - np.eye(dimension,dtype='complex128')))^
+^Hopefully biorthogonality has been maintained^
+run: 0
+run: 1
+run: 2
+run: 3
+run: 4
+run: 5
+run: 6
+run: 7
+run: 8
+run: 9
+run: 10
+run: 11
+run: 12
+run: 13
+run: 14
+run: 15
+run: 16
+run: 17
+run: 18
+run: 19
+run: 20
+run: 21
+run: 22
+run: 23
+run: 24
+run: 25
+run: 26
+run: 27
+run: 28
+run: 29
+run: 30
+run: 31
+run: 32
+run: 33
+run: 34
+run: 35
+run: 36
+run: 37
+run: 38
+run: 39
+run: 40
+run: 41
+run: 42
+run: 43
+run: 44
+run: 45
+run: 46
+run: 47
+run: 48
+run: 49
+run: 50
+run: 51
+run: 52
+run: 53
+run: 54
+run: 55
+run: 56
+run: 57
+run: 58
+run: 59
+run: 60
+run: 61
+run: 62
+run: 63
+run: 64
+run: 65
+run: 66
+run: 67
+run: 68
+run: 69
+run: 70
+run: 71
+run: 72
+run: 73
+run: 74
+run: 75
+run: 76
+run: 77
+run: 78
+run: 79
+run: 80
+run: 81
+run: 82
+run: 83
+run: 84
+run: 85
+run: 86
+run: 87
+run: 88
+run: 89
+run: 90
+run: 91
+run: 92
+run: 93
+run: 94
+run: 95
+run: 96
+run: 97
+run: 98
+run: 99
+run: 100
+run: 101
+run: 102
+run: 103
+run: 104
+run: 105
+run: 106
+run: 107
+run: 108
+run: 109
+run: 110
+run: 111
+run: 112
+run: 113
+run: 114
+run: 115
+run: 116
+run: 117
+run: 118
+run: 119
+run: 120
+run: 121
+run: 122
+run: 123
+run: 124
+run: 125
+run: 126
+run: 127
+run: 128
+run: 129
+run: 130
+run: 131
+run: 132
+run: 133
+run: 134
+run: 135
+run: 136
+run: 137
+run: 138
+run: 139
+run: 140
+run: 141
+run: 142
+run: 143
+run: 144
+run: 145
+run: 146
+run: 147
+run: 148
+run: 149
+Typicality time per run: 231.429

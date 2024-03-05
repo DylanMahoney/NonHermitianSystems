@@ -2,14 +2,14 @@
 #SBATCH --job-name=RRVs_and_IPRs_job
 #SBATCH --output=../SlurmOutputs/RRVs_and_IPRs_job.%j.out
 #SBATCH --error=../SlurmOutputs/RRVs_and_IPRs_job.%j.err
-#SBATCH --time=8:00:00
+#SBATCH --time=16:00:00
 #SBATCH -c 2
-#SBATCH --mem=64GB
+#SBATCH --mem=32GB
 #SBATCH --mail-type=all
 #SBATCH --chdir=../ScriptsForDataGeneration
-#SBATCH --ntasks=12
-#SBATCH -N 12
-#SBATCH --partition=hns,normal
+#SBATCH --ntasks=4
+#SBATCH -N 4
+#SBATCH --partition=hns
 
 ml load system
 ml load texlive/2019
@@ -20,7 +20,7 @@ ml load py-matplotlib/3.7.1_py39
 ml load py-scipy/1.10.1_py39
 pip3 install --user imageio
 
-for L in 10 12 14
+for L in 14
 do
  for g in 0 0.2
  do

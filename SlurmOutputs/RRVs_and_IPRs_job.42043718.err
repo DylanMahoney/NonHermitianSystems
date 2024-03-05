@@ -30,3 +30,24 @@
   results_all_sectors[j,i] += op_1_eval*op_1_dimension*EV/(2**L)
 /scratch/users/dylan24/NonHermitianSystems/NonHermitianSystems/function_definitions.py:491: ComplexWarning: Casting complex values to real discards the imaginary part
   results_all_sectors[j,i] += op_1_eval*op_1_dimension*EV/(2**L)
+/scratch/users/dylan24/NonHermitianSystems/NonHermitianSystems/function_definitions.py:491: ComplexWarning: Casting complex values to real discards the imaginary part
+  results_all_sectors[j,i] += op_1_eval*op_1_dimension*EV/(2**L)
+/scratch/users/dylan24/NonHermitianSystems/NonHermitianSystems/function_definitions.py:491: ComplexWarning: Casting complex values to real discards the imaginary part
+  results_all_sectors[j,i] += op_1_eval*op_1_dimension*EV/(2**L)
+/scratch/users/dylan24/NonHermitianSystems/NonHermitianSystems/function_definitions.py:491: ComplexWarning: Casting complex values to real discards the imaginary part
+  results_all_sectors[j,i] += op_1_eval*op_1_dimension*EV/(2**L)
+/scratch/users/dylan24/NonHermitianSystems/NonHermitianSystems/function_definitions.py:491: ComplexWarning: Casting complex values to real discards the imaginary part
+  results_all_sectors[j,i] += op_1_eval*op_1_dimension*EV/(2**L)
+/scratch/users/dylan24/NonHermitianSystems/NonHermitianSystems/function_definitions.py:491: ComplexWarning: Casting complex values to real discards the imaginary part
+  results_all_sectors[j,i] += op_1_eval*op_1_dimension*EV/(2**L)
+/scratch/users/dylan24/NonHermitianSystems/NonHermitianSystems/function_definitions.py:491: ComplexWarning: Casting complex values to real discards the imaginary part
+  results_all_sectors[j,i] += op_1_eval*op_1_dimension*EV/(2**L)
+/scratch/users/dylan24/NonHermitianSystems/NonHermitianSystems/function_definitions.py:491: ComplexWarning: Casting complex values to real discards the imaginary part
+  results_all_sectors[j,i] += op_1_eval*op_1_dimension*EV/(2**L)
+/scratch/users/dylan24/NonHermitianSystems/NonHermitianSystems/function_definitions.py:491: ComplexWarning: Casting complex values to real discards the imaginary part
+  results_all_sectors[j,i] += op_1_eval*op_1_dimension*EV/(2**L)
+slurmstepd: error: *** STEP 42043718.10 ON sh02-06n28 CANCELLED AT 2024-02-29T03:14:38 DUE TO TIME LIMIT ***
+slurmstepd: error: *** JOB 42043718 ON sh02-04n52 CANCELLED AT 2024-02-29T03:14:38 DUE TO TIME LIMIT ***
+slurmstepd: error: *** STEP 42043718.4 ON sh02-06n19 CANCELLED AT 2024-02-29T03:14:38 DUE TO TIME LIMIT ***
+slurmstepd: error: *** STEP 42043718.2 ON sh02-06n17 CANCELLED AT 2024-02-29T03:14:38 DUE TO TIME LIMIT ***
+slurmstepd: error: *** STEP 42043718.0 ON sh02-04n52 CANCELLED AT 2024-02-29T03:14:38 DUE TO TIME LIMIT ***

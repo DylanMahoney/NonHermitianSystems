@@ -32,17 +32,90 @@ data_dir = get_data_directory(current_directory,folder_name)
 
 color_list = get_list_of_colors_I_like(3)
 
-L_list = [10,12,14]#[10,12,14]
-g = 0.2#g_list = [0,0.2]
-D1_list = [1,1.5]
+#L_list = [10,12] #ADD IN 14 WHEN POSSIBLE
+#g_list = [0,0.2]
+
+L_list = [10,12,14]#[10,12,14] #ADD IN 14 WHEN POSSIBLE
+g_list = [0,0.2]
+Delta_1 = 1.5 #CHECK THAT 1 AND 1.5 BOTH LOOK GOOD
 Delta_2 = 0
 num_runs = 150
+eigen_method_index = 1 #This corresponds to normalizing the right eigenvectors and then inner producting with the right eigenvectors
+old_normalization = False
+
 
 t_max=20
 t_step=0.1
 num_times = int(t_max/t_step)+1
 t = np.linspace(0,t_max,num_times)
-title_list = ['right normalized, right i.p.','right normalized, left i.p.','left normalized, right i.p.','left normalized, left i.p.']
+fig,axs = plt.subplots(3,2,sharex='col',sharey='row')
+for i,g in enumerate(g_list):
+    for j,L in enumerate(L_list):
+        #LET'S LOAD ALL OF THE RELEVANT DATA
+        unnormalized_IPR_data_filename = os.path.join(data_dir,'L=%ig=%.2fD1=%.2fD2=%.2f,%iruns_all_data_IPR4methods.npy' % (L,g,Delta_1,Delta_2,num_runs))
+        unnormalized_IPR_all_runs = np.load(unnormalized_IPR_data_filename)[:,eigen_method_index,:]
+        
+        normalization_factor_data_filename = os.path.join(data_dir,'L=%ig=%.2fD1=%.2fD2=%.2f,%iruns_all_data_anomalous_norms4methods.npy' % (L,g,Delta_1,Delta_2,num_runs))
+        normalization_factor_all_runs = np.load(normalization_factor_data_filename)[:,eigen_method_index,:]
+        
+        if old_normalization:
+             normalized_IPR_all_runs = unnormalized_IPR_all_runs/normalization_factor_all_runs
+        else:
+            normalized_IPR_all_runs = unnormalized_IPR_all_runs/(normalization_factor_all_runs**2)
+        normalized_IPR = np.mean(normalized_IPR_all_runs,axis=0)
+        
+        correlations_data_filename = os.path.join(data_dir,'L=%ig=%.2fD1=%.2fD2=%.2f,%iruns_all_data.npy' % (L,g,Delta_1,Delta_2,num_runs))
+        all_runs_data = np.load(correlations_data_filename)
+        central_site_all_runs = all_runs_data
+        average_value = np.mean(central_site_all_runs,axis=0)
+        
+        variance_of_runs = np.var(central_site_all_runs,axis=0)
+        relative_variance_of_runs = variance_of_runs/(average_value**2)
+        std_of_runs = np.sqrt(variance_of_runs)
+        run_sem = std_of_runs/np.sqrt(num_runs)
+        
+        #NOW LET'S PLOT IT
+        color = color_list[j]
+        axs[0,i].plot(t,average_value,color=color,label=r'$L=%i$' % L)
+        axs[1,i].plot(t[1:],relative_variance_of_runs[1:],color=color)
+        axs[2,i].plot(t,normalized_IPR,color=color)
+
+axs[0,0].set_ylabel(r"\Large $\overline{C_{\psi}(0,t)}$")
+axs[1,0].set_ylabel(r"\Large $R(t)$")
+axs[2,0].set_ylabel(r"\Large $I(t)$")
+
+axs[2,0].set_xlabel(r"time $t$")
+axs[2,1].set_xlabel(r"time $t$")
+axs[0,0].legend(frameon=False)
+
+for ax in axs.flatten():
+    ax.set_xscale('log')
+    ax.set_yscale('log')
+
+fig.set_size_inches(6.4,4.8*1.5)
+
+x_to_put_letter = 0.025
+y_to_put_letter = 0.15
+labels = [r"{\Large\textbf{(a)} $g=0$}",r"{\Large\textbf{(b)} $g=0.2$}",r"{\Large\textbf{(c)} $g=0$}",r"{\Large\textbf{(d)} $g=0.2$}",r"{\Large\textbf{(e)} $g=0$}",r"{\Large\textbf{(f)} $g=0.2$}"]
+for i,ax in enumerate(axs.flatten()):
+    (y_min,y_max) = ax.get_ylim()
+    (x_min,x_max) = ax.get_xlim()
+    ax.text(x=10**(np.log10(x_min) + (np.log10(x_max) - np.log10(x_min))*x_to_put_letter),y=10**(np.log10(y_max) - (np.log10(y_max) - np.log10(y_min))*y_to_put_letter),s=labels[i],ha='left',va='top')
+
+
+if old_normalization:
+    filename = os.path.join(fig_dir,'fig4_old_normalization.pdf')
+else:
+    filename = os.path.join(fig_dir,'fig4.pdf')
+fig.savefig(filename,bbox_inches='tight')
+plt.close(fig)
+exit()
+        
+        
+        
+
+
+title_list = ['right normalized, left i.p.','right normalized, right i.p.','left normalized, right i.p.','left normalized, left i.p.']
 for eigen_method_index in range(4):
     #Method RL: normalize such that right eigenvectors are each normalized, then inner product with left
     #Method RR: normalize such that right eigenvectors are each normalized, then inner product with right
@@ -56,17 +129,14 @@ for eigen_method_index in range(4):
             color = color_list[j]
             IPR_data_filename = os.path.join(data_dir,'L=%ig=%.2fD1=%.2fD2=%.2f,%iruns_all_data_IPR4methods.npy' % (L,g,Delta_1,Delta_2,num_runs))
             IPR_all_runs = np.load(IPR_data_filename)[:,eigen_method_index,:]
-            IPR = IPR_all_runs[-1,:] #Let's just show data for the last run because that's all I saved
             #STUPID ERROR
-            #IPR = np.mean(IPR_all_runs,axis=0)
+            IPR = np.mean(IPR_all_runs,axis=0)
             axs[0,i].plot(t,IPR,color=color,label='L = %i' % L)
             axs[0,i].set_ylabel("IPR")
             
             anomalous_norms_data_filename = os.path.join(data_dir,'L=%ig=%.2fD1=%.2fD2=%.2f,%iruns_all_data_anomalous_norms4methods.npy' % (L,g,Delta_1,Delta_2,num_runs))
-            #anomalous_norms_all_runs = np.load(anomalous_norms_data_filename)[:,eigen_method_index,:]
-            #anomalous_norms = np.mean(anomalous_norms_all_runs,axis=0)
-            anomalous_norms_all_runs = np.load(anomalous_norms_data_filename)[eigen_method_index,:]
-            anomalous_norms = anomalous_norms_all_runs
+            anomalous_norms_all_runs = np.load(anomalous_norms_data_filename)[:,eigen_method_index,:]
+            anomalous_norms = np.mean(anomalous_norms_all_runs,axis=0)
             axs[1,i].plot(t,anomalous_norms,color=color,label='L = %i' % L)
             axs[1,i].set_ylabel("\"norm\"")
             
@@ -75,10 +145,8 @@ for eigen_method_index in range(4):
             axs[2,i].set_ylabel("normalized IPR")
             
             entropies_data_filename = os.path.join(data_dir,'L=%ig=%.2fD1=%.2fD2=%.2f,%iruns_all_data_entropies4methods.npy' % (L,g,Delta_1,Delta_2,num_runs))
-            #entropies_all_runs = np.load(entropies_data_filename)[:,eigen_method_index,:]
-            #entropies = np.mean(entropies_all_runs,axis=0)
-            entropies_all_runs = np.load(entropies_data_filename)[eigen_method_index,:]
-            entropies = entropies_all_runs
+            entropies_all_runs = np.load(entropies_data_filename)[:,eigen_method_index,:]
+            entropies = np.mean(entropies_all_runs,axis=0)
             axs[3,i].plot(t,entropies,color=color,label='L = %i' % L)
             axs[3,i].set_ylabel("entropy")
     
