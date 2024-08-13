@@ -74,7 +74,7 @@ color=color_list[1]
 ax.plot(t,0.01/np.sqrt(t),ls=':',label='Power-law fit')
 
 
-ax.set_ylabel(r"\Large $\overline{C(0,t)}$")
+ax.set_ylabel(r"\Large $C(0,t)$")
 ax.set_xlabel(r"time $t$")
 
 ax.legend(frameon=False)
