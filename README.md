@@ -3,6 +3,8 @@ This is the code for the paper "Transport and Integrability Breaking in Non-Herm
 
 If you're reading this right now, it means that we have made the paper public but that I haven't yet made the code base pretty and nicely commented. Sorry! I'll try to get to that soon.
 
+Also, the code for Figure 9 is currently missing, but I'm working on finding it and adding it.
+
 If you check back on March 8 2024 and this message is still here, feel free to send me an angry email at dylan24 `at` stanford.edu reminding me to make my code readable to people other than me.
 
 Here's an overview of the repository: TODO: Write this
