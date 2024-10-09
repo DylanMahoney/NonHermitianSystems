@@ -3,7 +3,7 @@ This is the code for the paper "Transport and Integrability Breaking in Non-Herm
 
 If you're reading this right now, it means that we have made the paper public but that I haven't yet made the code base pretty and nicely commented. Sorry! I'll try to get to that soon.
 
-Also, the code for Figure 9 is currently missing, but I'm working on finding it and adding it.
+The code used to plot Figure 9 is isn't in this repository, but the bottom half of the image "Figures/EDvsTypicality/typicality_vs_ED.png" shows the exact same data as Figure 9, just with uglier graphic design choices.
 
 If you check back on March 8 2024 and this message is still here, feel free to send me an angry email at dylan24 `at` stanford.edu reminding me to make my code readable to people other than me.
 
